@@ -1,0 +1,136 @@
+version: '3.8'
+
+services:
+  # MEOK OS - Main Application
+  meok-os:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meok-os
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=$DATABASE_URL
+      - REDIS_URL=$REDIS_URL
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # SOV3 - Sovereign Consciousness MCP Server
+  sov3:
+    build:
+      context: ../clawd/sovereign-temple
+      dockerfile: Dockerfile
+    container_name: sov3-mcp
+    ports:
+      - "3101:3101"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_URL=$DATABASE_URL
+      - OLLAMA_URL=$OLLAMA_URL
+    volumes:
+      - ../clawd:/workspace
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3101/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL with pgvector
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: meok-postgres
+    environment:
+      - POSTGRES_DB=meok
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis for caching and rate limiting
+  redis:
+    image: redis:7-alpine
+    container_name: meok-redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: meok-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - meok-os
+      - sov3
+    restart: unless-stopped
+
+  # Prometheus monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: meok-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+  # Grafana dashboards
+  grafana:
+    image: grafana/grafana:latest
+    container_name: meok-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=$GRAFANA_PASSWORD
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  default:
+    name: meok-network
