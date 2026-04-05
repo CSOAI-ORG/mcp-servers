@@ -1,0 +1,272 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "MEOK AI Labs API",
+    "description": "Constitutional AI Governance Platform API",
+    "version": "2.0.0",
+    "contact": {
+      "name": "MEOK AI Labs",
+      "email": "api@meok.ai",
+      "url": "https://meok.ai"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://meok.ai/api/v1",
+      "description": "Production"
+    },
+    {
+      "url": "https://staging.meok.ai/api/v1",
+      "description": "Staging"
+    }
+  ],
+  "paths": {
+    "/mcp": {
+      "get": {
+        "summary": "List MCP Servers",
+        "tags": ["MCP"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"name": "category", "in": "query", "schema": {"type": "string"}},
+          {"name": "page", "in": "query", "schema": {"type": "integer", "default": 1}},
+          {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 20}}
+        ],
+        "responses": {
+          "200": {
+            "description": "List of MCP servers",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/MCPList"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mcp/{id}": {
+      "get": {
+        "summary": "Get MCP Server",
+        "tags": ["MCP"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "MCP server details"},
+          "404": {"description": "Not found"}
+        }
+      }
+    },
+    "/governance/analyze": {
+      "post": {
+        "summary": "Analyze Content",
+        "description": "Analyze content against Constitutional AI principles",
+        "tags": ["Governance"],
+        "security": [{"bearerAuth": []}],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["content"],
+                "properties": {
+                  "content": {"type": "string"},
+                  "type": {"type": "string", "enum": ["text", "code", "document"]},
+                  "framework": {"type": "string", "default": "constitutional"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Analysis result",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/AnalysisResult"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/governance/compliance": {
+      "post": {
+        "summary": "Check Compliance",
+        "tags": ["Governance"],
+        "security": [{"bearerAuth": []}],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "content": {"type": "string"},
+                  "standards": {"type": "array", "items": {"type": "string"}}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {"description": "Compliance check result"}
+        }
+      }
+    },
+    "/memory": {
+      "post": {
+        "summary": "Store Memory",
+        "tags": ["Memory"],
+        "security": [{"bearerAuth": []}],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {"$ref": "#/components/schemas/Memory"}
+            }
+          }
+        },
+        "responses": {
+          "201": {"description": "Memory stored"}
+        }
+      },
+      "get": {
+        "summary": "Query Memory",
+        "tags": ["Memory"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"name": "q", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Memory results"}
+        }
+      }
+    },
+    "/consciousness/state": {
+      "get": {
+        "summary": "Get Consciousness State",
+        "tags": ["Consciousness"],
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Current consciousness state",
+            "content": {
+              "application/json": {
+                "schema": {"$ref": "#/components/schemas/ConsciousnessState"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/consciousness/dream": {
+      "post": {
+        "summary": "Enter Dream Mode",
+        "tags": ["Consciousness"],
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {"description": "Dream mode activated"}
+        }
+      }
+    },
+    "/agents/{agent_id}/tasks": {
+      "post": {
+        "summary": "Create Agent Task",
+        "tags": ["Agents"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"name": "agent_id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "instruction": {"type": "string"},
+                  "priority": {"type": "string", "enum": ["low", "normal", "high"]}
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {"description": "Task created"}
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "tags": ["System"],
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "status": {"type": "string"},
+                    "version": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "API Key"
+      }
+    },
+    "schemas": {
+      "MCPList": {
+        "type": "object",
+        "properties": {
+          "servers": {"type": "array", "items": {"$ref": "#/components/schemas/MCPServer"}},
+          "total": {"type": "integer"},
+          "page": {"type": "integer"}
+        }
+      },
+      "MCPServer": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "category": {"type": "string"},
+          "version": {"type": "string"}
+        }
+      },
+      "AnalysisResult": {
+        "type": "object",
+        "properties": {
+          "score": {"type": "number"},
+          "violations": {"type": "array", "items": {"type": "string"}},
+          "recommendations": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "Memory": {
+        "type": "object",
+        "properties": {
+          "content": {"type": "string"},
+          "type": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "ConsciousnessState": {
+        "type": "object",
+        "properties": {
+          "mode": {"type": "string"},
+          "consciousness_level": {"type": "number"},
+          "care_intensity": {"type": "number"},
+          "stability": {"type": "number"}
+        }
+      }
+    }
+  }
+}
