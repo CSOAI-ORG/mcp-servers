@@ -468,7 +468,7 @@ CC0-1.0 - Public Domain
 
 ## Author
 
-THN Global — Terranova Health AI
+THN Global — MEOK AI Health AI
 
 **Website**: https://thn-global.com
 

@@ -1,13 +1,13 @@
 {
-  "name": "@csga-global/csga-standards",
+  "name": "@meok-global/meok-standards",
   "version": "1.0.0",
-  "description": "CSGA Cyber Security Standards MCP Server - Provides cybersecurity standards, training pathways, and incident response capabilities",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "description": "MEOK AI Cyber Security Standards MCP Server - Provides cybersecurity standards, training pathways, and incident response capabilities",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
-  "homepage": "https://csga-global.org",
+  "homepage": "https://meok-global.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-standards-server"
+    "url": "https://github.com/meok-global/mcp-standards-server"
   },
   "main": "dist/index.js",
   "files": [
@@ -16,7 +16,7 @@
     "LICENSE"
   ],
   "bin": {
-    "csga-standards-mcp": "dist/index.js"
+    "meok-standards-mcp": "dist/index.js"
   },
   "type": "module",
   "scripts": {

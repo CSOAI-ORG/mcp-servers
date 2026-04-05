@@ -1,4 +1,4 @@
-# CSGA Global — Master Alignment Document
+# MEOK AI Labs — Master Alignment Document
 ## Site ↔ Distribution Blueprint ↔ Gap Analysis ↔ Audit v2
 
 **Generated:** 2026-02-28
@@ -41,16 +41,16 @@ Update needed in **75+ files**:
 ## 2. Distribution Page Overhaul — distribution.html
 
 ### Current State (3 channels)
-Only mentions: CSGA MCP Hub, Smithery.ai, GitHub
+Only mentions: MEOK AI MCP Hub, Smithery.ai, GitHub
 
 ### Required State (12 platforms per blueprint)
 
 **Tier 1 — Primary:**
 1. Official MCP Registry (registry.modelcontextprotocol.io)
-2. npm (@csga-global scope)
-3. PyPI (csga-* packages)
+2. npm (@meok-global scope)
+3. PyPI (meok-* packages)
 4. Docker Hub + GHCR (OCI containers)
-5. Smithery.ai (smithery.ai/server/@csga-global/*)
+5. Smithery.ai (smithery.ai/server/@meok-global/*)
 6. Docker MCP Catalog
 
 **Tier 2 — Secondary:**
@@ -152,7 +152,7 @@ Only mentions: CSGA MCP Hub, Smithery.ai, GitHub
 ## 7. Quick Reference — File Locations
 
 ```
-/CSOAI-CORP/vercel-sites/csga-global/
+/CSOAI-CORP/vercel-sites/meok-global/
 ├── js/pricing-config.js      ← Master catalog (70 MCPs)
 ├── index.html                 ← Homepage
 ├── catalog.html               ← Tier counter bug + catalog

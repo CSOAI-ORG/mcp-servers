@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Complete Product Catalog & Pricing Configuration
+ * MEOK AI Labs — Complete Product Catalog & Pricing Configuration
  * ══════════════════════════════════════════════════════════════
  * Single source of truth for all Stripe products, prices, memberships,
  * individual MCP pricing (LVP/MVP/HVP), ecosystem bundles, COBOL Bridge,
@@ -9,7 +9,7 @@
  *        from your Stripe Dashboard → Products → Prices
  */
 
-const CSGA_PRICING = {
+const MEOK AI_PRICING = {
 
   // ═══════════════════════════════════════════════════════════
   //  STRIPE CONFIGURATION
@@ -55,7 +55,7 @@ const CSGA_PRICING = {
         'Basic documentation',
         'No credit card required',
       ],
-      includedMcps: ['csoai-governance', 'csga-standards', 'oneos-education'],
+      includedMcps: ['csoai-governance', 'meok-standards', 'oneos-education'],
     },
 
     starter: {
@@ -248,11 +248,11 @@ const CSGA_PRICING = {
     // ── CORE TIER (All memberships) ──────────────────────
     'csoai-governance':      { name: 'CSOAI Governance',      class: 'mvp', sector: 'core', stripeProd: 'prod_U3nJEsLO32KyWP' },
     'casa-certification':    { name: 'CASA Certification',     class: 'hvp', sector: 'core', stripeProd: 'prod_U3nJjim69JW2wK' },
-    'csga-standards':        { name: 'CSGA Standards',         class: 'mvp', sector: 'core', stripeProd: 'prod_U3nJTLMmnhLT6q' },
+    'meok-standards':        { name: 'MEOK AI Standards',         class: 'mvp', sector: 'core', stripeProd: 'prod_U3nJTLMmnhLT6q' },
     'proofof-ai':            { name: 'PROOFOF.ai',             class: 'mvp', sector: 'core', stripeProd: 'prod_U3nJLTK54410Q8' },
     'oneos-education':       { name: 'OneOS Education',        class: 'lvp', sector: 'core', stripeProd: 'prod_U3nJTXjKcfPYmO' },
     'quantranet-pqc':        { name: 'QuantraNet PQC',         class: 'hvp', sector: 'core', stripeProd: 'prod_U3nJsIK5jKXWhE' },
-    'terranova-defence':     { name: 'Terranova Defence',      class: 'hvp', sector: 'core', stripeProd: 'prod_U3nJ6XUg8Bxdxm' },
+    'terranova-defence':     { name: 'MEOK AI Defence',      class: 'hvp', sector: 'core', stripeProd: 'prod_U3nJ6XUg8Bxdxm' },
     'bmcc-cyber':            { name: 'BMCC Cyber',             class: 'lvp', sector: 'core', stripeProd: 'prod_U3nJqS3WpM9Mzp' },
     'thn-global':            { name: 'THN Global Pharma',      class: 'hvp', sector: 'core', stripeProd: 'prod_U3nJhF9DenptM4' },
     'digital-human-library': { name: 'Digital Human Library',  class: 'lvp', sector: 'core', stripeProd: 'prod_U3nJWpAGlAachQ' },
@@ -354,7 +354,7 @@ const CSGA_PRICING = {
     'ai-governance': 'enterprise', 'thn-global': 'enterprise',
     'incident-response': 'enterprise', 'policy-engine': 'enterprise',
     'vulnerability-scanner': 'enterprise', 'casa-certification': 'enterprise',
-    'csga-standards': 'enterprise', 'proofof-ai': 'enterprise',
+    'meok-standards': 'enterprise', 'proofof-ai': 'enterprise',
     'oneos-education': 'enterprise', 'digital-human-library': 'enterprise',
     'ai-economy-infrastructure': 'enterprise',
     // Enterprise Tier — T1 Sector (Professional+)
@@ -628,7 +628,7 @@ const CSGA_PRICING = {
   freeTierMcps: {
     'oneos-education':       { freeCredits: 50, limitation: 'Basic courses only' },
     'bmcc-cyber':            { freeCredits: 50, limitation: 'Basic belts only' },
-    'csga-standards':        { freeCredits: 20, limitation: 'Read-only, no API' },
+    'meok-standards':        { freeCredits: 20, limitation: 'Read-only, no API' },
     'digital-human-library': { freeCredits: 30, limitation: 'K-12 only' },
   },
 
@@ -723,14 +723,14 @@ async function csga_checkout(priceId, options = {}) {
   }
 
   try {
-    const res = await fetch(CSGA_PRICING.stripe.endpoints.checkout, {
+    const res = await fetch(MEOK AI_PRICING.stripe.endpoints.checkout, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         priceId,
         mode: options.mode || 'subscription',
-        successUrl: options.successUrl || CSGA_PRICING.stripe.successUrl,
-        cancelUrl: options.cancelUrl || CSGA_PRICING.stripe.cancelUrl,
+        successUrl: options.successUrl || MEOK AI_PRICING.stripe.successUrl,
+        cancelUrl: options.cancelUrl || MEOK AI_PRICING.stripe.cancelUrl,
         trialDays: options.trial || null,
         customerEmail: options.email || null,
         metadata: options.metadata || {},
@@ -745,9 +745,9 @@ async function csga_checkout(priceId, options = {}) {
       window.location.href = data.url;
     } else if (data.sessionId) {
       // Legacy: redirect via Stripe.js
-      const key = CSGA_PRICING.stripe.mode === 'test'
-        ? CSGA_PRICING.stripe.testKey
-        : CSGA_PRICING.stripe.publishableKey;
+      const key = MEOK AI_PRICING.stripe.mode === 'test'
+        ? MEOK AI_PRICING.stripe.testKey
+        : MEOK AI_PRICING.stripe.publishableKey;
       const stripe = Stripe(key);
       stripe.redirectToCheckout({ sessionId: data.sessionId });
     } else {
@@ -762,7 +762,7 @@ async function csga_checkout(priceId, options = {}) {
 /** Open Stripe Customer Portal for subscription management */
 async function csga_openPortal() {
   try {
-    const res = await fetch(CSGA_PRICING.stripe.endpoints.portal, {
+    const res = await fetch(MEOK AI_PRICING.stripe.endpoints.portal, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
@@ -776,4 +776,4 @@ async function csga_openPortal() {
   }
 }
 
-if (typeof module !== 'undefined') module.exports = CSGA_PRICING;
+if (typeof module !== 'undefined') module.exports = MEOK AI_PRICING;

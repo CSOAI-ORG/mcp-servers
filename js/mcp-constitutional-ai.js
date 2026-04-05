@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       title: "Constitutional AI for Defense Applications",
       subtitle: "Ethical defense AI deployment with Constitutional AI guardrails - security effectiveness without compromise",
       badges: ["🧠 Constitutional AI Enhanced", "🛡️ Defense Grade", "🔒 CASA-ISS Certified"],
-      primaryCTA: { text: "🔐 Request Access", href: "mailto:defence@csga-global.org" },
+      primaryCTA: { text: "🔐 Request Access", href: "mailto:defence@meok-global.org" },
       secondaryCTA: { text: "📋 Defense Briefing", href: "/contact.html" },
       tertiaryCTA: { text: "🎯 Use Cases", href: "#use-cases" }
     },

@@ -1,13 +1,13 @@
 # Retail Ai MCP Server
 
-> Part of the [CSGA Global MCP Platform](https://csga-global.vercel.app/) — Cyber Security Global Alliance
+> Part of the [MEOK AI Labs MCP Platform](https://meok-global.vercel.app/) — Cyber Security Global Alliance
 
 Assess compliance for AI in retail and e-commerce. Covers dynamic pricing, recommendation engines, customer profiling, inventory AI, and consumer protection.
 
 ## Installation
 
 ```bash
-npx @smithery/cli install @csga-global/retail-ai
+npx @smithery/cli install @meok-global/retail-ai
 ```
 
 ## Configuration
@@ -19,7 +19,7 @@ Add to your MCP client config:
   "mcpServers": {
     "retail-ai": {
       "command": "npx",
-      "args": ["-y", "@csga-global/retail-ai"]
+      "args": ["-y", "@meok-global/retail-ai"]
     }
   }
 }
@@ -38,6 +38,6 @@ CC0-1.0 — See [LICENSE](./LICENSE)
 
 ## Links
 
-- [Product Page](https://csga-global.vercel.app/mcp/retail-ai.html)
-- [CSGA Global Platform](https://csga-global.vercel.app/)
-- [GitHub Repository](https://github.com/csga-global/mcp-servers)
+- [Product Page](https://meok-global.vercel.app/mcp/retail-ai.html)
+- [MEOK AI Labs Platform](https://meok-global.vercel.app/)
+- [GitHub Repository](https://github.com/meok-global/mcp-servers)

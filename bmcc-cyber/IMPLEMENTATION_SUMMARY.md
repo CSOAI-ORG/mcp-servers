@@ -2,7 +2,7 @@
 
 ## Overview
 
-A production-ready MCP (Model Context Protocol) server for the BMCC Cyber Programme - a comprehensive cybersecurity education pathway built in partnership between CSGA (Cybersecurity Governance Alliance) and Borough of Manhattan Community College (CUNY).
+A production-ready MCP (Model Context Protocol) server for the BMCC Cyber Programme - a comprehensive cybersecurity education pathway built in partnership between MEOK AI (Cybersecurity Governance Alliance) and Borough of Manhattan Community College (CUNY).
 
 **Status:** Complete and Ready for Production
 
@@ -400,14 +400,14 @@ The modular architecture allows easy addition of:
 
 **BMCC Cyber Programme**
 - Institution: Borough of Manhattan Community College (CUNY)
-- Partner: Cybersecurity Governance Alliance (CSGA)
+- Partner: Cybersecurity Governance Alliance (MEOK AI)
 - Contact: Daniel Katz at BMCC-CUNY
 - Homepage: https://bmcc-cyberprogram.com
 
 ## License and Attribution
 
 - **License:** CC0-1.0 (Public Domain)
-- **Author:** BMCC Cyber Programme — CSGA x CUNY Partnership
+- **Author:** BMCC Cyber Programme — MEOK AI x CUNY Partnership
 - **Version:** 1.0.0
 - **Build Date:** February 25, 2025
 

@@ -1,4 +1,4 @@
-# CSGA Standards MCP Server - Architecture
+# MEOK AI Standards MCP Server - Architecture
 
 Complete technical architecture and design documentation.
 
@@ -15,7 +15,7 @@ Complete technical architecture and design documentation.
                     stdio Transport
                           │
 ┌─────────────────────────▼──────────────────────────────────┐
-│              CSGA Standards MCP Server                       │
+│              MEOK AI Standards MCP Server                       │
 │                    (Node.js process)                        │
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
@@ -607,14 +607,14 @@ CMD ["npm", "start"]
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: csga-standards-mcp
+  name: meok-standards-mcp
 spec:
   replicas: 2
   template:
     spec:
       containers:
-      - name: csga-standards-mcp
-        image: csga-standards-mcp:1.0.0
+      - name: meok-standards-mcp
+        image: meok-standards-mcp:1.0.0
         ports:
         - containerPort: 3000
 ```
@@ -643,7 +643,7 @@ node dist/index.js
 
 ## Conclusion
 
-The CSGA Standards MCP Server uses a **clean, modular, type-safe architecture** designed for:
+The MEOK AI Standards MCP Server uses a **clean, modular, type-safe architecture** designed for:
 
 - **Correctness:** Type safety and input validation
 - **Performance:** In-memory operations, <50ms response times

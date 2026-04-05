@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Stripe Customer Portal
+ * MEOK AI Labs — Stripe Customer Portal
  * ═════════════════════════════════════
  * Vercel Serverless Function
  * Creates a Billing Portal session so customers can manage
@@ -35,7 +35,7 @@ module.exports = async (req, res) => {
     // ── Create portal session ──
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: customerId,
-      return_url: returnUrl || `${req.headers.origin || 'https://csga-global.org'}/dashboard`,
+      return_url: returnUrl || `${req.headers.origin || 'https://meok-global.org'}/dashboard`,
     });
 
     return res.status(200).json({ url: portalSession.url });

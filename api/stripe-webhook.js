@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Stripe Webhook Handler
+ * MEOK AI Labs — Stripe Webhook Handler
  * ═════════════════════════════════════
  * Vercel Serverless Function
  * Handles all subscription lifecycle events, payment events,
@@ -20,7 +20,7 @@
  * ENV: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
  *
  * Configure in Stripe Dashboard → Developers → Webhooks:
- *   Endpoint URL: https://csga-global.org/api/stripe-webhook
+ *   Endpoint URL: https://meok-global.org/api/stripe-webhook
  *   Events:
  *     checkout.session.completed
  *     invoice.paid
@@ -225,13 +225,13 @@ async function handleNewSubscription(session) {
     subscriptionId: session.subscription || '',
     lastPayment: new Date().toISOString(),
     failedAttempts: '0',
-    source: 'csga-global',
+    source: 'meok-global',
   });
 
   // Also store tier in subscription metadata for future lookups
   if (session.subscription) {
     await stripe.subscriptions.update(session.subscription, {
-      metadata: { tier, source: 'csga-global' },
+      metadata: { tier, source: 'meok-global' },
     });
   }
 
@@ -290,7 +290,7 @@ async function handlePlanChange(subscription) {
   });
 
   await stripe.subscriptions.update(subscription.id, {
-    metadata: { tier: newTier, source: 'csga-global' },
+    metadata: { tier: newTier, source: 'meok-global' },
   });
 
   console.log(`[HANDLER] Plan change: customer=${subscription.customer} new_tier=${newTier} mcps=${defaults.mcpCount}`);

@@ -1,7 +1,7 @@
 {
-  "name": "@csga-global/oneos-education",
+  "name": "@meok-global/oneos-education",
   "version": "1.0.0",
-  "description": "MCP server for OneOS — unified MOOC & LMS platform powering the CSOAI/CSGA/Terranova ecosystem",
+  "description": "MCP server for OneOS — unified MOOC & LMS platform powering the CSOAI/MEOK AI/MEOK AI ecosystem",
   "type": "module",
   "main": "dist/index.js",
   "files": [
@@ -12,11 +12,11 @@
   "bin": {
     "oneos-education-mcp": "dist/index.js"
   },
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/oneos-education"
   },
   "homepage": "https://oneos-zeta.vercel.app",

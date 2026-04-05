@@ -468,7 +468,7 @@ All files are located at:
 ## License & Attribution
 
 **License:** CC0-1.0 (Public Domain)
-**Authors:** QuantraNet (JV of Terranova Defence + CSGA)
+**Authors:** QuantraNet (JV of MEOK AI Defence + MEOK AI)
 **Homepage:** https://quantranet.com
 
 ---

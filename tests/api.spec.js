@@ -2,12 +2,12 @@
 const { test, expect } = require('@playwright/test');
 
 /**
- * CSGA Global — Playwright API Tests
+ * MEOK AI Labs — Playwright API Tests
  * ════════════════════════════════════
  * Tests all 4 serverless functions directly via HTTP.
  */
 
-const BASE_URL = 'https://csga-global.vercel.app';
+const BASE_URL = 'https://meok-global.vercel.app';
 
 test.describe('API Endpoints', () => {
 
@@ -40,7 +40,7 @@ test.describe('API Endpoints', () => {
         data: {
           priceId: 'price_starter_monthly',
           mode: 'subscription',
-          customerEmail: 'playwright@csga-e2e.org',
+          customerEmail: 'playwright@meok-e2e.org',
           metadata: { tier: 'starter', source: 'playwright-test' },
         },
       });
@@ -59,7 +59,7 @@ test.describe('API Endpoints', () => {
         data: {
           priceId: 'price_credit_starter',
           mode: 'payment',
-          customerEmail: 'playwright@csga-e2e.org',
+          customerEmail: 'playwright@meok-e2e.org',
           metadata: { productType: 'credit_pack', credits: '1000' },
         },
       });

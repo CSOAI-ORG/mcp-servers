@@ -2,11 +2,11 @@ name: red-team-ops
 description: >-
   Adversarial testing, attack simulation, purple team operations
 version: 1.0.0
-repository: https://github.com/csga-global/mcp-servers
+repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
 runtime: node
 command:
-  npx: '@csga-global/red-team-ops'
+  npx: '@meok-global/red-team-ops'
 categories:
   - Red Team
   - Cybersecurity

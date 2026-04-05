@@ -1,17 +1,17 @@
-// CSGA Global Service Worker - Advanced Caching Strategy
+// MEOK AI Labs Service Worker - Advanced Caching Strategy
 
-const CACHE_NAME = 'csga-global-v1.0.0';
-const STATIC_CACHE = 'csga-static-v1.0.0';
-const DYNAMIC_CACHE = 'csga-dynamic-v1.0.0';
+const CACHE_NAME = 'meok-global-v1.0.0';
+const STATIC_CACHE = 'meok-static-v1.0.0';
+const DYNAMIC_CACHE = 'meok-dynamic-v1.0.0';
 
 // Critical resources to cache immediately
 const CRITICAL_RESOURCES = [
   '/',
-  '/css/csga-branding.css',
+  '/css/meok-branding.css',
   '/css/mobile-advanced.css',
   '/js/advanced-enhancements.js',
   '/js/constitutional-ai-enhancements.js',
-  '/assets/csga-logo-white.svg'
+  '/assets/meok-logo-white.svg'
 ];
 
 // Cache strategies for different types of resources
@@ -217,4 +217,4 @@ self.addEventListener('notificationclick', event => {
   );
 });
 
-console.log('🚀 CSGA Service Worker loaded successfully');
+console.log('🚀 MEOK AI Service Worker loaded successfully');

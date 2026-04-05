@@ -1,8 +1,8 @@
-# Terranova Defence Solutions MCP Server - Build Summary
+# MEOK AI Defence Solutions MCP Server - Build Summary
 
 ## Project Completion Status: ✅ COMPLETE
 
-A comprehensive Model Context Protocol (MCP) server has been successfully created for Terranova Defence Solutions with all 6 specialized tools, complete TypeScript implementation, and production-grade documentation.
+A comprehensive Model Context Protocol (MCP) server has been successfully created for MEOK AI Defence Solutions with all 6 specialized tools, complete TypeScript implementation, and production-grade documentation.
 
 ## Directory Structure
 
@@ -335,7 +335,7 @@ npm start
 - QUICKSTART.md: Quick start and examples
 - IMPLEMENTATION_EXAMPLES.md: Real-world use cases
 - Standards references: NIST, NSA, DoD, CMMC documentation
-- Contact: Terranova Defence Solutions (https://terranova-defense.com)
+- Contact: MEOK AI Defence Solutions (https://terranova-defense.com)
 
 ## License
 

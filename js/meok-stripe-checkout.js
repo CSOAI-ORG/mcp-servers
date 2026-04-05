@@ -1,14 +1,14 @@
 /**
- * CSGA Global — Live Stripe Checkout Configuration
+ * MEOK AI Labs — Live Stripe Checkout Configuration
  * Generated: 2026-03-04
  *
  * This file replaces the placeholder handleCheckout() function
  * with real Stripe Payment Links for every product on pricing.html.
  *
  * INSTRUCTIONS:
- * 1. Add this file to your GitHub repo as /js/csga-stripe-checkout.js
+ * 1. Add this file to your GitHub repo as /js/meok-stripe-checkout.js
  * 2. In pricing.html, add before </body>:
- *    <script src="/js/csga-stripe-checkout.js"></script>
+ *    <script src="/js/meok-stripe-checkout.js"></script>
  * 3. Remove or comment out any existing handleCheckout / initiateStripeCheckout functions
  * 4. Push to main → Vercel auto-deploys → buttons go live
  */
@@ -18,7 +18,7 @@
 // All prices in GBP. Links go directly to Stripe hosted checkout.
 // ============================================================
 
-const CSGA_CHECKOUT_LINKS = {
+const MEOK AI_CHECKOUT_LINKS = {
 
   // ── MEMBERSHIP TIERS ──────────────────────────────────────
   community: null, // Free tier — no payment needed
@@ -64,7 +64,7 @@ const CSGA_CHECKOUT_LINKS = {
 // ============================================================
 
 function handleCheckout(productKey) {
-  const link = CSGA_CHECKOUT_LINKS[productKey];
+  const link = MEOK AI_CHECKOUT_LINKS[productKey];
 
   // Free tier → scroll to sign-up or redirect to registration
   if (productKey === 'community') {
@@ -152,5 +152,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  console.log('CSGA Stripe Checkout: All payment links loaded, currency updated to GBP.');
+  console.log('MEOK AI Stripe Checkout: All payment links loaded, currency updated to GBP.');
 });

@@ -3,11 +3,11 @@ description: >-
   AI governance for healthcare technology including clinical decision support oversight, medical imaging AI validation,
   and patient data AI compliance.
 version: 1.0.0
-repository: https://github.com/csga-global/mcp-servers
+repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
 runtime: node
 command:
-  npx: '@csga-global/healthcare-ai'
+  npx: '@meok-global/healthcare-ai'
 categories:
   - Healthcare
   - AI Governance

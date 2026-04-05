@@ -178,7 +178,7 @@ Current team knows: networking, Linux, compliance"
 
 **BMCC Cyber Programme**
 - Institution: Borough of Manhattan Community College (CUNY)
-- Partner: Cybersecurity Governance Alliance (CSGA)
+- Partner: Cybersecurity Governance Alliance (MEOK AI)
 - Contact: Daniel Katz at BMCC-CUNY
 - Website: https://bmcc-cyberprogram.com
 

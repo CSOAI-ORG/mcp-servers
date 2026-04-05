@@ -1,4 +1,4 @@
-name: "@csga-global/casa-certification"
+name: "@meok-global/casa-certification"
 version: "1.0.0"
 runtime: "node"
 startCommand:

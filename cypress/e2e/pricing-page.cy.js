@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 /**
- * CSGA Global — Pricing Page E2E Tests
+ * MEOK AI Labs — Pricing Page E2E Tests
  * ═════════════════════════════════════
  * Validates all 6 membership tiers, annual toggle,
  * ecosystem bundles, COBOL Bridge, CASA certs, credit packs.
@@ -144,7 +144,7 @@ describe('Pricing Page', () => {
     });
 
     it('loads pricing-config.js', () => {
-      cy.window().its('CSGA_PRICING').should('have.property', 'memberships');
+      cy.window().its('MEOK AI_PRICING').should('have.property', 'memberships');
     });
   });
 });

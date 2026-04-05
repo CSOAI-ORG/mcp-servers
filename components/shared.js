@@ -1,4 +1,4 @@
-/* CSGA Global — Shared Component Loader
+/* MEOK AI Labs — Shared Component Loader
    Dynamically loads header + footer, initialises interactions */
 (function () {
   'use strict';
@@ -207,7 +207,7 @@
         initReveal();
       });
     }).catch(function (err) {
-      console.error('[CSGA Shared]', err);
+      console.error('[MEOK AI Shared]', err);
     });
   }
 
@@ -218,7 +218,7 @@
   }
 })();
 
-// CSGA Professional Polish Integration
+// MEOK AI Professional Polish Integration
 const polishScript = document.createElement('script');
-polishScript.src = './components/csga-comprehensive-polish.js';
+polishScript.src = './components/meok-comprehensive-polish.js';
 document.head.appendChild(polishScript);

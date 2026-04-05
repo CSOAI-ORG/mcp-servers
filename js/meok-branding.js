@@ -1,7 +1,7 @@
-// 🎯 CSGA Global Correct Branding & Logo Integration
-// Professional cybersecurity design matching csga-global.org and BMCC styles
+// 🎯 MEOK AI Labs Correct Branding & Logo Integration
+// Professional cybersecurity design matching meok-global.org and BMCC styles
 
-class CSGACorrectBranding {
+class MEOK AICorrectBranding {
   constructor() {
     this.brandColors = {
       primary: '#1a202c',        // Dark navy - cybersecurity professional
@@ -27,26 +27,26 @@ class CSGACorrectBranding {
     this.enhanceHeroSections();
     this.improveCOBOLSection();
     this.fixReadabilityIssues();
-    this.addCSGALogo();
+    this.addMEOK AILogo();
     this.enhanceNavigation();
     this.addCybersecurityElements();
   }
 
-  // 🎨 Fix Site-Wide Consistency with Correct CSGA Colors
+  // 🎨 Fix Site-Wide Consistency with Correct MEOK AI Colors
   fixSiteWideConsistency() {
     const consistentStyles = `
-      <style id="csga-correct-branding">
-        /* 🎯 CSGA Correct Brand Colors */
+      <style id="meok-correct-branding">
+        /* 🎯 MEOK AI Correct Brand Colors */
         :root {
-          --csga-primary: #1a202c;
-          --csga-secondary: #2d3748;
-          --csga-accent: #3182ce;
-          --csga-accent-light: #4299e1;
-          --csga-accent-dark: #2c5282;
-          --csga-background: #ffffff;
-          --csga-surface: #f7fafc;
-          --csga-text: #1a202c;
-          --csga-text-secondary: #4a5568;
+          --meok-primary: #1a202c;
+          --meok-secondary: #2d3748;
+          --meok-accent: #3182ce;
+          --meok-accent-light: #4299e1;
+          --meok-accent-dark: #2c5282;
+          --meok-background: #ffffff;
+          --meok-surface: #f7fafc;
+          --meok-text: #1a202c;
+          --meok-text-secondary: #4a5568;
           --cyber-blue: #1e3a8a;
           --cyber-teal: #0891b2;
           --cyber-dark: #111827;
@@ -55,37 +55,37 @@ class CSGACorrectBranding {
         /* 🚫 Remove Problematic Blue Backgrounds */
         .bg-blue-600, .bg-blue-700, .bg-blue-800, .bg-blue-900,
         [class*="bg-blue"] {
-          background: var(--csga-background) !important;
-          color: var(--csga-text) !important;
+          background: var(--meok-background) !important;
+          color: var(--meok-text) !important;
           border: 1px solid #e2e8f0 !important;
         }
 
         /* ✅ Professional Dark Sections */
         .bg-slate-900, .bg-slate-800, .bg-gray-900, .bg-gray-800,
         [class*="bg-slate-9"], [class*="bg-gray-9"] {
-          background: linear-gradient(135deg, var(--cyber-dark), var(--csga-primary)) !important;
+          background: linear-gradient(135deg, var(--cyber-dark), var(--meok-primary)) !important;
           color: #ffffff !important;
         }
 
         /* 🔤 Professional Typography */
         h1, h2, h3, h4, h5, h6 {
-          color: var(--csga-primary) !important;
+          color: var(--meok-primary) !important;
           font-weight: 700 !important;
           line-height: 1.2 !important;
         }
 
         p {
-          color: var(--csga-text-secondary) !important;
+          color: var(--meok-text-secondary) !important;
           line-height: 1.6;
         }
 
         a {
-          color: var(--csga-accent) !important;
+          color: var(--meok-accent) !important;
           font-weight: 500;
         }
 
         a:hover {
-          color: var(--csga-accent-light) !important;
+          color: var(--meok-accent-light) !important;
         }
 
         /* 🎯 Professional Buttons */
@@ -100,13 +100,13 @@ class CSGACorrectBranding {
         }
 
         .btn-primary, [class*="btn-primary"] {
-          background: linear-gradient(135deg, var(--csga-accent), var(--csga-accent-light)) !important;
+          background: linear-gradient(135deg, var(--meok-accent), var(--meok-accent-light)) !important;
           color: #ffffff !important;
           border: none !important;
         }
 
         .btn-primary:hover, [class*="btn-primary"]:hover {
-          background: linear-gradient(135deg, var(--csga-accent-dark), var(--csga-accent)) !important;
+          background: linear-gradient(135deg, var(--meok-accent-dark), var(--meok-accent)) !important;
           transform: translateY(-1px) !important;
           box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3) !important;
         }
@@ -127,28 +127,28 @@ class CSGACorrectBranding {
         .service:hover, [class*="service"]:hover {
           transform: translateY(-4px) !important;
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-          border-color: var(--csga-accent) !important;
+          border-color: var(--meok-accent) !important;
         }
 
-        /* 🏢 CSGA Logo Integration */
-        .csga-logo-container {
+        /* 🏢 MEOK AI Logo Integration */
+        .meok-logo-container {
           display: flex;
           align-items: center;
           gap: 1rem;
           font-weight: 700;
-          color: var(--csga-primary);
+          color: var(--meok-primary);
         }
 
-        .csga-logo {
+        .meok-logo {
           height: 40px;
           width: auto;
           max-width: 200px;
         }
 
-        .csga-brand-text {
+        .meok-brand-text {
           font-size: 1.25rem;
           font-weight: 700;
-          color: var(--csga-primary);
+          color: var(--meok-primary);
           text-decoration: none;
         }
 
@@ -175,7 +175,7 @@ class CSGACorrectBranding {
 
         .cyber-section {
           background: linear-gradient(135deg, #f1f5f9, #ffffff);
-          border-left: 4px solid var(--csga-accent);
+          border-left: 4px solid var(--meok-accent);
           padding: 2rem;
           border-radius: 0.75rem;
           margin: 1.5rem 0;
@@ -206,14 +206,14 @@ class CSGACorrectBranding {
         .stat-number {
           font-size: 3rem;
           font-weight: 800;
-          color: var(--csga-accent);
+          color: var(--meok-accent);
           display: block;
           line-height: 1;
         }
 
         .stat-label {
           font-size: 0.875rem;
-          color: var(--csga-text-secondary);
+          color: var(--meok-text-secondary);
           text-transform: uppercase;
           letter-spacing: 0.05em;
           font-weight: 600;
@@ -231,7 +231,7 @@ class CSGACorrectBranding {
             font-size: 2rem;
           }
           
-          .csga-logo {
+          .meok-logo {
             height: 32px;
           }
           
@@ -246,17 +246,17 @@ class CSGACorrectBranding {
     document.head.insertAdjacentHTML('beforeend', consistentStyles);
   }
 
-  // 🦸 Enhance Hero Sections with CSGA Branding
+  // 🦸 Enhance Hero Sections with MEOK AI Branding
   enhanceHeroSections() {
     const heroSection = document.querySelector('.hero, [class*="hero"], .banner, [class*="banner"]') || 
                        document.querySelector('section:first-of-type');
     
     if (!heroSection) return;
 
-    // Enhanced hero with CSGA cybersecurity theme
+    // Enhanced hero with MEOK AI cybersecurity theme
     const enhancedHero = `
       <style>
-        .csga-hero {
+        .meok-hero {
           position: relative;
           background: linear-gradient(135deg, #111827 0%, #1a202c 50%, #1e3a8a 100%);
           color: #ffffff;
@@ -267,7 +267,7 @@ class CSGACorrectBranding {
           align-items: center;
         }
 
-        .csga-hero::before {
+        .meok-hero::before {
           content: '';
           position: absolute;
           top: 0;
@@ -278,7 +278,7 @@ class CSGACorrectBranding {
           opacity: 0.3;
         }
 
-        .csga-hero-content {
+        .meok-hero-content {
           position: relative;
           z-index: 2;
           max-width: 1200px;
@@ -287,7 +287,7 @@ class CSGACorrectBranding {
           text-align: center;
         }
 
-        .csga-hero h1 {
+        .meok-hero h1 {
           font-size: 3.5rem;
           font-weight: 800;
           color: #ffffff !important;
@@ -299,7 +299,7 @@ class CSGACorrectBranding {
           line-height: 1.1;
         }
 
-        .csga-hero p {
+        .meok-hero p {
           font-size: 1.25rem;
           color: #cbd5e1 !important;
           max-width: 600px;
@@ -307,11 +307,11 @@ class CSGACorrectBranding {
           line-height: 1.6;
         }
 
-        .csga-hero-logo {
+        .meok-hero-logo {
           margin-bottom: 2rem;
         }
 
-        .csga-hero-actions {
+        .meok-hero-actions {
           display: flex;
           gap: 1rem;
           justify-content: center;
@@ -320,7 +320,7 @@ class CSGACorrectBranding {
           margin-top: 2rem;
         }
 
-        .csga-hero-stats {
+        .meok-hero-stats {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           gap: 2rem;
@@ -329,18 +329,18 @@ class CSGACorrectBranding {
           border-top: 1px solid rgba(49, 130, 206, 0.2);
         }
 
-        .csga-hero-stat {
+        .meok-hero-stat {
           text-align: center;
         }
 
-        .csga-hero-stat-number {
+        .meok-hero-stat-number {
           font-size: 2.5rem;
           font-weight: 700;
           color: #3182ce;
           display: block;
         }
 
-        .csga-hero-stat-label {
+        .meok-hero-stat-label {
           font-size: 0.875rem;
           color: #94a3b8;
           text-transform: uppercase;
@@ -348,33 +348,33 @@ class CSGACorrectBranding {
         }
 
         @media (max-width: 768px) {
-          .csga-hero {
+          .meok-hero {
             padding: 3rem 0;
             min-height: 60vh;
           }
 
-          .csga-hero h1 {
+          .meok-hero h1 {
             font-size: 2.5rem;
           }
 
-          .csga-hero p {
+          .meok-hero p {
             font-size: 1.125rem;
           }
 
-          .csga-hero-actions {
+          .meok-hero-actions {
             flex-direction: column;
           }
 
-          .csga-hero-stats {
+          .meok-hero-stats {
             grid-template-columns: repeat(2, 1fr);
           }
         }
       </style>
 
-      <section class="csga-hero">
-        <div class="csga-hero-content">
-          <div class="csga-hero-logo">
-            <div class="csga-logo-container">
+      <section class="meok-hero">
+        <div class="meok-hero-content">
+          <div class="meok-hero-logo">
+            <div class="meok-logo-container">
               <h1>Cyber Security Global Alliance</h1>
             </div>
           </div>
@@ -384,31 +384,31 @@ class CSGACorrectBranding {
             supporting organizations and institutions worldwide.
           </p>
           
-          <div class="csga-hero-actions">
+          <div class="meok-hero-actions">
             <a href="/membership" class="btn-primary">
-              🛡️ Join CSGA Alliance
+              🛡️ Join MEOK AI Alliance
             </a>
             <a href="/programs" class="btn-outline">
               📚 Explore Programs
             </a>
           </div>
 
-          <div class="csga-hero-stats">
-            <div class="csga-hero-stat">
-              <span class="csga-hero-stat-number">Global</span>
-              <span class="csga-hero-stat-label">Alliance Network</span>
+          <div class="meok-hero-stats">
+            <div class="meok-hero-stat">
+              <span class="meok-hero-stat-number">Global</span>
+              <span class="meok-hero-stat-label">Alliance Network</span>
             </div>
-            <div class="csga-hero-stat">
-              <span class="csga-hero-stat-number">33</span>
-              <span class="csga-hero-stat-label">AI Agents</span>
+            <div class="meok-hero-stat">
+              <span class="meok-hero-stat-number">33</span>
+              <span class="meok-hero-stat-label">AI Agents</span>
             </div>
-            <div class="csga-hero-stat">
-              <span class="csga-hero-stat-number">100%</span>
-              <span class="csga-hero-stat-label">Open Source</span>
+            <div class="meok-hero-stat">
+              <span class="meok-hero-stat-number">100%</span>
+              <span class="meok-hero-stat-label">Open Source</span>
             </div>
-            <div class="csga-hero-stat">
-              <span class="csga-hero-stat-number">Enterprise</span>
-              <span class="csga-hero-stat-label">Security Ready</span>
+            <div class="meok-hero-stat">
+              <span class="meok-hero-stat-number">Enterprise</span>
+              <span class="meok-hero-stat-label">Security Ready</span>
             </div>
           </div>
         </div>
@@ -418,7 +418,7 @@ class CSGACorrectBranding {
     heroSection.outerHTML = enhancedHero;
   }
 
-  // 🏗️ Improve COBOL Section with CSGA Professional Design
+  // 🏗️ Improve COBOL Section with MEOK AI Professional Design
   improveCOBOLSection() {
     const cobolSection = document.querySelector('[id*="cobol"], [class*="cobol"], [data-section="cobol"]') ||
                         Array.from(document.querySelectorAll('section')).find(s => 
@@ -430,27 +430,27 @@ class CSGACorrectBranding {
 
     const enhancedCOBOL = `
       <style>
-        .csga-cobol-section {
+        .meok-cobol-section {
           background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
           padding: 5rem 0;
           position: relative;
         }
 
-        .csga-cobol-content {
+        .meok-cobol-content {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 2rem;
         }
 
-        .csga-cobol-header {
+        .meok-cobol-header {
           text-align: center;
           margin-bottom: 4rem;
         }
 
-        .csga-cobol-header h2 {
+        .meok-cobol-header h2 {
           font-size: 2.5rem;
           font-weight: 800;
-          color: var(--csga-primary) !important;
+          color: var(--meok-primary) !important;
           margin-bottom: 1rem;
           background: linear-gradient(135deg, #1a202c, #3182ce);
           -webkit-background-clip: text;
@@ -458,14 +458,14 @@ class CSGACorrectBranding {
           background-clip: text;
         }
 
-        .csga-cobol-stats {
+        .meok-cobol-stats {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           gap: 2rem;
           margin-bottom: 4rem;
         }
 
-        .csga-cobol-stat {
+        .meok-cobol-stat {
           background: linear-gradient(135deg, #ffffff, #f1f5f9);
           border: 1px solid #cbd5e1;
           border-radius: 1rem;
@@ -475,37 +475,37 @@ class CSGACorrectBranding {
           transition: all 0.3s ease;
         }
 
-        .csga-cobol-stat:hover {
+        .meok-cobol-stat:hover {
           transform: translateY(-4px);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-          border-color: var(--csga-accent);
+          border-color: var(--meok-accent);
         }
 
-        .csga-cobol-stat-number {
+        .meok-cobol-stat-number {
           font-size: 3rem;
           font-weight: 800;
-          color: var(--csga-accent);
+          color: var(--meok-accent);
           display: block;
           line-height: 1;
           margin-bottom: 0.5rem;
         }
 
-        .csga-cobol-stat-label {
+        .meok-cobol-stat-label {
           font-size: 0.875rem;
-          color: var(--csga-text-secondary);
+          color: var(--meok-text-secondary);
           text-transform: uppercase;
           letter-spacing: 0.05em;
           font-weight: 600;
         }
 
-        .csga-cobol-services {
+        .meok-cobol-services {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
           gap: 2rem;
           margin-bottom: 3rem;
         }
 
-        .csga-cobol-service {
+        .meok-cobol-service {
           background: #ffffff;
           border: 1px solid #e2e8f0;
           border-radius: 1rem;
@@ -514,16 +514,16 @@ class CSGACorrectBranding {
           transition: all 0.3s ease;
         }
 
-        .csga-cobol-service:hover {
-          border-color: var(--csga-accent);
+        .meok-cobol-service:hover {
+          border-color: var(--meok-accent);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
           transform: translateY(-2px);
         }
 
-        .csga-cobol-service-icon {
+        .meok-cobol-service-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, var(--csga-accent), var(--csga-accent-light));
+          background: linear-gradient(135deg, var(--meok-accent), var(--meok-accent-light));
           border-radius: 1rem;
           display: flex;
           align-items: center;
@@ -532,8 +532,8 @@ class CSGACorrectBranding {
           margin-bottom: 1.5rem;
         }
 
-        .csga-cobol-industries {
-          background: linear-gradient(135deg, var(--cyber-dark), var(--csga-primary));
+        .meok-cobol-industries {
+          background: linear-gradient(135deg, var(--cyber-dark), var(--meok-primary));
           border-radius: 1.5rem;
           padding: 3rem;
           text-align: center;
@@ -541,15 +541,15 @@ class CSGACorrectBranding {
         }
 
         @media (max-width: 768px) {
-          .csga-cobol-services, .csga-cobol-stats {
+          .meok-cobol-services, .meok-cobol-stats {
             grid-template-columns: 1fr;
           }
         }
       </style>
 
-      <section class="csga-cobol-section">
-        <div class="csga-cobol-content">
-          <div class="csga-cobol-header">
+      <section class="meok-cobol-section">
+        <div class="meok-cobol-content">
+          <div class="meok-cobol-header">
             <h2>Legacy Modernisation & COBOL Bridge</h2>
             <p>
               220 billion lines of COBOL still power the world's critical infrastructure. 
@@ -557,64 +557,64 @@ class CSGACorrectBranding {
             </p>
           </div>
 
-          <div class="csga-cobol-stats">
-            <div class="csga-cobol-stat">
-              <span class="csga-cobol-stat-number">95%</span>
-              <span class="csga-cobol-stat-label">ATM Transactions</span>
+          <div class="meok-cobol-stats">
+            <div class="meok-cobol-stat">
+              <span class="meok-cobol-stat-number">95%</span>
+              <span class="meok-cobol-stat-label">ATM Transactions</span>
             </div>
-            <div class="csga-cobol-stat">
-              <span class="csga-cobol-stat-number">220B</span>
-              <span class="csga-cobol-stat-label">Lines in Production</span>
+            <div class="meok-cobol-stat">
+              <span class="meok-cobol-stat-number">220B</span>
+              <span class="meok-cobol-stat-label">Lines in Production</span>
             </div>
-            <div class="csga-cobol-stat">
-              <span class="csga-cobol-stat-number">43%</span>
-              <span class="csga-cobol-stat-label">Banking Systems</span>
+            <div class="meok-cobol-stat">
+              <span class="meok-cobol-stat-number">43%</span>
+              <span class="meok-cobol-stat-label">Banking Systems</span>
             </div>
-            <div class="csga-cobol-stat">
-              <span class="csga-cobol-stat-number">$4.9T</span>
-              <span class="csga-cobol-stat-label">Daily Transactions</span>
+            <div class="meok-cobol-stat">
+              <span class="meok-cobol-stat-number">$4.9T</span>
+              <span class="meok-cobol-stat-label">Daily Transactions</span>
             </div>
           </div>
 
-          <div class="csga-cobol-services">
-            <div class="csga-cobol-service">
-              <div class="csga-cobol-service-icon">💼</div>
+          <div class="meok-cobol-services">
+            <div class="meok-cobol-service">
+              <div class="meok-cobol-service-icon">💼</div>
               <h3>COBOL Copybook Parser</h3>
               <p>
                 Parse COBOL copybook definitions, detect PII fields, and generate JSON schema 
                 mappings for AI governance APIs automatically.
               </p>
-              <a href="/services/cobol-bridge" style="color: var(--csga-accent); font-weight: 600;">
+              <a href="/services/cobol-bridge" style="color: var(--meok-accent); font-weight: 600;">
                 Learn More →
               </a>
             </div>
 
-            <div class="csga-cobol-service">
-              <div class="csga-cobol-service-icon">🏦</div>
+            <div class="meok-cobol-service">
+              <div class="meok-cobol-service-icon">🏦</div>
               <h3>CICS Bridge Assessment</h3>
               <p>
                 Architecture and compliance assessment for connecting CICS mainframe transactions 
                 to governance servers via CTG or web services.
               </p>
-              <a href="/services/cics-bridge" style="color: var(--csga-accent); font-weight: 600;">
+              <a href="/services/cics-bridge" style="color: var(--meok-accent); font-weight: 600;">
                 Learn More →
               </a>
             </div>
 
-            <div class="csga-cobol-service">
-              <div class="csga-cobol-service-icon">🔍</div>
+            <div class="meok-cobol-service">
+              <div class="meok-cobol-service-icon">🔍</div>
               <h3>JCL Batch Scanner</h3>
               <p>
                 Scan JCL batch jobs to identify data flows feeding AI governance systems. 
                 Detect datasets, DB2 queries, and map scheduling to compliance.
               </p>
-              <a href="/services/jcl-scanner" style="color: var(--csga-accent); font-weight: 600;">
+              <a href="/services/jcl-scanner" style="color: var(--meok-accent); font-weight: 600;">
                 Learn More →
               </a>
             </div>
           </div>
 
-          <div class="csga-cobol-industries">
+          <div class="meok-cobol-industries">
             <h3 style="color: #ffffff !important;">Target Industries</h3>
             <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
               <span class="cyber-badge">Banking</span>
@@ -666,19 +666,19 @@ class CSGACorrectBranding {
     });
   }
 
-  // 🏢 Add CSGA Logo Integration
-  addCSGALogo() {
+  // 🏢 Add MEOK AI Logo Integration
+  addMEOK AILogo() {
     // Find logo containers
     const logoContainers = document.querySelectorAll(
       '.logo, .navbar-brand, [class*="logo"], [class*="brand"], .brand'
     );
 
     logoContainers.forEach(container => {
-      // Replace with CSGA branding
+      // Replace with MEOK AI branding
       container.innerHTML = `
-        <div class="csga-logo-container">
-          <span class="csga-brand-text">CSGA</span>
-          <span style="color: var(--csga-text-secondary); font-size: 0.875rem; font-weight: 500;">
+        <div class="meok-logo-container">
+          <span class="meok-brand-text">MEOK AI</span>
+          <span style="color: var(--meok-text-secondary); font-size: 0.875rem; font-weight: 500;">
             Cyber Security Global Alliance
           </span>
         </div>
@@ -687,11 +687,11 @@ class CSGACorrectBranding {
 
     // If no logo containers found, add to navigation
     const nav = document.querySelector('nav, .navbar, header');
-    if (nav && !nav.querySelector('.csga-logo-container')) {
+    if (nav && !nav.querySelector('.meok-logo-container')) {
       const logoElement = `
-        <div class="csga-logo-container" style="margin-right: auto;">
-          <span class="csga-brand-text">CSGA</span>
-          <span style="color: var(--csga-text-secondary); font-size: 0.875rem; font-weight: 500;">
+        <div class="meok-logo-container" style="margin-right: auto;">
+          <span class="meok-brand-text">MEOK AI</span>
+          <span style="color: var(--meok-text-secondary); font-size: 0.875rem; font-weight: 500;">
             Cyber Security Global Alliance
           </span>
         </div>
@@ -770,15 +770,15 @@ class CSGACorrectBranding {
   }
 }
 
-// 🚀 Initialize CSGA Correct Branding
+// 🚀 Initialize MEOK AI Correct Branding
 document.addEventListener('DOMContentLoaded', () => {
-  new CSGACorrectBranding();
+  new MEOK AICorrectBranding();
 });
 
 // 🔄 Re-apply on dynamic content changes
 const observer = new MutationObserver(() => {
   setTimeout(() => {
-    new CSGACorrectBranding();
+    new MEOK AICorrectBranding();
   }, 100);
 });
 
@@ -788,7 +788,7 @@ observer.observe(document.body, {
 });
 
 // 📊 Add Professional Statistics Enhancement
-class CSGAStatsEnhancer {
+class MEOK AIStatsEnhancer {
   constructor() {
     this.enhanceStatistics();
   }
@@ -829,7 +829,7 @@ class CSGAStatsEnhancer {
 
 // Initialize stats enhancer
 document.addEventListener('DOMContentLoaded', () => {
-  new CSGAStatsEnhancer();
+  new MEOK AIStatsEnhancer();
 });
 
-console.log('✅ CSGA Correct Branding Applied - Professional cybersecurity theme with proper colors and logo integration');
+console.log('✅ MEOK AI Correct Branding Applied - Professional cybersecurity theme with proper colors and logo integration');

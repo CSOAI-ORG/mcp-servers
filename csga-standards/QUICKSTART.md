@@ -1,12 +1,12 @@
-# CSGA Standards MCP Server - Quick Start Guide
+# MEOK AI Standards MCP Server - Quick Start Guide
 
-Get up and running with the CSGA Standards MCP Server in minutes.
+Get up and running with the MEOK AI Standards MCP Server in minutes.
 
 ## Installation
 
 ```bash
 # Navigate to the project directory
-cd mcp-servers/csga-standards
+cd mcp-servers/meok-standards
 
 # Install dependencies
 npm install
@@ -31,9 +31,9 @@ Add this to your MCP client configuration (typically `~/.config/claude/settings.
 ```json
 {
   "mcpServers": {
-    "csga-standards-mcp": {
+    "meok-standards-mcp": {
       "command": "node",
-      "args": ["/path/to/mcp-servers/csga-standards/dist/index.js"],
+      "args": ["/path/to/mcp-servers/meok-standards/dist/index.js"],
       "env": {
         "MCP_STDIO": "true"
       }
@@ -178,7 +178,7 @@ npm test
 ## Project Structure
 
 ```
-csga-standards/
+meok-standards/
 ├── src/
 │   ├── index.ts              # Main server and tool handlers
 │   ├── types.ts              # TypeScript types and schemas
@@ -255,6 +255,6 @@ csga-standards/
 For detailed information, see:
 - **Full Documentation:** README.md
 - **Type Definitions:** src/types.ts
-- **CSGA Homepage:** https://csga-global.org
+- **MEOK AI Homepage:** https://meok-global.org
 
-Enjoy exploring the world of cybersecurity standards with CSGA!
+Enjoy exploring the world of cybersecurity standards with MEOK AI!

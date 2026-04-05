@@ -1,4 +1,4 @@
-# Terranova Defence MCP - Quick Start Guide
+# MEOK AI Defence MCP - Quick Start Guide
 
 ## Installation & Setup (5 minutes)
 

@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://csga-global.vercel.app/favicon.svg" alt="CSGA Global" width="64" />
+  <img src="https://meok-global.vercel.app/favicon.svg" alt="MEOK AI Labs" width="64" />
 </p>
 
-<h1 align="center">CSGA Global</h1>
+<h1 align="center">MEOK AI Labs</h1>
 
 <p align="center">
   <strong>AI Governance & Cybersecurity MCP Ecosystem</strong><br/>
@@ -10,18 +10,18 @@
 </p>
 
 <p align="center">
-  <a href="https://csga-global.vercel.app"><img src="https://img.shields.io/badge/Platform-Live-00c853?style=flat-square" alt="Live" /></a>
+  <a href="https://meok-global.vercel.app"><img src="https://img.shields.io/badge/Platform-Live-00c853?style=flat-square" alt="Live" /></a>
   <img src="https://img.shields.io/badge/MCP_Servers-70-CC0000?style=flat-square" alt="70 MCPs" />
-  <a href="https://github.com/csgaglobal/csga-global/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT" /></a>
+  <a href="https://github.com/csgaglobal/meok-global/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT" /></a>
 </p>
 
 ---
 
 ### What We Do
 
-CSGA Global (Cyber Security Global Alliance) builds open-source and enterprise MCP (Model Context Protocol) servers for AI governance, cybersecurity, compliance auditing, and defence intelligence. Our 70-server ecosystem integrates with Claude, ChatGPT, Cursor, and any MCP-compatible client — deployed on [Smithery.ai](https://smithery.ai) for one-click installation.
+MEOK AI Labs (Cyber Security Global Alliance) builds open-source and enterprise MCP (Model Context Protocol) servers for AI governance, cybersecurity, compliance auditing, and defence intelligence. Our 70-server ecosystem integrates with Claude, ChatGPT, Cursor, and any MCP-compatible client — deployed on [Smithery.ai](https://smithery.ai) for one-click installation.
 
-We are the platform division of **CSGA's CSOAI (UK) Division**, a non-profit certification body focused on international AI governance standards and cybersecurity certification.
+We are the platform division of **MEOK AI's CSOAI (UK) Division**, a non-profit certification body focused on international AI governance standards and cybersecurity certification.
 
 ### MCP Ecosystem — 67 Servers
 
@@ -31,7 +31,7 @@ We are the platform division of **CSGA's CSOAI (UK) Division**, a non-profit cer
 | **AI Governance** | 3 | AI Governance, DSRB Defence, PMCP Gateway |
 | **Cloud & DevOps** | 8 | AWS Cloud, Docker Compose, Vercel Deploy, GitHub/GitLab API, Sentry |
 | **Data & Analytics** | 6 | CSV Analytics, PostgreSQL, SQLite, JSON Transformer, Memory Graph |
-| **Defence & Sovereign** | 4 | Terranova Defence, QuantraNet PQC, THN Global, Space AI |
+| **Defence & Sovereign** | 4 | MEOK AI Defence, QuantraNet PQC, THN Global, Space AI |
 | **Industry Verticals** | 8 | Real Estate, Retail, Telecom, Supply Chain, Smart Cities, Sports, Travel |
 | **Productivity** | 10 | Slack, Notion, Google Drive, Linear, Brave Search, Filesystem |
 
@@ -56,13 +56,13 @@ Individual MCP pricing: LVP $9/mo · MVP $29/mo · HVP $79/mo
 
 ### Links
 
-- [Platform & Pricing](https://csga-global.vercel.app) — Full ecosystem, documentation, and pricing
-- [MCP Catalog](https://csga-global.vercel.app/catalog) — Browse all 70 MCP servers
+- [Platform & Pricing](https://meok-global.vercel.app) — Full ecosystem, documentation, and pricing
+- [MCP Catalog](https://meok-global.vercel.app/catalog) — Browse all 70 MCP servers
 - [Smithery](https://smithery.ai) — One-click installation for Claude, Cursor, and more
-- [Contributing](https://github.com/csgaglobal/csga-global/blob/main/CONTRIBUTING.md) — How to contribute
-- [Security Policy](https://github.com/csgaglobal/csga-global/blob/main/SECURITY.md) — Responsible disclosure
-- [Contact](https://csga-global.vercel.app/contact) — Enterprise and sovereign enquiries
+- [Contributing](https://github.com/csgaglobal/meok-global/blob/main/CONTRIBUTING.md) — How to contribute
+- [Security Policy](https://github.com/csgaglobal/meok-global/blob/main/SECURITY.md) — Responsible disclosure
+- [Contact](https://meok-global.vercel.app/contact) — Enterprise and sovereign enquiries
 
 ---
 
-<sub>CSGA Global is the platform division of CSGA's CSOAI (UK) Division — a non-profit certification body focused on international AI governance standards. Built for enterprises, governments, and defence organisations that require auditable, standards-aligned AI governance tooling.</sub>
+<sub>MEOK AI Labs is the platform division of MEOK AI's CSOAI (UK) Division — a non-profit certification body focused on international AI governance standards. Built for enterprises, governments, and defence organisations that require auditable, standards-aligned AI governance tooling.</sub>

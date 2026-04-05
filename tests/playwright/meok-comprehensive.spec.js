@@ -1,15 +1,15 @@
-// Fixed Playwright Tests for CSGA Global
+// Fixed Playwright Tests for MEOK AI Labs
 // Corrected syntax and adapted to actual page structure
 
 const { test, expect } = require('@playwright/test');
 
-test.describe('CSGA Global - Comprehensive E2E Tests', () => {
+test.describe('MEOK AI Labs - Comprehensive E2E Tests', () => {
   
   test('homepage loads and is functional', async ({ page }) => {
     await page.goto('/');
     
     // Check page loads
-    await expect(page).toHaveTitle(/CSGA Global/);
+    await expect(page).toHaveTitle(/MEOK AI Labs/);
     await expect(page.locator('h1')).toBeVisible();
     
     // Check hero section
@@ -70,7 +70,7 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
       
       const messageField = page.locator('textarea, input[name*="message"]').first();
       if (await messageField.count() > 0) {
-        await messageField.fill('Test message for CSGA Global');
+        await messageField.fill('Test message for MEOK AI Labs');
       }
     } else {
       console.log('Contact form not found - page may use different structure');
@@ -251,8 +251,8 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
   });
 });
 
-// Additional test for specific CSGA functionality
-test.describe('CSGA Specific Features', () => {
+// Additional test for specific MEOK AI functionality
+test.describe('MEOK AI Specific Features', () => {
   
   test('COBOL Bridge page shows enterprise pricing', async ({ page }) => {
     try {
@@ -278,14 +278,77 @@ test.describe('CSGA Specific Features', () => {
     }
   });
   
-  test('CSGA branding is consistent', async ({ page }) => {
+  test('MEOK AI branding is consistent', async ({ page }) => {
     await page.goto('/');
     
-    // Check for CSGA branding elements
+    // Check for MEOK AI branding elements
     const pageContent = await page.textContent('body');
-    expect(pageContent).toMatch(/csga|global/i);
+    expect(pageContent).toMatch(/MEOK AI|global/i);
     
     // Check title
-    await expect(page).toHaveTitle(/CSGA/);
+    await expect(page).toHaveTitle(/MEOK AI/);
+  });
+});
+
+test.describe('MEOK AI MCP Pages', () => {
+  
+  test('MCP catalog page loads', async ({ page }) => {
+    await page.goto('/mcp/catalog.html');
+    await expect(page.locator('h1, .page-title')).toBeVisible();
+    const content = await page.textContent('body');
+    expect(content).toMatch(/mcp|server|catalog/i);
+  });
+  
+  test('about page has content', async ({ page }) => {
+    await page.goto('/about.html');
+    await expect(page.locator('h1')).toBeVisible();
+    const content = await page.textContent('body');
+    expect(content.length).toBeGreaterThan(500);
+  });
+  
+  test('contact page loads', async ({ page }) => {
+    await page.goto('/contact.html');
+    await expect(page.locator('h1, .page-title')).toBeVisible();
+  });
+  
+  test('certification page loads', async ({ page }) => {
+    await page.goto('/certification.html');
+    const content = await page.textContent('body');
+    expect(content.length).toBeGreaterThan(200);
+  });
+  
+  test('AI governance MCP page loads', async ({ page }) => {
+    await page.goto('/mcp/ai-governance.html');
+    await expect(page.locator('h1')).toBeVisible();
+    const content = await page.textContent('body');
+    expect(content.length).toBeGreaterThan(300);
+  });
+  
+  test('cloud security MCP page loads', async ({ page }) => {
+    await page.goto('/mcp/cloud-security.html');
+    const content = await page.textContent('body');
+    expect(content.length).toBeGreaterThan(200);
+  });
+});
+
+test.describe('MEOK AI Core Pages', () => {
+  
+  test('homepage has no console errors', async ({ page }) => {
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    expect(errors.length).toBe(0);
+  });
+  
+  test('footer is present on homepage', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('footer')).toBeVisible();
+  });
+  
+  test('pricing page has tiers', async ({ page }) => {
+    await page.goto('/pricing.html');
+    const content = await page.textContent('body');
+    expect(content).toMatch(/starter|pro|enterprise/i);
   });
 });

@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 /**
- * CSGA Global — Navigation & Site-wide E2E Tests
+ * MEOK AI Labs — Navigation & Site-wide E2E Tests
  * ════════════════════════════════════════════════
  * Tests header, nav bar, mega menus, footer, mobile responsive,
  * and all major page loads.
@@ -83,7 +83,7 @@ describe('Navigation & Site Structure', () => {
   // ══════════════════════════════════
   describe('Page Load Smoke Tests', () => {
     const pages = [
-      { path: '/', title: 'CSGA' },
+      { path: '/', title: 'MEOK AI' },
       { path: '/pricing.html', title: 'Pricing' },
       { path: '/dashboard.html', title: 'Dashboard' },
       { path: '/programs.html', title: 'Program' },
@@ -187,23 +187,23 @@ describe('Navigation & Site Structure', () => {
   //  PRICING CONFIG GLOBAL
   // ══════════════════════════════════
   describe('Pricing Config Loaded', () => {
-    it('CSGA_PRICING is available globally on pricing page', () => {
+    it('MEOK AI_PRICING is available globally on pricing page', () => {
       cy.visit('/pricing.html');
-      cy.window().its('CSGA_PRICING').should('exist');
-      cy.window().its('CSGA_PRICING.memberships').should('exist');
-      cy.window().its('CSGA_PRICING.mcpCatalog').should('exist');
-      cy.window().its('CSGA_PRICING.mcpClassification').should('exist');
+      cy.window().its('MEOK AI_PRICING').should('exist');
+      cy.window().its('MEOK AI_PRICING.memberships').should('exist');
+      cy.window().its('MEOK AI_PRICING.mcpCatalog').should('exist');
+      cy.window().its('MEOK AI_PRICING.mcpClassification').should('exist');
     });
 
-    it('CSGA_PRICING is available on dashboard', () => {
+    it('MEOK AI_PRICING is available on dashboard', () => {
       cy.visit('/dashboard.html');
-      cy.window().its('CSGA_PRICING').should('exist');
+      cy.window().its('MEOK AI_PRICING').should('exist');
     });
 
     it('pricing config has all 6 membership tiers', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const tiers = Object.keys(win.CSGA_PRICING.memberships);
+        const tiers = Object.keys(win.MEOK AI_PRICING.memberships);
         expect(tiers.length).to.be.gte(6);
         expect(tiers).to.include.members(['community', 'starter', 'professional']);
       });
@@ -212,7 +212,7 @@ describe('Navigation & Site Structure', () => {
     it('pricing config has 67 MCPs in catalog', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const mcps = Object.keys(win.CSGA_PRICING.mcpCatalog);
+        const mcps = Object.keys(win.MEOK AI_PRICING.mcpCatalog);
         expect(mcps.length).to.be.gte(40); // Allow slight variance
       });
     });

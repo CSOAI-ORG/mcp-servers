@@ -1,5 +1,5 @@
 {
-  "name": "@csga-global/cobol-bridge",
+  "name": "@meok-global/cobol-bridge",
   "version": "1.0.0",
   "description": "COBOL-to-AI Bridge MCP Server — Legacy enterprise integration for CICS/IMS mainframes, COBOL copybook parsing, JCL scanning, and VSAM mapping to AI governance APIs",
   "type": "module",
@@ -27,10 +27,10 @@
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/cobol-bridge"
   },
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "keywords": [
     "mcp",
     "cobol",

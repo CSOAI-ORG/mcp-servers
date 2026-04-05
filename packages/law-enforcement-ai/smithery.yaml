@@ -3,11 +3,11 @@ description: >-
   AI governance for law enforcement technology including predictive policing oversight, surveillance AI compliance, and
   criminal justice algorithm auditing.
 version: 1.0.0
-repository: https://github.com/csga-global/mcp-servers
+repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
 runtime: node
 command:
-  npx: '@csga-global/law-enforcement-ai'
+  npx: '@meok-global/law-enforcement-ai'
 categories:
   - Law Enforcement
   - AI Governance

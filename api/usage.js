@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Usage Tracking & Overage Billing
+ * MEOK AI Labs — Usage Tracking & Overage Billing
  * ════════════════════════════════════════════════
  * Vercel Serverless Function
  *

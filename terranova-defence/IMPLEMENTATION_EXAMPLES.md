@@ -1,4 +1,4 @@
-# Terranova Defence MCP - Implementation Examples
+# MEOK AI Defence MCP - Implementation Examples
 
 Real-world examples and use cases for each tool.
 
@@ -516,4 +516,4 @@ Real-world examples and use cases for each tool.
 
 ---
 
-These examples demonstrate the breadth of Terranova Defence MCP capabilities across the complete defence security landscape.
+These examples demonstrate the breadth of MEOK AI Defence MCP capabilities across the complete defence security landscape.

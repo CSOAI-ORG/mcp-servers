@@ -74,10 +74,10 @@ All 11 MCP servers passed comprehensive end-to-end validation testing. Initial t
 
 ---
 
-### 3. csga-standards ✓ PASS
+### 3. meok-standards ✓ PASS
 
 **Package Details:**
-- Name: `csga-standards-mcp`
+- Name: `meok-standards-mcp`
 - Version: `1.0.0`
 - License: `CC0-1.0`
 - Main Entry: `dist/index.js`
@@ -216,7 +216,7 @@ All 11 MCP servers passed comprehensive end-to-end validation testing. Initial t
 - [✓] License: CC0-1.0 confirmed
 
 **Architecture Notes:**
-- Pharma AI IP engine (Terranova Health Network)
+- Pharma AI IP engine (MEOK AI Health Network)
 - Implicit stdio transport initialization
 - Tools: PatentLandscape, DrugDiscoveryAI, IPStrategy, RegulatoryPathway, MarketIntelligence, CollaborationMatch
 
@@ -317,7 +317,7 @@ Both patterns are valid and correctly implement MCP protocol.
 
 - **csoai-governance:** 6 tools via `.tool()` method
 - **casa-certification:** Tools array + setRequestHandler(CallToolRequestSchema)
-- **csga-standards:** 6 tools (StandardsLookup, KataAssessment, ThreatIntel, IncidentResponse, TrainingPathway, ComplianceCheck)
+- **meok-standards:** 6 tools (StandardsLookup, KataAssessment, ThreatIntel, IncidentResponse, TrainingPathway, ComplianceCheck)
 - **proofof-ai:** Proof-of-AI verification tools
 - **oneos-education:** Education-focused tools
 - **quantranet-pqc:** Post-quantum cryptography tools
@@ -394,7 +394,7 @@ Servers with resources:
 2. **Base Server + Request Handlers Pattern (10 servers)**
    - Pros: Flexible, explicit control over requests
    - Cons: More verbose
-   - Used by: casa-certification, csga-standards, proofof-ai, oneos-education, quantranet-pqc, terranova-defence, bmcc-cyber, thn-global, digital-human-library, ai-economy-infrastructure
+   - Used by: casa-certification, meok-standards, proofof-ai, oneos-education, quantranet-pqc, terranova-defence, bmcc-cyber, thn-global, digital-human-library, ai-economy-infrastructure
 
 ### Transport Layer
 
@@ -453,9 +453,9 @@ Both approaches are functionally equivalent.
 
 ### Initial False Positives (Resolved)
 
-**csga-standards and thn-global** were initially flagged for "missing StdioServerTransport", but this was a false positive. Upon investigation:
+**meok-standards and thn-global** were initially flagged for "missing StdioServerTransport", but this was a false positive. Upon investigation:
 
-- csga-standards uses `await server.connect({transport: "stdio"})` ✓ VALID
+- meok-standards uses `await server.connect({transport: "stdio"})` ✓ VALID
 - thn-global uses `await server.connect({type: "stdio"})` ✓ VALID
 
 Both methods properly initialize stdio transport through the SDK's connect() method.

@@ -1,4 +1,4 @@
-# CSGA Professional Icon System
+# MEOK AI Professional Icon System
 
 ## Available Icons
 
@@ -56,7 +56,7 @@
 - `professional-icon-xl` - 48px (for heroes/banners)
 
 ## Brand Colors
-All icons use CSGA brand gradient colors:
+All icons use MEOK AI brand gradient colors:
 - Primary: #3b82f6 to #1e40af (Blue)
 - Success: #10b981 to #059669 (Green) 
 - Warning: #f59e0b to #d97706 (Orange)

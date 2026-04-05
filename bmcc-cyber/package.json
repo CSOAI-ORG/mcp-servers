@@ -1,12 +1,12 @@
 {
-  "name": "@csga-global/bmcc-cyber",
+  "name": "@meok-global/bmcc-cyber",
   "version": "1.0.0",
-  "description": "BMCC Cyber Programme MCP Server - Cybersecurity education pathway built in partnership between CSGA and Borough of Manhattan Community College (CUNY)",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "description": "BMCC Cyber Programme MCP Server - Cybersecurity education pathway built in partnership between MEOK AI and Borough of Manhattan Community College (CUNY)",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/bmcc-cyber"
   },
   "homepage": "https://bmcc-cyberprogram.com",

@@ -1,10 +1,10 @@
-# Terranova Defence Solutions MCP Server
+# MEOK AI Defence Solutions MCP Server
 
 Production-grade Model Context Protocol (MCP) server for post-quantum cryptography, blockchain security, and defence cybersecurity assessments.
 
 ## Overview
 
-Terranova Defence Solutions MCP provides 6 specialized tools for defence organizations, contractors, and government agencies to assess and implement advanced security measures aligned with NSA/NIST standards, NDAA compliance, and emerging quantum-resistant cryptography requirements.
+MEOK AI Defence Solutions MCP provides 6 specialized tools for defence organizations, contractors, and government agencies to assess and implement advanced security measures aligned with NSA/NIST standards, NDAA compliance, and emerging quantum-resistant cryptography requirements.
 
 **Market Context:**
 - Post-Quantum Cryptography (PQC) market: USD 1.35B → USD 22.68B by 2033 (CAGR 30.8%)
@@ -376,7 +376,7 @@ interface CallToolResponse {
 - NDAA Section 889 FAQs
 
 ### Contact
-- **Organization**: Terranova Defence Solutions
+- **Organization**: MEOK AI Defence Solutions
 - **Homepage**: https://terranova-defense.com
 - **License**: CC0-1.0 (Public Domain)
 

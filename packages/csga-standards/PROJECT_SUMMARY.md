@@ -1,4 +1,4 @@
-# CSGA Standards MCP Server - Project Summary
+# MEOK AI Standards MCP Server - Project Summary
 
 **Complete production-ready MCP server for cybersecurity standards, training pathways, and incident response.**
 
@@ -14,7 +14,7 @@ A comprehensive Model Context Protocol (MCP) server providing access to:
 - Cybersecurity training and certification pathways
 - Compliance assessment across major frameworks
 
-**Organization:** CSGA — Cyber Security Global Alliance
+**Organization:** MEOK AI — Cyber Security Global Alliance
 **Status:** Production Ready
 **Language:** TypeScript (ES2020)
 **Node.js:** 18.0.0+
@@ -77,7 +77,7 @@ A comprehensive Model Context Protocol (MCP) server providing access to:
 **Purpose:** Cybersecurity standards database and lookup functions
 
 **Database:**
-- **CSR5** — CSGA's proprietary maturity model with implementation steps
+- **CSR5** — MEOK AI's proprietary maturity model with implementation steps
 - **NIST CSF** — Five core functions (Identify, Protect, Detect, Respond, Recover)
 - **ISO 27001** — 14 control areas with comprehensive requirements
 - **CIS Controls** — 18 critical controls with IG1-3 implementation groups
@@ -199,7 +199,7 @@ A comprehensive Model Context Protocol (MCP) server providing access to:
 **Training Courses (25+ Courses):**
 - SANS Institute courses (SEC401, SEC504, SEC566)
 - CompTIA (Security+, CySA+, CASP+)
-- CSGA proprietary courses (NIST CSF, ISO 27001, threat hunting)
+- MEOK AI proprietary courses (NIST CSF, ISO 27001, threat hunting)
 - Specialized courses (incident response, forensics, red team)
 
 **Certifications (10+ Certifications):**
@@ -312,7 +312,7 @@ A comprehensive Model Context Protocol (MCP) server providing access to:
 **Purpose:** Complete project documentation
 
 **Sections:**
-- About CSGA (95,000+ subscribers, 20+ countries, 11-member board)
+- About MEOK AI (95,000+ subscribers, 20+ countries, 11-member board)
 - Features overview (all 6 tools)
 - Installation and setup instructions
 - Usage examples with JSON payloads
@@ -530,8 +530,8 @@ CMD ["npm", "start"]
 
 ## Support & Community
 
-**CSGA — Cyber Security Global Alliance**
-- **Homepage:** https://csga-global.org
+**MEOK AI — Cyber Security Global Alliance**
+- **Homepage:** https://meok-global.org
 - **Members:** 95,000+ cybersecurity professionals
 - **Global:** 20+ countries
 - **Governance:** 11-member board
@@ -541,7 +541,7 @@ CMD ["npm", "start"]
 
 ## Conclusion
 
-The CSGA Standards MCP Server is a comprehensive, production-ready tool for:
+The MEOK AI Standards MCP Server is a comprehensive, production-ready tool for:
 - Understanding cybersecurity frameworks and standards
 - Assessing organizational maturity
 - Accessing threat intelligence

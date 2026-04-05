@@ -3,319 +3,319 @@ version: "3.9"
 services:
   agriculture-ai:
     build: ./packages/agriculture-ai
-    container_name: csga-agriculture-ai
+    container_name: meok-agriculture-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=agriculture-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   ai-economy-infrastructure:
     build: ./packages/ai-economy-infrastructure
-    container_name: csga-ai-economy-infrastructure
+    container_name: meok-ai-economy-infrastructure
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=ai-economy-infrastructure
     networks:
-      - csga-mcp
+      - meok-mcp
 
   autonomous-vehicles-ai:
     build: ./packages/autonomous-vehicles-ai
-    container_name: csga-autonomous-vehicles-ai
+    container_name: meok-autonomous-vehicles-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=autonomous-vehicles-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   biometrics-ai:
     build: ./packages/biometrics-ai
-    container_name: csga-biometrics-ai
+    container_name: meok-biometrics-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=biometrics-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   bmcc-cyber:
     build: ./packages/bmcc-cyber
-    container_name: csga-bmcc-cyber
+    container_name: meok-bmcc-cyber
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=bmcc-cyber
     networks:
-      - csga-mcp
+      - meok-mcp
 
   ca3o-certification:
     build: ./packages/ca3o-certification
-    container_name: csga-ca3o-certification
+    container_name: meok-ca3o-certification
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=ca3o-certification
     networks:
-      - csga-mcp
+      - meok-mcp
 
   casa-certification:
     build: ./packages/casa-certification
-    container_name: csga-casa-certification
+    container_name: meok-casa-certification
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=casa-certification
     networks:
-      - csga-mcp
+      - meok-mcp
 
   cobol-bridge:
     build: ./packages/cobol-bridge
-    container_name: csga-cobol-bridge
+    container_name: meok-cobol-bridge
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=cobol-bridge
     networks:
-      - csga-mcp
+      - meok-mcp
 
   construction-ai:
     build: ./packages/construction-ai
-    container_name: csga-construction-ai
+    container_name: meok-construction-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=construction-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
-  csga-standards:
-    build: ./packages/csga-standards
-    container_name: csga-csga-standards
+  meok-standards:
+    build: ./packages/meok-standards
+    container_name: meok-meok-standards
     restart: unless-stopped
     environment:
-      - MCP_SERVER_NAME=csga-standards
+      - MCP_SERVER_NAME=meok-standards
     networks:
-      - csga-mcp
+      - meok-mcp
 
   csoai-governance:
     build: ./packages/csoai-governance
-    container_name: csga-csoai-governance
+    container_name: meok-csoai-governance
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=csoai-governance
     networks:
-      - csga-mcp
+      - meok-mcp
 
   digital-human-library:
     build: ./packages/digital-human-library
-    container_name: csga-digital-human-library
+    container_name: meok-digital-human-library
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=digital-human-library
     networks:
-      - csga-mcp
+      - meok-mcp
 
   employment-ai:
     build: ./packages/employment-ai
-    container_name: csga-employment-ai
+    container_name: meok-employment-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=employment-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   energy-ai:
     build: ./packages/energy-ai
-    container_name: csga-energy-ai
+    container_name: meok-energy-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=energy-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   financial-ai:
     build: ./packages/financial-ai
-    container_name: csga-financial-ai
+    container_name: meok-financial-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=financial-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   gaming-ai:
     build: ./packages/gaming-ai
-    container_name: csga-gaming-ai
+    container_name: meok-gaming-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=gaming-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   healthcare-ai:
     build: ./packages/healthcare-ai
-    container_name: csga-healthcare-ai
+    container_name: meok-healthcare-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=healthcare-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   insurance-ai:
     build: ./packages/insurance-ai
-    container_name: csga-insurance-ai
+    container_name: meok-insurance-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=insurance-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   law-enforcement-ai:
     build: ./packages/law-enforcement-ai
-    container_name: csga-law-enforcement-ai
+    container_name: meok-law-enforcement-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=law-enforcement-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   legal-tech-ai:
     build: ./packages/legal-tech-ai
-    container_name: csga-legal-tech-ai
+    container_name: meok-legal-tech-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=legal-tech-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   maritime-ai:
     build: ./packages/maritime-ai
-    container_name: csga-maritime-ai
+    container_name: meok-maritime-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=maritime-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   media-advertising-ai:
     build: ./packages/media-advertising-ai
-    container_name: csga-media-advertising-ai
+    container_name: meok-media-advertising-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=media-advertising-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   mining-ai:
     build: ./packages/mining-ai
-    container_name: csga-mining-ai
+    container_name: meok-mining-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=mining-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   oneos-education:
     build: ./packages/oneos-education
-    container_name: csga-oneos-education
+    container_name: meok-oneos-education
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=oneos-education
     networks:
-      - csga-mcp
+      - meok-mcp
 
   proofof-ai:
     build: ./packages/proofof-ai
-    container_name: csga-proofof-ai
+    container_name: meok-proofof-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=proofof-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   quantranet-pqc:
     build: ./packages/quantranet-pqc
-    container_name: csga-quantranet-pqc
+    container_name: meok-quantranet-pqc
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=quantranet-pqc
     networks:
-      - csga-mcp
+      - meok-mcp
 
   real-estate-ai:
     build: ./packages/real-estate-ai
-    container_name: csga-real-estate-ai
+    container_name: meok-real-estate-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=real-estate-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   retail-ai:
     build: ./packages/retail-ai
-    container_name: csga-retail-ai
+    container_name: meok-retail-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=retail-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   smart-cities-ai:
     build: ./packages/smart-cities-ai
-    container_name: csga-smart-cities-ai
+    container_name: meok-smart-cities-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=smart-cities-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   space-ai:
     build: ./packages/space-ai
-    container_name: csga-space-ai
+    container_name: meok-space-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=space-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   sports-analytics-ai:
     build: ./packages/sports-analytics-ai
-    container_name: csga-sports-analytics-ai
+    container_name: meok-sports-analytics-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=sports-analytics-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   supply-chain-ai:
     build: ./packages/supply-chain-ai
-    container_name: csga-supply-chain-ai
+    container_name: meok-supply-chain-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=supply-chain-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   telecom-ai:
     build: ./packages/telecom-ai
-    container_name: csga-telecom-ai
+    container_name: meok-telecom-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=telecom-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
   thn-global:
     build: ./packages/thn-global
-    container_name: csga-thn-global
+    container_name: meok-thn-global
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=thn-global
     networks:
-      - csga-mcp
+      - meok-mcp
 
   travel-hospitality-ai:
     build: ./packages/travel-hospitality-ai
-    container_name: csga-travel-hospitality-ai
+    container_name: meok-travel-hospitality-ai
     restart: unless-stopped
     environment:
       - MCP_SERVER_NAME=travel-hospitality-ai
     networks:
-      - csga-mcp
+      - meok-mcp
 
 networks:
-  csga-mcp:
+  meok-mcp:
     driver: bridge

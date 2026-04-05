@@ -1,4 +1,4 @@
-// BMCC Cyber Inspired Enhancements for CSGA Global
+// BMCC Cyber Inspired Enhancements for MEOK AI Labs
 // Based on BMCC's exceptional professional polish and conversion optimization
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -390,7 +390,7 @@ function implementExecutiveGradeLanguage() {
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
         <div style="background: var(--surface-2); padding: 30px; border-radius: 12px; border: 1px solid var(--surface-3);">
           <div style="font-size: 1.1rem; color: white; line-height: 1.6; margin-bottom: 20px;">
-            "CSGA's CASA certification became mandatory for our security team after the first AI incident. 
+            "MEOK AI's CASA certification became mandatory for our security team after the first AI incident. 
             <strong>The ROI was immediate.</strong>"
           </div>
           <div style="display: flex; align-items: center; gap: 15px;">
@@ -422,7 +422,7 @@ function implementExecutiveGradeLanguage() {
         
         <div style="background: var(--surface-2); padding: 30px; border-radius: 12px; border: 1px solid var(--surface-3);">
           <div style="font-size: 1.1rem; color: white; line-height: 1.6; margin-bottom: 20px;">
-            "Our entire AI strategy pivoted after the CSGA assessment. 
+            "Our entire AI strategy pivoted after the MEOK AI assessment. 
             <strong>Revenue impact was 300% in Q1.</strong>"
           </div>
           <div style="display: flex; align-items: center; gap: 15px;">
@@ -617,7 +617,7 @@ function implementBenefitDrivenArchitecture() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-      console.log('🎯 BMCC Excellence Standards Applied to CSGA Global');
+      console.log('🎯 BMCC Excellence Standards Applied to MEOK AI Labs');
     }, 1000);
   });
 }

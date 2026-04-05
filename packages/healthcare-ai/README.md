@@ -99,7 +99,7 @@ CC0-1.0 — Public Domain
 
 ## Feedback and Contributions
 
-Questions? Found an issue? Open an issue at https://github.com/CSGA_Global/healthcare-ai-mcp
+Questions? Found an issue? Open an issue at https://github.com/MEOK AI_Global/healthcare-ai-mcp
 
 ---
 

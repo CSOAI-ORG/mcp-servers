@@ -530,4 +530,4 @@ NODE_ENV=production node dist/index.js
 
 **For deployment and integration support, contact:**
 - QuantraNet: https://quantranet.com
-- Terranova Defence: https://terranova.ca
+- MEOK AI Defence: https://terranova.ca

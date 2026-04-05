@@ -2,7 +2,7 @@
 
 ## What Was Built
 
-A production-grade Model Context Protocol (MCP) server implementing a comprehensive educational platform interface for OneOS — the unified MOOC & LMS platform powering the CSOAI/CSGA/Terranova ecosystem.
+A production-grade Model Context Protocol (MCP) server implementing a comprehensive educational platform interface for OneOS — the unified MOOC & LMS platform powering the CSOAI/MEOK AI/MEOK AI ecosystem.
 
 ## Project Location
 
@@ -85,9 +85,9 @@ src/
 **24 Active Courses** across entities:
 - BMCC Cyber (4 courses)
 - DHL/Lawrie Group (5 courses)
-- CSGA Global (4 courses)
+- MEOK AI Labs (4 courses)
 - CSOAI (3 courses)
-- Terranova Group (4 courses)
+- MEOK AI Group (4 courses)
 - OrbitQ (2 courses)
 - AIdome (3 courses)
 
@@ -282,7 +282,7 @@ Ready for:
 
 - **Project Version**: 1.0.0
 - **Release Date**: 2025-02-25
-- **Author**: OneOS Platform — Terranova CSOAI Corp
+- **Author**: OneOS Platform — MEOK AI CSOAI Corp
 - **License**: CC0-1.0 (Public Domain)
 
 ## Next Steps for Users

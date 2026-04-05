@@ -6,7 +6,7 @@ Google Drive integration for file management, search, sharing, and collaborative
 
 ## Overview
 
-Part of the [CSGA Global MCP Server Platform](https://csga-global.org/) — a comprehensive suite of 70+ Model Context Protocol servers for AI governance, cybersecurity, and enterprise tooling.
+Part of the [MEOK AI Labs MCP Server Platform](https://meok-global.org/) — a comprehensive suite of 70+ Model Context Protocol servers for AI governance, cybersecurity, and enterprise tooling.
 
 ## Features
 
@@ -59,8 +59,8 @@ npm test
 
 ## Related Packages
 
-Explore the full suite at [csga-global.org/mcp](https://csga-global.org/mcp/)
+Explore the full suite at [meok-global.org/mcp](https://meok-global.org/mcp/)
 
 ## License
 
-MIT © [CSGA Global](https://csga-global.org/)
+MIT © [MEOK AI Labs](https://meok-global.org/)

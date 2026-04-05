@@ -1,12 +1,12 @@
 {
-  "name": "@csga-global/law-enforcement-ai",
+  "name": "@meok-global/law-enforcement-ai",
   "version": "1.0.0",
   "description": "CSOAI Law Enforcement & Criminal Justice AI Governance — predictive policing, recidivism, EU AI Act law enforcement provisions, and constitutional rights",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/law-enforcement-ai"
   },
   "type": "module",

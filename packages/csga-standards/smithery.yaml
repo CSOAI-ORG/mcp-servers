@@ -1,4 +1,4 @@
-name: "@csga-global/csga-standards"
+name: "@meok-global/meok-standards"
 version: "1.0.0"
 runtime: "node"
 startCommand:

@@ -1,4 +1,4 @@
-// CSGA Global Hero Enhancement Script
+// MEOK AI Labs Hero Enhancement Script
 // Adds engagement buttons and ensures consistent styling across all hero sections
 
 document.addEventListener('DOMContentLoaded', function() {

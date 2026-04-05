@@ -93,7 +93,7 @@ All servers were tested for:
 |--------|--------|-----------------|-------|-----------|-------|
 | csoai-governance | ✓ PASS | McpServer | 6 | 3 | Modern pattern, explicit transport |
 | casa-certification | ✓ PASS | Server | 6 | 3 | Request handlers pattern |
-| csga-standards | ✓ PASS | Server | 6 | - | Implicit transport |
+| meok-standards | ✓ PASS | Server | 6 | - | Implicit transport |
 | proofof-ai | ✓ PASS | Server | - | - | Proof-of-AI verification |
 | oneos-education | ✓ PASS | Server | - | 1+ | Education tools |
 | quantranet-pqc | ✓ PASS | Server | - | - | Post-quantum cryptography |
@@ -145,12 +145,12 @@ Both patterns are valid and MCP-compliant.
 ### Main Test Files
 - `/sessions/brave-adoring-cerf/mcp-servers/csoai-governance/src/index.ts` - McpServer implementation example
 - `/sessions/brave-adoring-cerf/mcp-servers/casa-certification/src/index.ts` - Server pattern example
-- `/sessions/brave-adoring-cerf/mcp-servers/csga-standards/src/index.ts` - Implicit transport example
+- `/sessions/brave-adoring-cerf/mcp-servers/meok-standards/src/index.ts` - Implicit transport example
 
 ### Server Directories
 - `/sessions/brave-adoring-cerf/mcp-servers/csoai-governance/` (AI governance)
 - `/sessions/brave-adoring-cerf/mcp-servers/casa-certification/` (AI certification)
-- `/sessions/brave-adoring-cerf/mcp-servers/csga-standards/` (Standards and security)
+- `/sessions/brave-adoring-cerf/mcp-servers/meok-standards/` (Standards and security)
 - `/sessions/brave-adoring-cerf/mcp-servers/proofof-ai/` (AI proof systems)
 - `/sessions/brave-adoring-cerf/mcp-servers/oneos-education/` (Education)
 - `/sessions/brave-adoring-cerf/mcp-servers/quantranet-pqc/` (Post-quantum cryptography)

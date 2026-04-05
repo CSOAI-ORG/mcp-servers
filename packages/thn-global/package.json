@@ -1,12 +1,12 @@
 {
-  "name": "@csga-global/thn-global",
+  "name": "@meok-global/thn-global",
   "version": "1.0.0",
   "description": "MCP Server for THN Global - Pharma AI IP engine for drug discovery and patent landscape analysis",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/thn-global"
   },
   "homepage": "https://thn-global.com",

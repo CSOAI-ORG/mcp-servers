@@ -1,8 +1,8 @@
-// Final Website Integration Test - CSGA Global
+// Final Website Integration Test - MEOK AI Labs
 // Comprehensive testing and validation of all enhancements
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.group('🎯 CSGA Website Integration Test');
+  console.group('🎯 MEOK AI Website Integration Test');
   
   // Test all major systems
   testAdvancedAnimations();
@@ -61,7 +61,7 @@ function testPerformanceEnhancements() {
     serviceWorker: 'serviceWorker' in navigator,
     intersectionObserver: 'IntersectionObserver' in window,
     performanceAPI: 'performance' in window,
-    localStorageCache: 'localStorage' in window && window.CSGACache,
+    localStorageCache: 'localStorage' in window && window.MEOK AICache,
     resourceHints: !!document.querySelector('link[rel="preload"], link[rel="prefetch"]')
   };
   
@@ -82,7 +82,7 @@ function testDashboardNavigation() {
   
   const dashboardElements = {
     sideNavigation: !!document.getElementById('dashboard-sidenav'),
-    navigationScript: !!window.CSGAIntegration,
+    navigationScript: !!window.MEOK AIIntegration,
     mobileToggle: !!document.getElementById('mobile-nav-toggle'),
     navItems: document.querySelectorAll('.nav-item').length > 0,
     responsiveDesign: CSS.supports('transform', 'translateX(-100%)')
@@ -156,7 +156,7 @@ function showIntegrationStatus() {
     <div style="font-size: 3rem; margin-bottom: 20px;">🚀</div>
     <h2 style="color: #cc0000; margin-bottom: 16px; font-size: 1.5rem;">Integration Complete!</h2>
     <p style="margin-bottom: 20px; opacity: 0.9; line-height: 1.6;">
-      All CSGA Global website enhancements have been successfully integrated and tested.
+      All MEOK AI Labs website enhancements have been successfully integrated and tested.
     </p>
     <div style="background: rgba(204,0,0,0.1); padding: 16px; border-radius: 12px; margin: 20px 0;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
@@ -220,7 +220,7 @@ function testComponentLoading() {
   
   // Test CSS loading
   const criticalCSS = [
-    '/css/csga-branding.css',
+    '/css/meok-branding.css',
     '/css/mobile-advanced.css',
     '/css/bmcc-level-polish.css'
   ];
@@ -253,7 +253,7 @@ function testComponentLoading() {
 setTimeout(testComponentLoading, 1000);
 
 // Export test functions for manual testing
-window.CSGATests = {
+window.MEOK AITests = {
   testAnimations: testAdvancedAnimations,
   testMobile: testMobileOptimizations,
   testPerformance: testPerformanceEnhancements,
@@ -313,6 +313,6 @@ testCSS.innerHTML = `
 
 document.head.appendChild(testCSS);
 
-console.log('🎯 CSGA Integration Test System Loaded');
-console.log('💡 Use window.CSGATests to run individual tests');
+console.log('🎯 MEOK AI Integration Test System Loaded');
+console.log('💡 Use window.MEOK AITests to run individual tests');
 console.log('🚀 Full integration test will run automatically');

@@ -1,10 +1,10 @@
 name: telecom-ai
 description: AI governance for telecommunications including network optimization, customer service AI, and regulatory compliance.
 version: 1.0.0
-repository: https://github.com/csga-global/mcp-servers
+repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
 runtime: node
 command:
-  npx: '@csga-global/telecom-ai'
+  npx: '@meok-global/telecom-ai'
 categories:
   - Telecommunications

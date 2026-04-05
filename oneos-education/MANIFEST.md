@@ -4,7 +4,7 @@
 
 - **Name**: oneos-education-mcp
 - **Version**: 1.0.0
-- **Author**: OneOS Platform — Terranova CSOAI Corp
+- **Author**: OneOS Platform — MEOK AI CSOAI Corp
 - **License**: CC0-1.0 (Creative Commons Zero)
 - **Homepage**: https://oneos-zeta.vercel.app
 - **Status**: Production Ready
@@ -210,7 +210,7 @@ npm run prepare  # Pre-publish hook (runs build)
    - 5 courses: Supply Chain, Trade, Marketing, CX, Service Design
    - Price range: $179-$399
 
-3. **CSGA Global** - AI & data science
+3. **MEOK AI Labs** - AI & data science
    - 4 courses: AI & ML, Data Science, Advanced Data Engineering, Product Management
    - Price range: $449-$699
 
@@ -218,7 +218,7 @@ npm run prepare  # Pre-publish hook (runs build)
    - 3 courses: Blockchain, Cryptocurrency, Digital Leadership, FinTech
    - Price range: $449-$599
 
-5. **Terranova Group** - Cloud & DevOps
+5. **MEOK AI Group** - Cloud & DevOps
    - 4 courses: Cloud Architecture, DevOps, API Design, Sustainability
    - Price range: $299-$699
 
@@ -240,7 +240,7 @@ npm run prepare  # Pre-publish hook (runs build)
 - **Average Course Duration**: 22.5 hours
 - **Average Course Price**: $449
 - **Top Skills**: ai, machine-learning, cloud, cybersecurity, data-science
-- **Top Entities**: AIdome, CSGA Global, Terranova Group, BMCC Cyber
+- **Top Entities**: AIdome, MEOK AI Labs, MEOK AI Group, BMCC Cyber
 
 ## Validation Schemas
 

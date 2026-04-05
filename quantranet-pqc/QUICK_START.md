@@ -293,7 +293,7 @@ NODE_DEBUG=* npm run dev
 - **Current Version:** 1.0.0
 - **Release Status:** Stable & Production-Ready
 - **License:** CC0-1.0 (Public Domain)
-- **Authors:** QuantraNet (Terranova Defence + CSGA)
+- **Authors:** QuantraNet (MEOK AI Defence + MEOK AI)
 
 ---
 

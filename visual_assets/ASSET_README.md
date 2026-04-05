@@ -1,9 +1,9 @@
 
-# CSGA GLOBAL - VISUAL ASSET LIBRARY
+# MEOK AI GLOBAL - VISUAL ASSET LIBRARY
 ## Complete Asset Package Summary
 
 ### BRAND SPECIFICATIONS
-- Company: CSGA Global - Cyber Security Global Alliance
+- Company: MEOK AI Labs - Cyber Security Global Alliance
 - Style: Futuristic, bold, professional, enterprise-grade
 - Theme: Dark with electric blue, cyan, purple, gold accents
 - Total Assets: 21 high-quality images

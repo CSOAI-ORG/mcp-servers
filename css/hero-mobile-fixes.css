@@ -1,4 +1,4 @@
-/* 🛡️ CSGA Hero Slider & Mobile Navigation Fixes */
+/* 🛡️ MEOK AI Hero Slider & Mobile Navigation Fixes */
 /* Fix hero images alignment, branding, and mobile menu navigation */
 
 /* 🎯 Hero Slider Improvements */
@@ -37,7 +37,7 @@
   z-index: 1;
 }
 
-/* CSGA branded overlay pattern */
+/* MEOK AI branded overlay pattern */
 .hero-slide::after, .slide::after, [class*="slide"]::after {
   content: '';
   position: absolute;
@@ -60,7 +60,7 @@
   margin: 0 auto;
 }
 
-/* Hero headings with CSGA branding */
+/* Hero headings with MEOK AI branding */
 .hero-content h1, .hero-content h2, 
 .slide-content h1, .slide-content h2,
 [class*="slide-content"] h1, [class*="slide-content"] h2 {
@@ -86,7 +86,7 @@
   font-weight: 500 !important;
 }
 
-/* CSGA branded buttons in hero */
+/* MEOK AI branded buttons in hero */
 .hero-content .btn, .hero-content button,
 .slide-content .btn, .slide-content button,
 [class*="slide-content"] .btn, [class*="slide-content"] button {
@@ -113,7 +113,7 @@
   border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* Slider navigation with CSGA styling */
+/* Slider navigation with MEOK AI styling */
 .slider-nav, .carousel-nav, [class*="nav"]:not(.navbar) {
   position: absolute;
   bottom: 2rem;
@@ -211,14 +211,14 @@
   transform: rotate(90deg) !important;
 }
 
-/* CSGA logo in mobile menu */
+/* MEOK AI logo in mobile menu */
 .mobile-menu-logo, .navbar-brand-mobile {
   padding: 1rem 2rem !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   margin-bottom: 1rem !important;
 }
 
-.mobile-menu-logo .csga-brand-text {
+.mobile-menu-logo .meok-brand-text {
   color: #ffffff !important;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
@@ -359,9 +359,9 @@
   }
 }
 
-/* 🎯 CSGA Specific Enhancements */
+/* 🎯 MEOK AI Specific Enhancements */
 
-/* Add CSGA security badges to hero */
+/* Add MEOK AI security badges to hero */
 .hero-badges, .slide-badges {
   position: absolute;
   bottom: 1rem;
@@ -385,7 +385,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* CSGA branded loading states */
+/* MEOK AI branded loading states */
 .slider-loading, .carousel-loading {
   display: flex;
   align-items: center;

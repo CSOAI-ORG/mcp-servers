@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 /**
- * CSGA Global — Playwright Navigation & Page Load Tests
+ * MEOK AI Labs — Playwright Navigation & Page Load Tests
  * ══════════════════════════════════════════════════════
  */
 
@@ -57,13 +57,13 @@ test.describe('Navigation & Site Structure', () => {
 
   test('pricing-config.js loads on pricing page', async ({ page }) => {
     await page.goto('/pricing.html');
-    const hasConfig = await page.evaluate(() => typeof window.CSGA_PRICING !== 'undefined');
+    const hasConfig = await page.evaluate(() => typeof window.MEOK AI_PRICING !== 'undefined');
     expect(hasConfig).toBe(true);
   });
 
   test('pricing-config.js loads on dashboard', async ({ page }) => {
     await page.goto('/dashboard.html');
-    const hasConfig = await page.evaluate(() => typeof window.CSGA_PRICING !== 'undefined');
+    const hasConfig = await page.evaluate(() => typeof window.MEOK AI_PRICING !== 'undefined');
     expect(hasConfig).toBe(true);
   });
 });

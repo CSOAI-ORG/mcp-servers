@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Stripe Checkout Session Creator
+ * MEOK AI Labs — Stripe Checkout Session Creator
  * ═══════════════════════════════════════════════
  * Vercel Serverless Function
  * Supports: subscriptions, one-time purchases, trials, coupons, metadata
@@ -49,8 +49,8 @@ module.exports = async (req, res) => {
       mode: checkoutMode,
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: parseInt(quantity, 10) || 1 }],
-      success_url: successUrl || `${req.headers.origin || 'https://csga-global.org'}/dashboard?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: cancelUrl || `${req.headers.origin || 'https://csga-global.org'}/pricing`,
+      success_url: successUrl || `${req.headers.origin || 'https://meok-global.org'}/dashboard?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: cancelUrl || `${req.headers.origin || 'https://meok-global.org'}/pricing`,
       allow_promotion_codes: !couponCode, // Disable if applying coupon directly
       billing_address_collection: 'auto',
       tax_id_collection: { enabled: true },
@@ -67,7 +67,7 @@ module.exports = async (req, res) => {
     if (checkoutMode === 'subscription') {
       sessionConfig.subscription_data = {
         metadata: {
-          source: 'csga-global',
+          source: 'meok-global',
           plan: priceId,
           ...(metadata || {}),
         },
@@ -84,7 +84,7 @@ module.exports = async (req, res) => {
     if (checkoutMode === 'payment') {
       sessionConfig.payment_intent_data = {
         metadata: {
-          source: 'csga-global',
+          source: 'meok-global',
           product: priceId,
           ...(metadata || {}),
         },

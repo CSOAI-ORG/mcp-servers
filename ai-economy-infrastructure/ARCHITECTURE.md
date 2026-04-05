@@ -47,7 +47,7 @@ The AI Economy Infrastructure MCP is the master orchestration layer that coordin
          │           │              │              │
          ▼           ▼              ▼              ▼
     ┌────────┐  ┌────────┐  ┌────────┐  ┌────────────┐
-    │CSOAI   │  │CASA    │  │CSGA    │  │QuantraNet  │
+    │CSOAI   │  │CASA    │  │MEOK AI    │  │QuantraNet  │
     │Govern. │  │Cert    │  │Cyber   │  │Quantum/PQC │
     └────────┘  └────────┘  └────────┘  └────────────┘
          │           │              │              │
@@ -226,7 +226,7 @@ Output: Ordered list of MCPs + Aggregation strategy
 ```
 Query: "What quantum threats do we face?"
 ├─ Keywords: quantum, threats
-├─ Routes: quantra-quantum, csga-cybersecurity
+├─ Routes: quantra-quantum, meok-cybersecurity
 └─ Strategy: parallel (can run independently)
 
 Query: "Complete AI governance certification"
@@ -247,7 +247,7 @@ Router (identify MCPs)
 [Parallel or Sequential]
   ├─ CSOAI: Risk assessment
   ├─ CASA: Tier evaluation
-  ├─ CSGA: Security check
+  ├─ MEOK AI: Security check
   └─ QuantraNet: PQC readiness
   ↓
 Aggregator (combine results)
@@ -263,7 +263,7 @@ Pathway Request
   ↓
 Skill Gap Analysis
   ↓
-Course Selection (OneOS MOOC, BMCC, CSGA)
+Course Selection (OneOS MOOC, BMCC, MEOK AI)
   ↓
 K.A.T.A. Belt Mapping
   ↓
@@ -283,10 +283,10 @@ Type Classification (cyber/ai_safety/compliance/quantum/multi)
 Severity Assessment
   ↓
 Select Responsible MCPs
-  ├─ Cyber → CSGA, Quantra, PROOFOF
+  ├─ Cyber → MEOK AI, Quantra, PROOFOF
   ├─ AI Safety → CSOAI, CASA, OneOS
   ├─ Compliance → CSOAI, CASA, Sector MCPs
-  └─ Quantum → Quantra, CSGA
+  └─ Quantum → Quantra, MEOK AI
   ↓
 Build Unified Response Plan
   ├─ Phase 1: Investigation
@@ -359,7 +359,7 @@ CSOAI Assessment → CASA Tier Recommendation → Certification Path
 
 ### Pattern 2: Incident-to-Governance
 ```
-Incident → CSGA Forensics → CSOAI Risk Re-classification → CASA Review
+Incident → MEOK AI Forensics → CSOAI Risk Re-classification → CASA Review
            (if cyber)       (governance impact)           (cert impact)
 ```
 

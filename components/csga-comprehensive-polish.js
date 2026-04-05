@@ -1,4 +1,4 @@
-// CSGA Global Comprehensive Polish & Quality Assurance Script
+// MEOK AI Labs Comprehensive Polish & Quality Assurance Script
 // Ensures 100% professional, clean, seamless experience across all platforms
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeQualityAssurance() {
-  console.log('🎯 CSGA Global Quality Assurance - Initializing...');
+  console.log('🎯 MEOK AI Labs Quality Assurance - Initializing...');
   
   // Add global quality CSS
   const qualityCSS = `
     /* ============================================================================
-       CSGA Global - Professional Polish & Quality Assurance Styles
+       MEOK AI Labs - Professional Polish & Quality Assurance Styles
        ============================================================================ */
     
     /* Fix common layout issues */
@@ -851,4 +851,4 @@ window.addEventListener('unhandledrejection', function(e) {
   console.error('🚨 Unhandled Promise Rejection:', e.reason);
 });
 
-console.log('✅ CSGA Global Quality Assurance - Complete!');
+console.log('✅ MEOK AI Labs Quality Assurance - Complete!');

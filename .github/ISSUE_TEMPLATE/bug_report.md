@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug in a CSGA MCP server or the platform
+about: Report a bug in a MEOK AI MCP server or the platform
 title: "[BUG] "
 labels: bug
 assignees: ''

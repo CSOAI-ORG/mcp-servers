@@ -1,7 +1,7 @@
 // 🧪 Comprehensive Functionality Testing
 // Test all interactive elements and user flows
 
-class CSGAFunctionalityTester {
+class MEOK AIFunctionalityTester {
     constructor() {
         this.tests = [];
         this.results = {
@@ -181,7 +181,7 @@ class CSGAFunctionalityTester {
 
 // Auto-run tests when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    const tester = new CSGAFunctionalityTester();
+    const tester = new MEOK AIFunctionalityTester();
     window.csgaTester = tester; // Make available globally
     
     // Run tests after a brief delay to ensure all content is loaded

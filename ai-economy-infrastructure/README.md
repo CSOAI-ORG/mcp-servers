@@ -26,7 +26,7 @@ The AI Economy Infrastructure MCP serves as the "brain" of the CSOAI ecosystem, 
     ┌────────┴────────┬──────────┬──────────┬──────────┬──────────┐
     │                 │          │          │          │          │
 ┌───▼──┐  ┌────────┐  │  ┌─────┐│ ┌──────┐ │┌──────┐ │┌───────┐│
-│CSOAI │  │ CASA   │  │  │CSGA ││ │Quantra││PROOFOF ││BMCC   ││
+│CSOAI │  │ CASA   │  │  │MEOK AI ││ │Quantra││PROOFOF ││BMCC   ││
 │ Gvn  │  │Cert    │  │  │Cyber││ │Quantum││Verif  ││Cyber  ││
 └──────┘  └────────┘  │  └─────┘│ └──────┘ │└──────┘ │└───────┘│
     │         │       │    │     │    │    │    │    │    │
@@ -179,7 +179,7 @@ Personalized cross-ecosystem learning recommendations.
 
 **Output:**
 - Personalized learning pathway ID
-- Recommended courses (OneOS MOOC, BMCC Cyber, CSGA, etc.)
+- Recommended courses (OneOS MOOC, BMCC Cyber, MEOK AI, etc.)
 - K.A.T.A. belt progression plan
 - CASA certification prep track
 - OneOS enrollment hooks for auto-enrollment and tracking
@@ -269,7 +269,7 @@ Multi-certification pathway bundling CASA, K.A.T.A., CSR5, and PQC.
     "size": "large",
     "jurisdiction": "US"
   },
-  "target_certifications": ["CASA Tier 4", "CSGA Level 2", "PQC Readiness"],
+  "target_certifications": ["CASA Tier 4", "MEOK AI Level 2", "PQC Readiness"],
   "timeline_months": 18
 }
 ```
@@ -439,7 +439,7 @@ curl -X POST http://localhost:3000/tools/ai_certification_bundle \
 - Risk assessments inform tier recommendations
 - Tier progression drives governance reassessment
 
-### CSGA Cybersecurity ↔ QuantraNet
+### MEOK AI Cybersecurity ↔ QuantraNet
 - Security assessments identify crypto weaknesses
 - PQC readiness feeds into security strategy
 
@@ -456,7 +456,7 @@ curl -X POST http://localhost:3000/tools/ai_certification_bundle \
 - Healthcare regulations mapped to governance frameworks
 - Clinical validation requirements inform tier assessment
 
-### DAO Defence ↔ CSGA + Quantra
+### DAO Defence ↔ MEOK AI + Quantra
 - Defence regulations drive security requirements
 - Quantum threat assessment mandatory for classified systems
 

@@ -84,7 +84,7 @@ const doc = new Document({
       children: [
         new Paragraph({ spacing: { before: 2400 } }),
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, children: [
-          new TextRun({ text: "CSOAI / CSGA / TERRANOVA", font: "Arial", size: 28, color: GOLD, bold: true }),
+          new TextRun({ text: "CSOAI / MEOK AI / TERRANOVA", font: "Arial", size: 28, color: GOLD, bold: true }),
         ]}),
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 100 }, children: [
           new TextRun({ text: "MCP ECOSYSTEM", font: "Arial", size: 52, bold: true, color: NAVY }),
@@ -101,13 +101,13 @@ const doc = new Document({
           new TextRun({ text: "Prepared for:", font: "Arial", size: 20, color: "999999" }),
         ]}),
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 80 }, children: [
-          new TextRun({ text: "Nick Templeman  |  James Castle  |  Chris Olden", font: "Arial", size: 24, bold: true, color: NAVY }),
+          new TextRun({ text: "Nick Templeman  |  Nicholas Templeman  |  Chris Olden", font: "Arial", size: 24, bold: true, color: NAVY }),
         ]}),
         new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 400 }, children: [
           new TextRun({ text: "February 26, 2026  |  28 Days to Toronto Summit", font: "Arial", size: 20, color: "CC0000", bold: true }),
         ]}),
         new Paragraph({ alignment: AlignmentType.CENTER, children: [
-          new TextRun({ text: "CONFIDENTIAL \u2014 CSGA Global / Terranova CSOAI Corp", font: "Arial", size: 18, color: "CC0000", italics: true }),
+          new TextRun({ text: "CONFIDENTIAL \u2014 MEOK AI Labs / MEOK AI CSOAI Corp", font: "Arial", size: 18, color: "CC0000", italics: true }),
         ]}),
       ]
     },
@@ -163,9 +163,9 @@ const doc = new Document({
           columnWidths: [1800, 2000, 3060, 2500],
           rows: [
             new TableRow({ children: [hdrCell("Level", 1800), hdrCell("Name", 2000), hdrCell("Target", 3060), hdrCell("Practices", 2500)] }),
-            new TableRow({ children: [colorCell("L1", 1800, "2B5797"), cell("AI Ready", 2000), cell("CSGA Commercial: Retail, HR, Media, Gaming, Legal, Education, Agriculture, Travel", 3060), cell("17 practices", 2500)] }),
-            new TableRow({ children: [colorCell("L2", 1800, "BF8F00"), cell("AI Assured", 2000), cell("Terranova Dual-Use: Healthcare, Financial, Energy, Maritime, Aerospace, Telecom, Mining", 3060), cell("72 practices", 2500)] }),
-            new TableRow({ children: [colorCell("L3", 1800, "8B0000"), cell("AI Sovereign", 2000), cell("Terranova Defence: Space, Weapons, PQC, Law Enforcement, Critical Defence", 3060), cell("130 practices", 2500)] }),
+            new TableRow({ children: [colorCell("L1", 1800, "2B5797"), cell("AI Ready", 2000), cell("MEOK AI Commercial: Retail, HR, Media, Gaming, Legal, Education, Agriculture, Travel", 3060), cell("17 practices", 2500)] }),
+            new TableRow({ children: [colorCell("L2", 1800, "BF8F00"), cell("AI Assured", 2000), cell("MEOK AI Dual-Use: Healthcare, Financial, Energy, Maritime, Aerospace, Telecom, Mining", 3060), cell("72 practices", 2500)] }),
+            new TableRow({ children: [colorCell("L3", 1800, "8B0000"), cell("AI Sovereign", 2000), cell("MEOK AI Defence: Space, Weapons, PQC, Law Enforcement, Critical Defence", 3060), cell("130 practices", 2500)] }),
             new TableRow({ children: [colorCell("L4", 1800, "4A0E4E"), cell("AI National Trust", 2000), cell("Nation-State: Five Eyes, NATO, Sovereign AI, Nuclear", 3060), cell("171 practices", 2500)] }),
           ]
         }),
@@ -219,9 +219,9 @@ const doc = new Document({
             new TableRow({ children: [hdrCell("Crosswalk", 2500), hdrCell("Why It Matters", 3860), hdrCell("Priority", 3000)] }),
             new TableRow({ children: [cell("DORA (EU Digital Operational Resilience)", 2500), cell("Mandatory for EU financial services from Jan 2025. Financial-AI MCP should map to it.", 3860), colorCell("P0 \u2014 Revenue", 3000, "CC0000")] }),
             new TableRow({ children: [cell("NIS2 Directive", 2500), cell("EU network/info security for critical infrastructure. Applies to Energy, Telecom, Healthcare MCPs.", 3860), colorCell("P0 \u2014 Revenue", 3000, "CC0000")] }),
-            new TableRow({ children: [cell("NIST CSF 2.0", 2500), cell("Updated Feb 2024. Our CSGA Standards MCP should crosswalk to the new GOVERN function.", 3860), colorCell("P1", 3000, "BF8F00")] }),
+            new TableRow({ children: [cell("NIST CSF 2.0", 2500), cell("Updated Feb 2024. Our MEOK AI Standards MCP should crosswalk to the new GOVERN function.", 3860), colorCell("P1", 3000, "BF8F00")] }),
             new TableRow({ children: [cell("Canada AIDA (C-27)", 2500), cell("Canadian AI regulation. Critical for Toronto Summit positioning and DND.", 3860), colorCell("P0 \u2014 Strategic", 3000, "CC0000")] }),
-            new TableRow({ children: [cell("AUKUS Pillar II", 2500), cell("AI/quantum sharing between US/UK/AU. Maps to Terranova Defence + QuantraNet.", 3860), colorCell("P1", 3000, "BF8F00")] }),
+            new TableRow({ children: [cell("AUKUS Pillar II", 2500), cell("AI/quantum sharing between US/UK/AU. Maps to MEOK AI Defence + QuantraNet.", 3860), colorCell("P1", 3000, "BF8F00")] }),
             new TableRow({ children: [cell("NATO STANAG 4778", 2500), cell("NATO AI interoperability standard. L3/L4 certification requirement.", 3860), colorCell("P1", 3000, "BF8F00")] }),
             new TableRow({ children: [cell("Singapore PDPA + AI Governance Framework", 2500), cell("Asia-Pacific expansion. Huge market for L1/L2 certifications.", 3860), colorCell("P2", 3000, "2B5797")] }),
             new TableRow({ children: [cell("DARPA ElectRx", 2500), cell("Bioelectronics crosswalk for Healthcare + Biometrics WBAN integration.", 3860), colorCell("P2", 3000, "2B5797")] }),
@@ -239,7 +239,7 @@ const doc = new Document({
         heading("4.3 Sector MCPs That Could Be Stronger", HeadingLevel.HEADING_2),
         bullet("ProofOf.ai MCP: Currently 0 active tools (placeholder). Needs: deepfake_detection, content_authentication, blockchain_verification tools. Samir and Ting should spec the tool schemas."),
         bullet("QuantraNet PQC MCP: Currently 0 active tools. Needs: pqc_algorithm_assessment, quantum_risk_scoring, migration_readiness tools."),
-        bullet("Terranova Defence MCP: Currently 0 active tools. Needs: itar_compliance_check, cmmc_readiness_assessment, defence_supply_chain_audit tools."),
+        bullet("MEOK AI Defence MCP: Currently 0 active tools. Needs: itar_compliance_check, cmmc_readiness_assessment, defence_supply_chain_audit tools."),
         bullet("Digital Human Library MCP: Currently 0 active tools. Needs: mentor_matching, student_safety_assessment, curriculum_alignment tools."),
 
         new Paragraph({ children: [new PageBreak()] }),
@@ -265,7 +265,7 @@ const doc = new Document({
         }),
 
         heading("5.2 DSR Bank Ready \u2014 40 Nations", HeadingLevel.HEADING_2),
-        para("James Castle\u2019s DSRB (40-nation advisory network) becomes the distribution channel. Each nation gets:"),
+        para("Nicholas Templeman\u2019s DSRB (40-nation advisory network) becomes the distribution channel. Each nation gets:"),
         bullet("A CA3O-certified AI governance stack (L1-L3 depending on classification level)"),
         bullet("The full 36-MCP ecosystem installed as their national AI compliance infrastructure"),
         bullet("API Gateway for integration with their existing government systems"),
@@ -418,7 +418,7 @@ const doc = new Document({
         para("The Defence Innovation Secure Hubs challenge is custom-made for us. Our ecosystem provides the secure infrastructure, CA3O provides the certification framework, DSRB provides the 40-nation distribution. One DND contract validates everything and opens every Five Eyes + NATO country."),
 
         heading("9.4 Speed > Perfection Right Now", HeadingLevel.HEADING_2),
-        para("The 4 placeholder MCPs (ProofOf, QuantraNet, Terranova Defence, Digital Human Library) should not block publishing. Publish the 32 that are fully armed, then backfill. First-mover advantage in the GPT Store and Claude MCP ecosystem matters more than 100% tool coverage."),
+        para("The 4 placeholder MCPs (ProofOf, QuantraNet, MEOK AI Defence, Digital Human Library) should not block publishing. Publish the 32 that are fully armed, then backfill. First-mover advantage in the GPT Store and Claude MCP ecosystem matters more than 100% tool coverage."),
 
         heading("9.5 The AIDA Crosswalk Is a Toronto Summit Showstopper", HeadingLevel.HEADING_2),
         para("If we walk into the Toronto Summit on March 26 with CA3O + Canada AIDA alignment, we\u2019re the only organization offering Canadian-law-aligned AI certification. That\u2019s a headline. Add it to the csoai-governance MCP before the summit."),

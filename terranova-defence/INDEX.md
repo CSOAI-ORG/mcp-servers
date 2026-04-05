@@ -1,4 +1,4 @@
-# Terranova Defence MCP Server - Complete Index
+# MEOK AI Defence MCP Server - Complete Index
 
 ## Quick Navigation
 
@@ -236,7 +236,7 @@ npm start
 - CMMC 2.0 - Certification model
 
 ### Organization
-- Terranova Defence Solutions
+- MEOK AI Defence Solutions
 - Homepage: https://terranova-defense.com
 - License: CC0-1.0 (Public Domain)
 

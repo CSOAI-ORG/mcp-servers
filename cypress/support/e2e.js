@@ -1,5 +1,5 @@
 // ***********************************************************
-// CSGA Global — Cypress E2E Support
+// MEOK AI Labs — Cypress E2E Support
 // ***********************************************************
 
 // ── Custom Commands ──
@@ -7,9 +7,9 @@
 /**
  * Simulate login via localStorage (mirrors dashboard demo auth)
  */
-Cypress.Commands.add('login', (email = 'pro@csga.org', tier = 'professional') => {
+Cypress.Commands.add('login', (email = 'pro@meok.org', tier = 'professional') => {
   cy.window().then((win) => {
-    win.localStorage.setItem('csga_session', JSON.stringify({
+    win.localStorage.setItem('meok_session', JSON.stringify({
       loggedIn: true,
       email,
       customerId: `cus_test_${tier}`,
@@ -21,7 +21,7 @@ Cypress.Commands.add('login', (email = 'pro@csga.org', tier = 'professional') =>
 
 Cypress.Commands.add('logout', () => {
   cy.window().then((win) => {
-    win.localStorage.removeItem('csga_session');
+    win.localStorage.removeItem('meok_session');
   });
 });
 
@@ -36,10 +36,10 @@ Cypress.Commands.add('assertNoConsoleErrors', () => {
 });
 
 /**
- * Wait for CSGA_PRICING to be loaded
+ * Wait for MEOK AI_PRICING to be loaded
  */
 Cypress.Commands.add('waitForPricingConfig', () => {
-  cy.window().its('CSGA_PRICING').should('exist');
+  cy.window().its('MEOK AI_PRICING').should('exist');
 });
 
 /**

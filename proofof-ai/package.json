@@ -1,8 +1,8 @@
 {
-  "name": "@csga-global/proofof-ai",
+  "name": "@meok-global/proofof-ai",
   "version": "1.0.0",
   "description": "Blockchain-verified AI content authentication and deepfake detection MCP server",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "homepage": "https://proofof.ai",
   "main": "dist/index.js",

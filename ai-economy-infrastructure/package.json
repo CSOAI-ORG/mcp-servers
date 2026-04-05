@@ -1,15 +1,15 @@
 {
-  "name": "@csga-global/ai-economy-infrastructure",
+  "name": "@meok-global/ai-economy-infrastructure",
   "version": "1.0.0",
   "description": "Unified AI Economy Infrastructure — the brain of the CSOAI ecosystem. Aggregates 10 specialist MCP servers covering governance, certification, cybersecurity, verification, education, quantum security, defence, pharma, and mentoring.",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/ai-economy-infrastructure"
   },
-  "homepage": "https://csga-global.org",
+  "homepage": "https://meok-global.org",
   "main": "dist/index.js",
   "files": [
     "dist",

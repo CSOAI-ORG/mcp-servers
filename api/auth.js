@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Customer Authentication
+ * MEOK AI Labs — Customer Authentication
  * ═══════════════════════════════════════
  * Vercel Serverless Function
  * Looks up Stripe customer by email and returns subscription info.

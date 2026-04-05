@@ -177,7 +177,7 @@ thn-global/
 #### `package.json`
 - **Project Name**: `thn-global-mcp`
 - **Version**: `1.0.0`
-- **Author**: THN Global — Terranova Health AI
+- **Author**: THN Global — MEOK AI Health AI
 - **License**: CC0-1.0
 - **Homepage**: https://thn-global.com
 - **Key Scripts**:
@@ -359,7 +359,7 @@ npm start
 
 - **Name**: THN Global MCP Server
 - **Version**: 1.0.0
-- **Author**: THN Global — Terranova Health AI
+- **Author**: THN Global — MEOK AI Health AI
 - **License**: CC0-1.0 (Public Domain)
 - **Homepage**: https://thn-global.com
 - **Location**: Waterloo Biotech Ecosystem, Canada

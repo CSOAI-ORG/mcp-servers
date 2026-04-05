@@ -1,11 +1,11 @@
-// Enhanced Analytics - CSGA Global
+// Enhanced Analytics - MEOK AI Labs
 
 (function() {
   'use strict';
   
   // Enhanced Google Analytics 4 configuration
   if (typeof gtag !== 'undefined') {
-    // Custom events for CSGA tracking
+    // Custom events for MEOK AI tracking
     const trackCustomEvents = () => {
       // Track CTA interactions
       document.querySelectorAll('.cta-button, .btn-primary').forEach(btn => {

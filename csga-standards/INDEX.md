@@ -1,8 +1,8 @@
-# CSGA Standards MCP Server - Complete Index
+# MEOK AI Standards MCP Server - Complete Index
 
 **Status:** ✅ Production Ready
 **Created:** February 25, 2026
-**Location:** /sessions/brave-adoring-cerf/mcp-servers/csga-standards/
+**Location:** /sessions/brave-adoring-cerf/mcp-servers/meok-standards/
 
 ---
 
@@ -91,7 +91,7 @@ npm start
 ```json
 {
   "mcpServers": {
-    "csga-standards-mcp": {
+    "meok-standards-mcp": {
       "command": "node",
       "args": ["/path/to/dist/index.js"],
       "env": { "MCP_STDIO": "true" }
@@ -169,14 +169,14 @@ npm start
 
 ---
 
-## About CSGA
+## About MEOK AI
 
 **Cyber Security Global Alliance**
 - 95,000+ cybersecurity professionals
 - 20+ countries represented
 - 11-member board
 - Mission: Unified security standards globally
-- Website: https://csga-global.org
+- Website: https://meok-global.org
 - License: CC0-1.0 (Public Domain)
 
 ---
@@ -189,7 +189,7 @@ npm start
 - Project metadata
 - Dependencies: @modelcontextprotocol/sdk, zod
 - Build and run scripts
-- Author: CSGA — Cyber Security Global Alliance
+- Author: MEOK AI — Cyber Security Global Alliance
 
 **tsconfig.json** (726 bytes)
 - ES2020 target and module
@@ -345,7 +345,7 @@ npm run format
 - [ ] Try example tool calls from QUICKSTART.md
 - [ ] Deploy to your environment
 - [ ] Monitor first runs
-- [ ] Provide feedback to CSGA
+- [ ] Provide feedback to MEOK AI
 
 ---
 
@@ -364,14 +364,14 @@ npm run format
 - **Individual Tools:** `src/*.ts` files
 
 ### External
-- **CSGA Website:** https://csga-global.org
+- **MEOK AI Website:** https://meok-global.org
 - **MCP Documentation:** https://modelcontextprotocol.io
 
 ---
 
 ## Version Info
 
-- **Server:** csga-standards-mcp v1.0.0
+- **Server:** meok-standards-mcp v1.0.0
 - **Node.js:** 18.0.0+
 - **TypeScript:** 5.3.3+
 - **MCP SDK:** 0.7.0+

@@ -1,10 +1,10 @@
-# 🛡️ CSGA Professional Style Guide
+# 🛡️ MEOK AI Professional Style Guide
 
 ## Professional Icon System Applied
 
 ### ✅ **Icon Replacements Completed:**
 - **Removed**: All emoji icons (🏗️📋⚙️🔍🧠⚡📊💰📞🎓🚁🏦📈🔒🌐💬📚🛡️)
-- **Applied**: Professional abbreviated icons with CSGA branding
+- **Applied**: Professional abbreviated icons with MEOK AI branding
 - **Style**: Gradient backgrounds with proper typography
 
 ### ✅ **Professional Typography:**
@@ -13,9 +13,9 @@
 - **Consistent**: Letter spacing and line heights
 - **Professional**: Color hierarchy aligned
 
-### ✅ **CSGA Branding Colors:**
-- **Primary**: #3182ce (CSGA Blue)
-- **Secondary**: #1e40af (CSGA Dark Blue)  
+### ✅ **MEOK AI Branding Colors:**
+- **Primary**: #3182ce (MEOK AI Blue)
+- **Secondary**: #1e40af (MEOK AI Dark Blue)  
 - **Neutral**: #6b7280 (Professional Gray)
 - **Success**: #059669 (Professional Green)
 

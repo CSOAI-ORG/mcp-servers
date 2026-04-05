@@ -1,7 +1,7 @@
-// 🛡️ CSGA Inner Pages Professional Enhancement
+// 🛡️ MEOK AI Inner Pages Professional Enhancement
 // Consistent functionality and branding for all inner pages
 
-class CSGAInnerPagesEnhancer {
+class MEOK AIInnerPagesEnhancer {
   constructor() {
     this.pageType = this.detectPageType();
     this.init();
@@ -102,7 +102,7 @@ class CSGAInnerPagesEnhancer {
     // Generate breadcrumb items based on URL
     const pathSegments = window.location.pathname.split('/').filter(segment => segment);
     const breadcrumbItems = [
-      { text: '🛡️ CSGA Home', href: '/' }
+      { text: '🛡️ MEOK AI Home', href: '/' }
     ];
 
     let currentPath = '';
@@ -230,7 +230,7 @@ class CSGAInnerPagesEnhancer {
       return h1.textContent.trim();
     }
     
-    if (title && title !== 'CSGA') {
+    if (title && title !== 'MEOK AI') {
       return title.split(' | ')[0];
     }
     
@@ -286,7 +286,7 @@ class CSGAInnerPagesEnhancer {
   }
 
   enhancePageHeader(pageHeader) {
-    // Add CSGA background pattern if not present
+    // Add MEOK AI background pattern if not present
     if (!pageHeader.querySelector('::before')) {
       // Already styled via CSS
     }
@@ -565,7 +565,7 @@ class CSGAInnerPagesEnhancer {
 
     return relatedMap[this.pageType] || [
       { title: 'Home', href: '/' },
-      { title: 'About CSGA', href: '/about.html' },
+      { title: 'About MEOK AI', href: '/about.html' },
       { title: 'Contact', href: '/contact.html' }
     ];
   }
@@ -646,7 +646,7 @@ class CSGAInnerPagesEnhancer {
     const ctaMap = {
       'mcp': {
         title: 'Ready to Transform Your AI Governance?',
-        subtitle: 'Join leading organizations using CSGA MCP services for enterprise AI compliance and security.',
+        subtitle: 'Join leading organizations using MEOK AI MCP services for enterprise AI compliance and security.',
         primaryAction: { text: '🚀 Get Started', href: '/pricing.html' },
         secondaryAction: { text: '📞 Contact Sales', href: '/contact.html' }
       },
@@ -657,7 +657,7 @@ class CSGAInnerPagesEnhancer {
         secondaryAction: { text: '📚 Learn More', href: '/programs.html' }
       },
       'about': {
-        title: 'Join the CSGA Alliance',
+        title: 'Join the MEOK AI Alliance',
         subtitle: 'Connect with cybersecurity professionals and AI governance experts worldwide.',
         primaryAction: { text: '🤝 Become a Member', href: '/members.html' },
         secondaryAction: { text: '💬 Contact Us', href: '/contact.html' }
@@ -666,7 +666,7 @@ class CSGAInnerPagesEnhancer {
 
     return ctaMap[this.pageType] || {
       title: 'Ready to Enhance Your Cybersecurity?',
-      subtitle: 'Discover how CSGA can help protect your organization in the AI-driven economy.',
+      subtitle: 'Discover how MEOK AI can help protect your organization in the AI-driven economy.',
       primaryAction: { text: '🛡️ Get Protected', href: '/programs.html' },
       secondaryAction: { text: '📞 Contact Us', href: '/contact.html' }
     };
@@ -682,7 +682,7 @@ class CSGAInnerPagesEnhancer {
     
     compliance.innerHTML = `
       <h3 style="color: #1a202c !important; margin-bottom: 1rem !important;">🔒 Security & Compliance</h3>
-      <p style="color: #4a5568 !important;">CSGA maintains the highest standards of security and compliance for enterprise cybersecurity.</p>
+      <p style="color: #4a5568 !important;">MEOK AI maintains the highest standards of security and compliance for enterprise cybersecurity.</p>
       <div class="compliance-badges">
         <span class="compliance-badge">ISO 27001:2022</span>
         <span class="compliance-badge">SOC 2 Type II</span>
@@ -920,13 +920,13 @@ class CSGAInnerPagesEnhancer {
 
 // 🚀 Initialize Inner Pages Enhancement
 document.addEventListener('DOMContentLoaded', () => {
-  new CSGAInnerPagesEnhancer();
+  new MEOK AIInnerPagesEnhancer();
 });
 
 // Handle dynamic content
 const observer = new MutationObserver(() => {
   setTimeout(() => {
-    new CSGAInnerPagesEnhancer();
+    new MEOK AIInnerPagesEnhancer();
   }, 100);
 });
 
@@ -935,4 +935,4 @@ observer.observe(document.body, {
   subtree: true
 });
 
-console.log('✅ CSGA Inner Pages Professional Enhancement Applied');
+console.log('✅ MEOK AI Inner Pages Professional Enhancement Applied');

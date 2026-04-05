@@ -1,7 +1,7 @@
-// Enhanced Cypress Tests for CSGA Global
+// Enhanced Cypress Tests for MEOK AI Labs
 // Comprehensive E2E testing with mobile/desktop coverage
 
-describe('CSGA Global - Comprehensive E2E Tests', () => {
+describe('MEOK AI Labs - Comprehensive E2E Tests', () => {
   
   beforeEach(() => {
     // Set up test environment
@@ -14,7 +14,7 @@ describe('CSGA Global - Comprehensive E2E Tests', () => {
     it('loads homepage successfully', () => {
       cy.get('h1').should('be.visible');
       cy.get('.home-hero').should('be.visible');
-      cy.title().should('contain', 'CSGA Global');
+      cy.title().should('contain', 'MEOK AI Labs');
     });
     
     it('has working navigation menu', () => {
@@ -94,7 +94,7 @@ describe('CSGA Global - Comprehensive E2E Tests', () => {
       cy.get('input[name*="fname"], input[name*="first"]').type('Test');
       cy.get('input[name*="lname"], input[name*="last"]').type('User');
       cy.get('input[type="email"]').type('test@example.com');
-      cy.get('textarea').type('Test message for CSGA Global');
+      cy.get('textarea').type('Test message for MEOK AI Labs');
       
       // Check form validation
       cy.get('input[type="email"]').should('have.value', 'test@example.com');
@@ -155,7 +155,7 @@ describe('CSGA Global - Comprehensive E2E Tests', () => {
     it('DSRB Defence has proper security gating', () => {
       cy.visit('/mcp/dsrb-defence.html');
       cy.contains('Defence').should('be.visible');
-      cy.contains('defence@csga-global.org').should('be.visible');
+      cy.contains('defence@meok-global.org').should('be.visible');
     });
   });
 

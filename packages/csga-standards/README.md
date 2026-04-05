@@ -1,24 +1,24 @@
-# CSGA Standards MCP Server
+# MEOK AI Standards MCP Server
 
-A comprehensive Model Context Protocol (MCP) server providing cybersecurity standards, training pathways, threat intelligence, and incident response capabilities from the Cyber Security Global Alliance (CSGA).
+A comprehensive Model Context Protocol (MCP) server providing cybersecurity standards, training pathways, threat intelligence, and incident response capabilities from the Cyber Security Global Alliance (MEOK AI).
 
-**Author:** CSGA — Cyber Security Global Alliance
+**Author:** MEOK AI — Cyber Security Global Alliance
 **License:** CC0-1.0
-**Homepage:** https://csga-global.org
+**Homepage:** https://meok-global.org
 **Version:** 1.0.0
 
 ---
 
-## About CSGA
+## About MEOK AI
 
-The **Cyber Security Global Alliance (CSGA)** is a leading global organization dedicated to advancing cybersecurity standards and practices worldwide.
+The **Cyber Security Global Alliance (MEOK AI)** is a leading global organization dedicated to advancing cybersecurity standards and practices worldwide.
 
 - **95,000+ subscribers** across the global cybersecurity community
 - **20+ countries** represented in our member network
 - **11-member board** providing strategic governance and oversight
 - **Mission:** To establish and promote unified cybersecurity standards, frameworks, and best practices globally
 
-CSGA serves organizations of all sizes, from startups to enterprises, helping them implement security best practices and achieve compliance with major international frameworks.
+MEOK AI serves organizations of all sizes, from startups to enterprises, helping them implement security best practices and achieve compliance with major international frameworks.
 
 ---
 
@@ -28,7 +28,7 @@ CSGA serves organizations of all sizes, from startups to enterprises, helping th
 Look up comprehensive information about major cybersecurity standards, frameworks, and best practices.
 
 **Covers:**
-- **CSR5** — CSGA Cyber Security Readiness Level 5 (proprietary maturity model)
+- **CSR5** — MEOK AI Cyber Security Readiness Level 5 (proprietary maturity model)
 - **NIST CSF** — NIST Cybersecurity Framework
 - **ISO 27001** — International Information Security Management Standard
 - **CIS Controls** — CIS Critical Security Controls
@@ -39,7 +39,7 @@ Look up comprehensive information about major cybersecurity standards, framework
 **Output:** Standard details, requirements, implementation guidance, compliance effort
 
 ### 2. **csga_kata_assessment** — K.A.T.A.™ 8-Belt Cyber Defense Assessment
-Evaluate your organization's cybersecurity maturity using CSGA's proprietary K.A.T.A.™ framework.
+Evaluate your organization's cybersecurity maturity using MEOK AI's proprietary K.A.T.A.™ framework.
 
 **Belt Levels (Progression Path):**
 1. **White (Awareness)** — Basic security awareness and understanding
@@ -163,7 +163,7 @@ The server operates via the Model Context Protocol (MCP) using stdio transport. 
 
 ```json
 {
-  "name": "csga-standards-mcp",
+  "name": "meok-standards-mcp",
   "command": "node",
   "args": ["dist/index.js"],
   "env": {
@@ -267,9 +267,9 @@ The server operates via the Model Context Protocol (MCP) using stdio transport. 
 
 ## Framework & Standards Details
 
-### CSR5 (CSGA Cyber Security Readiness Level 5)
+### CSR5 (MEOK AI Cyber Security Readiness Level 5)
 
-CSGA's proprietary maturity assessment framework with 5 levels:
+MEOK AI's proprietary maturity assessment framework with 5 levels:
 - **Level 1 (Initial):** Ad hoc processes
 - **Level 2 (Repeatable):** Basic security practices
 - **Level 3 (Defined):** Documented and standardized
@@ -409,7 +409,7 @@ K.A.T.A. belt definitions and progression:
 Available training courses and certifications:
 - SANS Institute courses (SEC401, SEC504, SEC566)
 - CompTIA certifications (Security+, CISSP, CISM)
-- CSGA proprietary courses
+- MEOK AI proprietary courses
 - Specialized certifications (OSCP, CEH, CISA)
 - Cost and duration information
 
@@ -428,7 +428,7 @@ Available training courses and certifications:
 ## Project Structure
 
 ```
-csga-standards/
+meok-standards/
 ├── src/
 │   ├── index.ts           # Main server and tool handlers
 │   ├── types.ts           # TypeScript types and Zod schemas
@@ -524,7 +524,7 @@ Feel free to use, modify, and distribute without restriction.
 ## Support & Feedback
 
 For issues, questions, or contributions:
-- **Homepage:** https://csga-global.org
+- **Homepage:** https://meok-global.org
 - **Community:** 95,000+ cybersecurity professionals
 - **Global Reach:** 20+ countries
 
@@ -546,7 +546,7 @@ Future enhancements:
 
 ## Contributors
 
-Built by the CSGA Team with input from our 11-member board and global community of cybersecurity professionals.
+Built by the MEOK AI Team with input from our 11-member board and global community of cybersecurity professionals.
 
 ---
 

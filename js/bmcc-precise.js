@@ -75,7 +75,7 @@ function implementHALTStyleCertification() {
   const threatsSection = document.createElement('section');
   threatsSection.style.cssText = `
     padding: 60px 0;
-    background: var(--csga-navy);
+    background: var(--meok-navy);
     text-align: center;
   `;
   

@@ -1,4 +1,4 @@
-// Dashboard Side Navigation - CSGA Global Style
+// Dashboard Side Navigation - MEOK AI Labs Style
 // Based on csoai.org backend navigation pattern
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -52,9 +52,9 @@ function createDashboardSideNav() {
       background: rgba(0,0,0,0.2);
     ">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-        <img src="/assets/csga-logo-white.svg" alt="CSGA" style="width: 32px; height: 32px;" onerror="this.style.display='none'">
+        <img src="/assets/meok-logo-white.svg" alt="MEOK AI" style="width: 32px; height: 32px;" onerror="this.style.display='none'">
         <div>
-          <div style="font-weight: 700; font-size: 1.1rem;">CSGA Dashboard</div>
+          <div style="font-weight: 700; font-size: 1.1rem;">MEOK AI Dashboard</div>
           <div style="font-size: 0.8rem; opacity: 0.7;">Cyber Security Global Alliance</div>
         </div>
       </div>

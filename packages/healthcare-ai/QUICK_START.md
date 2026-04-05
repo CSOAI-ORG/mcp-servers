@@ -229,7 +229,7 @@ Two built-in resources provide reference material:
 ## Support
 
 For issues or questions:
-- GitHub: https://github.com/CSGA_Global/healthcare-ai-mcp
+- GitHub: https://github.com/MEOK AI_Global/healthcare-ai-mcp
 - Website: https://csoai.org
 
 ---

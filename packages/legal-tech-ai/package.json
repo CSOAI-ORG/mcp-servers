@@ -1,5 +1,5 @@
 {
-  "name": "@csga-global/legal-tech-ai",
+  "name": "@meok-global/legal-tech-ai",
   "version": "1.0.0",
   "description": "Assess compliance for AI in legal services. Covers contract analysis, e-discovery, legal research, predictive case outcomes, and unauthorized practice of law.",
   "type": "module",
@@ -27,10 +27,10 @@
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/legal-tech-ai"
   },
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "keywords": [
     "mcp",
     "ai-governance",

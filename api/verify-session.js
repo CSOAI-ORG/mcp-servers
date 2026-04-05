@@ -1,5 +1,5 @@
 /**
- * CSGA Global — Verify Stripe Checkout Session
+ * MEOK AI Labs — Verify Stripe Checkout Session
  * ══════════════════════════════════════════════
  * Vercel Serverless Function
  * Called by dashboard after Stripe checkout redirect.

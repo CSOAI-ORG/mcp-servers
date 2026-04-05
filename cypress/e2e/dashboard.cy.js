@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 /**
- * CSGA Global — Dashboard E2E Tests
+ * MEOK AI Labs — Dashboard E2E Tests
  * ═══════════════════════════════════
  * Tests login/logout, subscription card, usage meter,
  * MCP grid, credit packs, billing portal, tier rendering.
@@ -41,17 +41,17 @@ describe('Dashboard', () => {
   describe('Login Flow', () => {
     it('logs in with email and shows dashboard', () => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
 
       // Should now show logged-in state
-      cy.contains('pro@csga.org').should('be.visible');
+      cy.contains('pro@meok.org').should('be.visible');
       cy.get('.login-overlay, [class*="login-overlay"]').should('not.be.visible');
     });
 
     it('detects Professional tier from "pro" in email', () => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
 
       cy.contains(/Professional/i).should('be.visible');
@@ -59,7 +59,7 @@ describe('Dashboard', () => {
 
     it('detects Starter tier from "starter" in email', () => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('starter@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('starter@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
 
       cy.contains(/Starter/i).should('be.visible');
@@ -75,20 +75,20 @@ describe('Dashboard', () => {
 
     it('persists session across page reload', () => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
-      cy.contains('pro@csga.org').should('be.visible');
+      cy.contains('pro@meok.org').should('be.visible');
 
       // Reload
       cy.reload();
-      cy.contains('pro@csga.org').should('be.visible');
+      cy.contains('pro@meok.org').should('be.visible');
     });
 
     it('logout clears session and shows login overlay', () => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
-      cy.contains('pro@csga.org').should('be.visible');
+      cy.contains('pro@meok.org').should('be.visible');
 
       // Click logout
       cy.get('button, a').contains(/log.?out|sign.?out/i).click();
@@ -104,7 +104,7 @@ describe('Dashboard', () => {
   describe('Subscription Card', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -139,7 +139,7 @@ describe('Dashboard', () => {
   describe('Stats Row', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -166,7 +166,7 @@ describe('Dashboard', () => {
   describe('Usage Meter', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -185,7 +185,7 @@ describe('Dashboard', () => {
   describe('MCP Grid', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -218,7 +218,7 @@ describe('Dashboard', () => {
   describe('Quick Actions', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 

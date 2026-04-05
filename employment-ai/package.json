@@ -1,12 +1,12 @@
 {
-  "name": "@csga-global/employment-ai",
+  "name": "@meok-global/employment-ai",
   "version": "1.0.0",
   "description": "CSOAI Employment & HR AI Governance — hiring AI bias, EU AI Act employment provisions, NYC Local Law 144, EEOC compliance, and workplace surveillance AI",
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/employment-ai"
   },
   "type": "module",

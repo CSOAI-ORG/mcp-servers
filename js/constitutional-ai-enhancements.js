@@ -1,5 +1,5 @@
 // Constitutional AI Website Enhancement Script - March 3, 2026
-// Updates all CSGA website pages with Constitutional AI positioning
+// Updates all MEOK AI website pages with Constitutional AI positioning
 
 document.addEventListener('DOMContentLoaded', function() {
   addConstitutionalAIGlobalPositioning();
@@ -78,7 +78,7 @@ function updateCASAPricing() {
 function addConstitutionalAIBadges() {
   // Add Constitutional AI badges to all governance MCPs
   const governanceMcps = [
-    'ai-governance', 'casa-certification', 'csga-standards', 'proofof-ai',
+    'ai-governance', 'casa-certification', 'meok-standards', 'proofof-ai',
     'compliance-audit', 'data-classification', 'policy-engine', 'dsrb-defence',
     'terranova-defence', 'quantranet-pqc', 'thn-global'
   ];
@@ -163,7 +163,7 @@ function addAnthropicIndependenceMessaging() {
         🎯 Independent Constitutional AI Implementation
       </h3>
       <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 24px;">
-        While Anthropic faces government relations challenges in February 2026, CSGA provides 
+        While Anthropic faces government relations challenges in February 2026, MEOK AI provides 
         vendor-independent Constitutional AI implementation with full transparency and control.
       </p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 24px;">
@@ -268,8 +268,8 @@ function addConstitutionalAIFAQ() {
           <p style="color: #475569;">Constitutional AI is a training methodology that teaches AI systems to be harmless, helpful, and honest through constitutional principles and value alignment protocols.</p>
         </div>
         <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #0058A4;">
-          <h4 style="color: #0058A4; margin-bottom: 8px;">How is CSGA's implementation different from Anthropic's?</h4>
-          <p style="color: #475569;">CSGA provides vendor-independent Constitutional AI implementation with full methodology transparency, custom training capabilities, and no political constraints on deployment.</p>
+          <h4 style="color: #0058A4; margin-bottom: 8px;">How is MEOK AI's implementation different from Anthropic's?</h4>
+          <p style="color: #475569;">MEOK AI provides vendor-independent Constitutional AI implementation with full methodology transparency, custom training capabilities, and no political constraints on deployment.</p>
         </div>
         <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #059669;">
           <h4 style="color: #059669; margin-bottom: 8px;">Why is Constitutional AI integration critical now?</h4>

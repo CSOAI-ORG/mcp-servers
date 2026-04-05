@@ -2,11 +2,11 @@ name: threat-intelligence
 description: >-
   Real-time threat feeds, IOC enrichment, MITRE ATT&CK mapping
 version: 1.0.0
-repository: https://github.com/csga-global/mcp-servers
+repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
 runtime: node
 command:
-  npx: '@csga-global/threat-intelligence'
+  npx: '@meok-global/threat-intelligence'
 categories:
   - Threat Intel
   - Cybersecurity

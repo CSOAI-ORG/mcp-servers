@@ -1,5 +1,5 @@
-// CSGA Global Partners Data - Complete Partner Directory
-const CSGA_PARTNERS = {
+// MEOK AI Labs Partners Data - Complete Partner Directory
+const MEOK AI_PARTNERS = {
   
   // Academic & Research Partners
   academic: {
@@ -35,11 +35,11 @@ const CSGA_PARTNERS = {
   // Enterprise & Technology Partners
   enterprise: {
     terranova: {
-      name: 'Terranova Defense Solutions',
+      name: 'MEOK AI Defense Solutions',
       type: 'Strategic Partner',
-      description: '$256M valuation defense contractor providing sovereign AI governance solutions and CSGA Global chairmanship.',
+      description: '$256M valuation defense contractor providing sovereign AI governance solutions and MEOK AI Labs chairmanship.',
       logo: '/assets/partners/terranova-logo.png',
-      highlights: ['Defense Solutions', 'James Castle CEO', '$256M Valuation'],
+      highlights: ['Defense Solutions', 'Nicholas Templeman CEO', '$256M Valuation'],
       partnership: 'Strategic governance, defense AI solutions, and global chairmanship',
       valuation: '$256M'
     },
@@ -88,17 +88,17 @@ const CSGA_PARTNERS = {
   // Leadership & Governance
   leadership: {
     jamesCastle: {
-      name: 'James Castle',
-      role: 'Global Chairperson CSGA & CEO Terranova',
-      description: 'Global chairperson of CSGA and CEO of Terranova Defense Solutions, leading strategic governance and defense AI initiatives.',
+      name: 'Nicholas Templeman',
+      role: 'Global Chairperson MEOK AI & CEO MEOK AI',
+      description: 'Global chairperson of MEOK AI and CEO of MEOK AI Defense Solutions, leading strategic governance and defense AI initiatives.',
       expertise: ['Defense AI', 'Strategic Governance', 'Global Leadership'],
       background: 'CMMC co-creator, defense contractor, strategic governance expert'
     },
     
     nicholasTempleman: {
       name: 'Nicholas Templeman',
-      role: 'CSOAI CEO & CSGA Director',
-      description: 'CEO of CSOAI and Director of CSGA, driving Constitutional AI governance and certification programs.',
+      role: 'CSOAI CEO & MEOK AI Director',
+      description: 'CEO of CSOAI and Director of MEOK AI, driving Constitutional AI governance and certification programs.',
       expertise: ['Constitutional AI', 'AI Governance', 'Certification Programs'],
       background: 'AI governance entrepreneur, Constitutional AI expert'
     }
@@ -107,8 +107,8 @@ const CSGA_PARTNERS = {
 
 // Export for use in website
 if (typeof module !== 'undefined') {
-  module.exports = CSGA_PARTNERS;
+  module.exports = MEOK AI_PARTNERS;
 }
 
 // Global access
-window.CSGA_PARTNERS = CSGA_PARTNERS;
+window.MEOK AI_PARTNERS = MEOK AI_PARTNERS;

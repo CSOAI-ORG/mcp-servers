@@ -1,4 +1,4 @@
-// Advanced Performance Enhancements - CSGA Global
+// Advanced Performance Enhancements - MEOK AI Labs
 
 document.addEventListener('DOMContentLoaded', function() {
   initPerformanceOptimizations();
@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function initPerformanceOptimizations() {
   // Preload critical resources
   const criticalResources = [
-    { href: '/css/csga-branding.css', as: 'style' },
+    { href: '/css/meok-branding.css', as: 'style' },
     { href: '/js/constitutional-ai-enhancements.js', as: 'script' },
-    { href: '/assets/csga-logo-white.svg', as: 'image' }
+    { href: '/assets/meok-logo-white.svg', as: 'image' }
   ];
   
   criticalResources.forEach(resource => {
@@ -84,7 +84,7 @@ function initAdvancedCaching() {
     }
   };
   
-  window.CSGACache = cachedData;
+  window.MEOK AICache = cachedData;
 }
 
 function initImageOptimizations() {
@@ -140,7 +140,7 @@ function initCriticalResourceHints() {
   const externalDomains = [
     'fonts.googleapis.com',
     'fonts.gstatic.com',
-    'api.csga-global.org'
+    'api.meok-global.org'
   ];
   
   externalDomains.forEach(domain => {
@@ -226,7 +226,7 @@ function monitorPerformance() {
         firstContentfulPaint: performance.getEntriesByType('paint')[1]?.startTime || 0
       };
       
-      console.group('🚀 CSGA Performance Metrics');
+      console.group('🚀 MEOK AI Performance Metrics');
       console.log('Page Load Time:', metrics.pageLoadTime + 'ms');
       console.log('DOM Content Loaded:', metrics.domContentLoaded + 'ms');
       console.log('First Paint:', metrics.firstPaint.toFixed(2) + 'ms');
@@ -247,7 +247,7 @@ function monitorPerformance() {
 monitorPerformance();
 
 // Export for debugging
-window.CSGAPerformance = {
-  cache: window.CSGACache,
+window.MEOK AIPerformance = {
+  cache: window.MEOK AICache,
   version: '1.0.0'
 };

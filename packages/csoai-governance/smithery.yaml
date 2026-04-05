@@ -1,4 +1,4 @@
-name: "@csga-global/csoai-governance"
+name: "@meok-global/csoai-governance"
 version: "1.0.0"
 runtime: "node"
 startCommand:

@@ -39,7 +39,7 @@ const contentEnhancements = {
     'backup': 'back up',
     
     // Brand consistency
-    'csga': 'CSGA',
+    'csga': 'MEOK AI',
     'casa': 'CASA',
     'ai': 'AI',
     'faa': 'FAA',
@@ -52,12 +52,12 @@ const contentEnhancements = {
 
 // Professional tone enhancements
 const professionalPhrases = {
-    'We help': 'CSGA provides',
-    'We offer': 'CSGA delivers', 
-    'We provide': 'CSGA ensures',
+    'We help': 'MEOK AI provides',
+    'We offer': 'MEOK AI delivers', 
+    'We provide': 'MEOK AI ensures',
     'Our service': 'Our Constitutional AI governance',
-    'Our platform': 'The CSGA governance platform',
-    'Our team': 'CSGA experts',
+    'Our platform': 'The MEOK AI governance platform',
+    'Our team': 'MEOK AI experts',
     'Contact us': 'Schedule consultation',
     'Get started': 'Begin implementation',
     'Learn more': 'Explore governance solutions'

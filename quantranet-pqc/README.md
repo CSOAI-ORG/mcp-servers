@@ -3,7 +3,7 @@
 A production-grade Model Context Protocol (MCP) server for quantum-secure internet infrastructure and post-quantum cryptography (PQC) assessment.
 
 **Version:** 1.0.0
-**Authors:** QuantraNet — JV of Terranova Defence + CSGA
+**Authors:** QuantraNet — JV of MEOK AI Defence + MEOK AI
 **License:** CC0-1.0
 **Homepage:** https://quantranet.com
 
@@ -606,8 +606,8 @@ npm run type-check
 For implementation support, architecture review, or consulting services:
 
 - **QuantraNet:** https://quantranet.com
-- **Terranova Defence:** https://terranova.ca
-- **CSGA:** Contact through QuantraNet partnership
+- **MEOK AI Defence:** https://terranova.ca
+- **MEOK AI:** Contact through QuantraNet partnership
 
 ## References
 

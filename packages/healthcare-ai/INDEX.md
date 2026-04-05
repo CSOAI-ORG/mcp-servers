@@ -364,8 +364,8 @@ Add to `claude_desktop_config.json`:
 ## Support and Contribution
 
 **Website:** https://csoai.org  
-**GitHub:** https://github.com/CSGA_Global/healthcare-ai-mcp  
-**Issues:** https://github.com/CSGA_Global/healthcare-ai-mcp/issues
+**GitHub:** https://github.com/MEOK AI_Global/healthcare-ai-mcp  
+**Issues:** https://github.com/MEOK AI_Global/healthcare-ai-mcp/issues
 
 ---
 

@@ -1,4 +1,4 @@
-# Contributing to CSGA Global MCP Ecosystem
+# Contributing to MEOK AI Labs MCP Ecosystem
 
 Thank you for your interest in contributing to the world's first AI Governance MCP Ecosystem. This guide will help you get started.
 
@@ -42,8 +42,8 @@ This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDU
 
 ```bash
 # Clone the repository
-git clone https://github.com/csga-global/csga-global.git
-cd csga-global
+git clone https://github.com/meok-global/meok-global.git
+cd meok-global
 
 # Install dependencies
 npm install
@@ -85,8 +85,8 @@ When contributing a new MCP server:
 ## Reporting Issues
 
 - **Bugs**: Use GitHub Issues with the bug template
-- **Security**: Email security@csga-global.org (see [SECURITY.md](SECURITY.md))
-- **General**: Email support@csga-global.org
+- **Security**: Email security@meok-global.org (see [SECURITY.md](SECURITY.md))
+- **General**: Email support@meok-global.org
 
 ## License
 

@@ -1,4 +1,4 @@
-name: "@csga-global/bmcc-cyber"
+name: "@meok-global/bmcc-cyber"
 version: "1.0.0"
 runtime: "node"
 startCommand:

@@ -1,6 +1,6 @@
 # OneOS Education MCP Server - START HERE
 
-Welcome to the OneOS Education MCP Server! This is a production-grade Model Context Protocol server for the unified MOOC & LMS platform powering the CSOAI/CSGA/Terranova ecosystem.
+Welcome to the OneOS Education MCP Server! This is a production-grade Model Context Protocol server for the unified MOOC & LMS platform powering the CSOAI/MEOK AI/MEOK AI ecosystem.
 
 ## Quick Navigation
 
@@ -100,7 +100,7 @@ See: [INSTALLATION.md - Production Deployment](./INSTALLATION.md#production-depl
 - **Languages**: TypeScript, Node.js
 - **Framework**: Model Context Protocol (MCP)
 - **Courses**: 24 active
-- **Entities**: 7 (BMCC Cyber, DHL/Lawrie, CSGA Global, CSOAI, Terranova, OrbitQ, AIdome)
+- **Entities**: 7 (BMCC Cyber, DHL/Lawrie, MEOK AI Labs, CSOAI, MEOK AI, OrbitQ, AIdome)
 - **Learners**: 12,847 (in mock data)
 - **Completion Rate**: 87.3%
 - **License**: CC0-1.0 (Public Domain)
@@ -109,9 +109,9 @@ See: [INSTALLATION.md - Production Deployment](./INSTALLATION.md#production-depl
 
 1. **BMCC Cyber** - Cybersecurity training (4 courses)
 2. **DHL/Lawrie Group** - Supply chain & logistics (5 courses)
-3. **CSGA Global** - AI & data science (4 courses)
+3. **MEOK AI Labs** - AI & data science (4 courses)
 4. **CSOAI** - Blockchain & digital leadership (3 courses)
-5. **Terranova Group** - Cloud & DevOps (4 courses)
+5. **MEOK AI Group** - Cloud & DevOps (4 courses)
 6. **OrbitQ** - Quantum computing (2 courses)
 7. **AIdome** - AI/LLM & generative AI (3 courses)
 

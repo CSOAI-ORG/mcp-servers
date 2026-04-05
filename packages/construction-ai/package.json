@@ -1,5 +1,5 @@
 {
-  "name": "@csga-global/construction-ai",
+  "name": "@meok-global/construction-ai",
   "version": "1.0.0",
   "description": "Assess compliance for AI in construction. Covers BIM, safety monitoring, autonomous equipment, structural analysis, and project management AI.",
   "type": "module",
@@ -27,10 +27,10 @@
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/construction-ai"
   },
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "keywords": [
     "mcp",
     "ai-governance",

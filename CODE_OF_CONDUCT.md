@@ -30,7 +30,7 @@ Examples of unacceptable behavior:
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders at **conduct@csga-global.org**.
+reported to the community leaders at **conduct@meok-global.org**.
 
 All complaints will be reviewed and investigated promptly and fairly.
 

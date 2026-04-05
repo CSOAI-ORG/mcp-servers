@@ -1,6 +1,6 @@
 # OneOS Education MCP Server
 
-A production-grade Model Context Protocol (MCP) server for OneOS — the unified MOOC & LMS platform powering education across the CSOAI/CSGA/Terranova ecosystem.
+A production-grade Model Context Protocol (MCP) server for OneOS — the unified MOOC & LMS platform powering education across the CSOAI/MEOK AI/MEOK AI ecosystem.
 
 ## Overview
 
@@ -27,9 +27,9 @@ Search for courses across all ecosystem entities with advanced filtering:
 **Entities Supported:**
 - BMCC Cyber
 - DHL/Lawrie Group
-- CSGA Global
+- MEOK AI Labs
 - CSOAI
-- Terranova Group
+- MEOK AI Group
 - OrbitQ
 - AIdome
 
@@ -101,7 +101,7 @@ Available professional certifications:
 - CompTIA Security+
 - GIAC Certified Incident Handler
 - DHL Supply Chain Professional
-- CSGA AI Strategy Professional
+- MEOK AI AI Strategy Professional
 - Data Science Professional
 - Blockchain Developer
 - Digital Leadership Executive
@@ -122,7 +122,7 @@ Real-time platform metrics:
   "monthlyRevenue": 54820,
   "averageCourseDuration": 22.5,
   "averageCoursePrice": 449,
-  "topEntities": ["AIdome", "CSGA Global", "Terranova Group", "BMCC Cyber"],
+  "topEntities": ["AIdome", "MEOK AI Labs", "MEOK AI Group", "BMCC Cyber"],
   "topSkills": ["ai", "machine-learning", "cloud", "cybersecurity", "data-science", "blockchain", "devops"],
   "lastUpdated": "2025-02-25T..."
 }
@@ -137,11 +137,11 @@ Real-time platform metrics:
 | Cybersecurity Fundamentals | BMCC Cyber | Beginner | 24h | $299 | CompTIA Security+ |
 | Advanced Threat Detection | BMCC Cyber | Advanced | 32h | $599 | GIAC CEH |
 | Supply Chain Management | DHL/Lawrie | Intermediate | 20h | $399 | Supply Chain Pro |
-| AI & Machine Learning | CSGA Global | Intermediate | 28h | $499 | AI Strategy Pro |
-| Data Science Masterclass | CSGA Global | Advanced | 36h | $649 | Data Science Pro |
+| AI & Machine Learning | MEOK AI Labs | Intermediate | 28h | $499 | AI Strategy Pro |
+| Data Science Masterclass | MEOK AI Labs | Advanced | 36h | $649 | Data Science Pro |
 | Blockchain Essentials | CSOAI | Intermediate | 20h | $449 | Blockchain Dev |
-| Enterprise Cloud Arch | Terranova | Advanced | 30h | $699 | Cloud Architect |
-| DevOps & CI/CD | Terranova | Intermediate | 22h | $449 | DevOps Pro |
+| Enterprise Cloud Arch | MEOK AI | Advanced | 30h | $699 | Cloud Architect |
+| DevOps & CI/CD | MEOK AI | Intermediate | 22h | $449 | DevOps Pro |
 | Prompt Engineering | AIdome | Intermediate | 16h | $299 | Prompt Eng Pro |
 | Building Production AI | AIdome | Advanced | 26h | $649 | AI Systems Eng |
 
@@ -439,7 +439,7 @@ CC0-1.0 - Creative Commons Zero (Public Domain)
 
 For issues, feature requests, or documentation:
 - **Homepage**: https://oneos-zeta.vercel.app
-- **Author**: OneOS Platform — Terranova CSOAI Corp
+- **Author**: OneOS Platform — MEOK AI CSOAI Corp
 
 ## Changelog
 

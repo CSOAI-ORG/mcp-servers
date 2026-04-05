@@ -187,7 +187,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     "currentSkills": ["Linux", "Networking", "Python"],
     "timeAvailable": 15,
     "budget": 3500,
-    "preferredEntities": ["Terranova Group", "CSGA Global"]
+    "preferredEntities": ["MEOK AI Group", "MEOK AI Labs"]
   }
 }
 ```
@@ -200,7 +200,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     {
       "id": "course-009",
       "title": "Enterprise Cloud Architecture",
-      "entity": "Terranova Group",
+      "entity": "MEOK AI Group",
       "level": "advanced",
       "duration": 30,
       "price": 699,
@@ -210,7 +210,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     {
       "id": "course-010",
       "title": "DevOps & Continuous Integration/Deployment",
-      "entity": "Terranova Group",
+      "entity": "MEOK AI Group",
       "level": "intermediate",
       "duration": 22,
       "price": 449,
@@ -220,7 +220,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     {
       "id": "course-017",
       "title": "API Design & Microservices Architecture",
-      "entity": "Terranova Group",
+      "entity": "MEOK AI Group",
       "level": "intermediate",
       "duration": 18,
       "price": 399,
@@ -259,7 +259,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     "currentSkills": ["Python", "Machine Learning", "Data Analysis"],
     "timeAvailable": 20,
     "budget": 2500,
-    "preferredEntities": ["AIdome", "CSGA Global"]
+    "preferredEntities": ["AIdome", "MEOK AI Labs"]
   }
 }
 ```
@@ -272,7 +272,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     {
       "id": "course-006",
       "title": "Data Science & Analytics Masterclass",
-      "entity": "CSGA Global",
+      "entity": "MEOK AI Labs",
       "level": "advanced",
       "duration": 36,
       "price": 649,
@@ -411,7 +411,7 @@ This document provides practical examples of using the OneOS Education MCP serve
   "learnerId": "learner-sarah",
   "courseName": "Enterprise Cloud Architecture",
   "courseDescription": "Design, deploy, and manage scalable cloud solutions for enterprises",
-  "entity": "Terranova Group",
+  "entity": "MEOK AI Group",
   "status": "pending_payment",
   "enrollmentDate": "2025-02-25T10:30:00Z",
   "startDate": "2025-02-27T00:00:00Z",
@@ -672,7 +672,7 @@ This document provides practical examples of using the OneOS Education MCP serve
     "learnerId": "learner-sarah",
     "courseId": "course-009",
     "courseName": "Enterprise Cloud Architecture",
-    "issuingEntity": "Terranova Group",
+    "issuingEntity": "MEOK AI Group",
     "issuanceDate": "2025-02-25T15:00:00Z",
     "expirationDate": "2027-02-25T15:00:00Z",
     "score": 92,
@@ -778,8 +778,8 @@ This document provides practical examples of using the OneOS Education MCP serve
   "averageCoursePrice": 449,
   "topEntities": [
     "AIdome",
-    "CSGA Global",
-    "Terranova Group",
+    "MEOK AI Labs",
+    "MEOK AI Group",
     "BMCC Cyber"
   ],
   "topSkills": [

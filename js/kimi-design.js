@@ -1,4 +1,4 @@
-// Kimi Agent Design Implementation - CSGA Global Enhancement
+// Kimi Agent Design Implementation - MEOK AI Labs Enhancement
 // Based on comprehensive brand identity guide and 37 visual assets
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function implementBrandIdentity() {
-  console.log('🎨 Implementing CSGA Brand Identity...');
+  console.log('🎨 Implementing MEOK AI Brand Identity...');
   
   // Update CSS Custom Properties with proper brand colors
   const root = document.documentElement;
   
   // Primary Brand Colors
-  root.style.setProperty('--csga-navy', '#0A1628');
+  root.style.setProperty('--meok-navy', '#0A1628');
   root.style.setProperty('--cyber-blue', '#1E5AF5');
   root.style.setProperty('--security-teal', '#00D4AA');
   root.style.setProperty('--alliance-white', '#FFFFFF');
@@ -56,12 +56,12 @@ function implementBrandIdentity() {
 function addBrandIdentityCSS() {
   const brandCSS = document.createElement('style');
   brandCSS.innerHTML = `
-    /* CSGA Brand Identity Implementation */
+    /* MEOK AI Brand Identity Implementation */
     
     /* Typography System - Inter Font Family */
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--csga-navy);
+      background: var(--meok-navy);
       color: var(--text-secondary);
       line-height: 1.6;
     }

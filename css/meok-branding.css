@@ -1,4 +1,4 @@
-/* CSGA Global Branding CSS - Nav & Layout Fixes */
+/* MEOK AI Labs Branding CSS - Nav & Layout Fixes */
 .nav { background: rgba(10,22,40,0.95) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 !important; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
 .nav-container { display: flex !important; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 16px 24px; }
 .nav-brand { display: flex !important; align-items: center; gap: 10px; color: #fff !important; font-size: 1.2rem; font-weight: 700; text-decoration: none !important; }
@@ -18,7 +18,7 @@
 .stat-card { background: rgba(255,255,255,0.04) !important; border: 1px solid rgba(255,255,255,0.08) !important; border-radius: 16px; padding: 28px 20px; text-align: center; }
 .stat-number { font-size: 2.2rem; font-weight: 800; color: #5b9cf0 !important; }
 .stat-label { font-size: 0.85rem; color: rgba(148,163,184,0.8) !important; margin-top: 4px; }
-.section-title { text-align: center; font-size: 2rem; font-/* CSGA Global Branding CSS - Nav & Layout Fixes */
+.section-title { text-align: center; font-size: 2rem; font-/* MEOK AI Labs Branding CSS - Nav & Layout Fixes */
                 .nav { background: rgba(10,22,40,0.95) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 !important; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
                 .nav-container { display: flex !important; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 16px 24px; }
                 .nav-brand { display: flex !important; align-items: center; gap: 10px; color: #fff !important; font-size: 1.2rem; font-weight: 700; text-decoration: none !important; }

@@ -6,7 +6,7 @@ A production-grade Model Context Protocol (MCP) server for comprehensive post-qu
 
 **Status:** Complete & Production-Ready
 **Version:** 1.0.0
-**Authors:** QuantraNet (JV of Terranova Defence + CSGA)
+**Authors:** QuantraNet (JV of MEOK AI Defence + MEOK AI)
 **License:** CC0-1.0
 **Location:** `/sessions/brave-adoring-cerf/mcp-servers/quantranet-pqc/`
 
@@ -521,8 +521,8 @@ npm run type-check
 
 ### For Implementation Support
 - QuantraNet: https://quantranet.com
-- Terranova Defence: https://terranova.ca
-- CSGA: Contact through QuantraNet partnership
+- MEOK AI Defence: https://terranova.ca
+- MEOK AI: Contact through QuantraNet partnership
 
 ### For Code Maintenance
 - TypeScript strict mode ensures code quality

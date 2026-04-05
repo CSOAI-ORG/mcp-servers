@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 /**
- * CSGA Global — Playwright Dashboard Tests
+ * MEOK AI Labs — Playwright Dashboard Tests
  * ══════════════════════════════════════════
  */
 

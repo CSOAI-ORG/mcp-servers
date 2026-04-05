@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 /**
- * CSGA Global — Playwright Pricing & Config Tests
+ * MEOK AI Labs — Playwright Pricing & Config Tests
  * ═════════════════════════════════════════════════
  */
 
@@ -11,7 +11,7 @@ const BASE = '';
 test.describe('Pricing Page', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/pricing.html');
-    await page.waitForFunction(() => typeof window.CSGA_PRICING !== 'undefined', null, { timeout: 10000 });
+    await page.waitForFunction(() => typeof window.MEOK AI_PRICING !== 'undefined', null, { timeout: 10000 });
   });
 
   test('renders all 6 membership tiers', async ({ page }) => {
@@ -33,16 +33,16 @@ test.describe('Pricing Page', () => {
   test('pricing config has complete structure', async ({ page }) => {
     const config = await page.evaluate(() => {
       return {
-        hasMemberships: !!window.CSGA_PRICING.memberships,
-        hasMcpCatalog: !!window.CSGA_PRICING.mcpCatalog,
-        hasMcpClassification: !!window.CSGA_PRICING.mcpClassification,
-        hasEcosystems: !!window.CSGA_PRICING.ecosystems,
-        hasCobolBridge: !!window.CSGA_PRICING.cobolBridge,
-        hasCasaCertification: !!window.CSGA_PRICING.casaCertification,
-        hasCreditPacks: !!window.CSGA_PRICING.creditPacks,
-        hasStripe: !!window.CSGA_PRICING.stripe,
-        tierCount: Object.keys(window.CSGA_PRICING.memberships).length,
-        mcpCount: Object.keys(window.CSGA_PRICING.mcpCatalog).length,
+        hasMemberships: !!window.MEOK AI_PRICING.memberships,
+        hasMcpCatalog: !!window.MEOK AI_PRICING.mcpCatalog,
+        hasMcpClassification: !!window.MEOK AI_PRICING.mcpClassification,
+        hasEcosystems: !!window.MEOK AI_PRICING.ecosystems,
+        hasCobolBridge: !!window.MEOK AI_PRICING.cobolBridge,
+        hasCasaCertification: !!window.MEOK AI_PRICING.casaCertification,
+        hasCreditPacks: !!window.MEOK AI_PRICING.creditPacks,
+        hasStripe: !!window.MEOK AI_PRICING.stripe,
+        tierCount: Object.keys(window.MEOK AI_PRICING.memberships).length,
+        mcpCount: Object.keys(window.MEOK AI_PRICING.mcpCatalog).length,
       };
     });
 
@@ -60,7 +60,7 @@ test.describe('Pricing Page', () => {
 
   test('LVP/MVP/HVP classification present', async ({ page }) => {
     const classes = await page.evaluate(() => {
-      const c = window.CSGA_PRICING.mcpClassification;
+      const c = window.MEOK AI_PRICING.mcpClassification;
       return { lvp: c.lvp?.monthlyPrice, mvp: c.mvp?.monthlyPrice, hvp: c.hvp?.monthlyPrice };
     });
     expect(classes.lvp).toBe(9);
@@ -70,7 +70,7 @@ test.describe('Pricing Page', () => {
 
   test('credit packs have correct prices', async ({ page }) => {
     const packs = await page.evaluate(() => {
-      const p = window.CSGA_PRICING.creditPacks;
+      const p = window.MEOK AI_PRICING.creditPacks;
       return {
         starter: p.starter?.price,
         professional: p.professional?.price,
@@ -84,7 +84,7 @@ test.describe('Pricing Page', () => {
 
   test('all membership tiers have correct credit allocations', async ({ page }) => {
     const credits = await page.evaluate(() => {
-      const m = window.CSGA_PRICING.memberships;
+      const m = window.MEOK AI_PRICING.memberships;
       return Object.fromEntries(
         Object.entries(m).map(([k, v]) => [k, v.credits])
       );
@@ -95,7 +95,7 @@ test.describe('Pricing Page', () => {
   });
 
   test('Stripe endpoints configured correctly', async ({ page }) => {
-    const endpoints = await page.evaluate(() => window.CSGA_PRICING.stripe.endpoints);
+    const endpoints = await page.evaluate(() => window.MEOK AI_PRICING.stripe.endpoints);
     expect(endpoints.checkout).toContain('create-checkout-session');
     expect(endpoints.portal).toContain('customer-portal');
     expect(endpoints.webhook).toContain('stripe-webhook');

@@ -1,4 +1,4 @@
-# CSGA Standards MCP Server - Feature Map
+# MEOK AI Standards MCP Server - Feature Map
 
 Complete breakdown of all features and capabilities by tool.
 
@@ -10,7 +10,7 @@ Complete breakdown of all features and capabilities by tool.
 Reference and lookup cybersecurity frameworks and standards
 
 ### Supported Standards
-- **CSR5** — CSGA Cyber Security Readiness Level 5
+- **CSR5** — MEOK AI Cyber Security Readiness Level 5
 - **NIST CSF** — NIST Cybersecurity Framework
 - **ISO 27001** — ISO/IEC 27001:2022 Information Security Management
 - **CIS Controls** — CIS Critical Security Controls v8.1
@@ -324,7 +324,7 @@ Personalized cybersecurity training and certification recommendations
 - **CISSP:** (80h, $7,000)
 - **CASP+:** (Included in CISSP path)
 
-#### CSGA Proprietary Courses
+#### MEOK AI Proprietary Courses
 - **NIST CSF Implementation:** (24h, $2,500)
 - **ISO 27001 Management:** (32h, $3,500)
 - **Advanced Threat Hunting:** (40h, $5,000)

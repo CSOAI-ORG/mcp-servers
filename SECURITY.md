@@ -9,7 +9,7 @@
 
 ## Reporting a Vulnerability
 
-We take security seriously at CSGA Global. If you discover a security vulnerability in any of our MCP servers or platform infrastructure, please report it responsibly.
+We take security seriously at MEOK AI Labs. If you discover a security vulnerability in any of our MCP servers or platform infrastructure, please report it responsibly.
 
 ### Please DO NOT
 
@@ -19,7 +19,7 @@ We take security seriously at CSGA Global. If you discover a security vulnerabil
 
 ### Please DO
 
-- Email us at **security@csga-global.org**
+- Email us at **security@meok-global.org**
 - Include detailed steps to reproduce
 - Provide your contact information for follow-up
 - Encrypt sensitive reports using our PGP key (available on request)
@@ -35,7 +35,7 @@ We take security seriously at CSGA Global. If you discover a security vulnerabil
 
 ## Security Best Practices
 
-When using CSGA MCP servers:
+When using MEOK AI MCP servers:
 
 1. **Keep packages updated** — Regularly update to the latest versions
 2. **Review permissions** — Understand what each MCP server can access
@@ -49,8 +49,8 @@ When using CSGA MCP servers:
 
 This security policy covers:
 
-- All 67 CSGA MCP servers
-- The CSGA Global platform (csga-global.vercel.app)
+- All 67 MEOK AI MCP servers
+- The MEOK AI Labs platform (meok-global.vercel.app)
 - API endpoints and webhook integrations
 - Stripe payment integration
 - User dashboard and authentication

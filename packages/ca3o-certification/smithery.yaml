@@ -1,4 +1,4 @@
-name: "@csga-global/ca3o-certification"
+name: "@meok-global/ca3o-certification"
 version: "1.0.0"
 runtime: "node"
 startCommand:

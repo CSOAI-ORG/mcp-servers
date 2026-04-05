@@ -1,7 +1,7 @@
-// 🛡️ CSGA Hero Slider & Mobile Navigation Fixes
+// 🛡️ MEOK AI Hero Slider & Mobile Navigation Fixes
 // Fix hero text visibility, branding, and mobile menu navigation
 
-class CSGAHeroMobileFixes {
+class MEOK AIHeroMobileFixes {
   constructor() {
     this.init();
   }
@@ -9,7 +9,7 @@ class CSGAHeroMobileFixes {
   init() {
     this.fixHeroSliders();
     this.enhanceMobileNavigation();
-    this.addCSGABranding();
+    this.addMEOK AIBranding();
     this.improveTextVisibility();
     this.addAccessibilityFeatures();
   }
@@ -28,8 +28,8 @@ class CSGAHeroMobileFixes {
   }
 
   enhanceSlider(slider) {
-    // Add CSGA styling classes
-    slider.classList.add('csga-hero-enhanced');
+    // Add MEOK AI styling classes
+    slider.classList.add('meok-hero-enhanced');
 
     // Find slides within the slider
     const slides = slider.querySelectorAll(`
@@ -45,15 +45,15 @@ class CSGAHeroMobileFixes {
     // Add navigation if not present
     this.addSliderNavigation(slider);
 
-    // Add CSGA badges
-    this.addCSGABadges(slider);
+    // Add MEOK AI badges
+    this.addMEOK AIBadges(slider);
   }
 
   enhanceSlide(slide, index) {
     // Ensure proper overlay for text visibility
-    if (!slide.querySelector('.csga-overlay')) {
+    if (!slide.querySelector('.meok-overlay')) {
       const overlay = document.createElement('div');
-      overlay.className = 'csga-overlay';
+      overlay.className = 'meok-overlay';
       overlay.style.cssText = `
         position: absolute;
         top: 0;
@@ -73,10 +73,10 @@ class CSGAHeroMobileFixes {
     // Ensure content has proper z-index
     const content = slide.querySelector('.content, [class*="content"], h1, h2, p');
     if (content) {
-      let contentWrapper = slide.querySelector('.csga-content-wrapper');
+      let contentWrapper = slide.querySelector('.meok-content-wrapper');
       if (!contentWrapper) {
         contentWrapper = document.createElement('div');
-        contentWrapper.className = 'csga-content-wrapper';
+        contentWrapper.className = 'meok-content-wrapper';
         contentWrapper.style.cssText = `
           position: relative;
           z-index: 3;
@@ -99,7 +99,7 @@ class CSGAHeroMobileFixes {
     // Fix text styling
     this.fixSlideTextStyling(slide);
 
-    // Add CSGA branding
+    // Add MEOK AI branding
     this.addSlideBranding(slide, index);
   }
 
@@ -168,10 +168,10 @@ class CSGAHeroMobileFixes {
   }
 
   addSlideBranding(slide, index) {
-    // Add CSGA branding to first slide
-    if (index === 0 && !slide.querySelector('.csga-slide-branding')) {
+    // Add MEOK AI branding to first slide
+    if (index === 0 && !slide.querySelector('.meok-slide-branding')) {
       const branding = document.createElement('div');
-      branding.className = 'csga-slide-branding';
+      branding.className = 'meok-slide-branding';
       branding.style.cssText = `
         position: absolute;
         top: 2rem;
@@ -186,7 +186,7 @@ class CSGAHeroMobileFixes {
       
       branding.innerHTML = `
         <div style="color: #ffffff; font-weight: 700; font-size: 1.125rem;">
-          🛡️ CSGA
+          🛡️ MEOK AI
         </div>
         <div style="color: #4299e1; font-size: 0.875rem; font-weight: 500;">
           Cyber Security Global Alliance
@@ -198,12 +198,12 @@ class CSGAHeroMobileFixes {
   }
 
   addSliderNavigation(slider) {
-    if (!slider.querySelector('.csga-slider-nav')) {
+    if (!slider.querySelector('.meok-slider-nav')) {
       const slides = slider.querySelectorAll('.slide, [class*="slide"], .carousel-item');
       
       if (slides.length > 1) {
         const nav = document.createElement('div');
-        nav.className = 'csga-slider-nav';
+        nav.className = 'meok-slider-nav';
         nav.style.cssText = `
           position: absolute;
           bottom: 2rem;
@@ -216,7 +216,7 @@ class CSGAHeroMobileFixes {
 
         slides.forEach((_, index) => {
           const dot = document.createElement('button');
-          dot.className = 'csga-slider-dot';
+          dot.className = 'meok-slider-dot';
           dot.style.cssText = `
             width: 12px;
             height: 12px;
@@ -244,7 +244,7 @@ class CSGAHeroMobileFixes {
 
   goToSlide(slider, index) {
     const slides = slider.querySelectorAll('.slide, [class*="slide"], .carousel-item');
-    const dots = slider.querySelectorAll('.csga-slider-dot');
+    const dots = slider.querySelectorAll('.meok-slider-dot');
 
     // Hide all slides
     slides.forEach((slide, i) => {
@@ -265,10 +265,10 @@ class CSGAHeroMobileFixes {
     });
   }
 
-  addCSGABadges(slider) {
-    if (!slider.querySelector('.csga-hero-badges')) {
+  addMEOK AIBadges(slider) {
+    if (!slider.querySelector('.meok-hero-badges')) {
       const badges = document.createElement('div');
-      badges.className = 'csga-hero-badges';
+      badges.className = 'meok-hero-badges';
       badges.style.cssText = `
         position: absolute;
         bottom: 1rem;
@@ -282,7 +282,7 @@ class CSGAHeroMobileFixes {
       const badgeTexts = ['ISO 27001', 'SOC 2', 'GDPR', 'WCAG 2.1'];
       badgeTexts.forEach(text => {
         const badge = document.createElement('div');
-        badge.className = 'csga-hero-badge';
+        badge.className = 'meok-hero-badge';
         badge.textContent = text;
         badge.style.cssText = `
           background: rgba(49, 130, 206, 0.9);
@@ -331,7 +331,7 @@ class CSGAHeroMobileFixes {
 
   createMobileMenu(nav) {
     const mobileMenu = document.createElement('div');
-    mobileMenu.className = 'csga-mobile-menu';
+    mobileMenu.className = 'meok-mobile-menu';
     mobileMenu.style.cssText = `
       position: fixed;
       top: 0;
@@ -347,9 +347,9 @@ class CSGAHeroMobileFixes {
       box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
     `;
 
-    // Add CSGA logo
+    // Add MEOK AI logo
     const logo = document.createElement('div');
-    logo.className = 'csga-mobile-logo';
+    logo.className = 'meok-mobile-logo';
     logo.style.cssText = `
       padding: 1rem 2rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -357,7 +357,7 @@ class CSGAHeroMobileFixes {
     `;
     logo.innerHTML = `
       <div style="color: #ffffff; font-size: 1.5rem; font-weight: 700;">
-        🛡️ CSGA
+        🛡️ MEOK AI
       </div>
       <div style="color: #4299e1; font-size: 0.875rem; font-weight: 500;">
         Cyber Security Global Alliance
@@ -366,7 +366,7 @@ class CSGAHeroMobileFixes {
 
     // Add close button
     const closeBtn = document.createElement('button');
-    closeBtn.className = 'csga-mobile-close';
+    closeBtn.className = 'meok-mobile-close';
     closeBtn.innerHTML = '×';
     closeBtn.style.cssText = `
       position: absolute;
@@ -397,7 +397,7 @@ class CSGAHeroMobileFixes {
 
     // Create overlay
     const overlay = document.createElement('div');
-    overlay.className = 'csga-mobile-overlay';
+    overlay.className = 'meok-mobile-overlay';
     overlay.style.cssText = `
       position: fixed;
       top: 0;
@@ -486,11 +486,11 @@ class CSGAHeroMobileFixes {
   }
 
   createMobileToggle(nav) {
-    let toggleBtn = nav.querySelector('.csga-mobile-toggle');
+    let toggleBtn = nav.querySelector('.meok-mobile-toggle');
     
     if (!toggleBtn) {
       toggleBtn = document.createElement('button');
-      toggleBtn.className = 'csga-mobile-toggle';
+      toggleBtn.className = 'meok-mobile-toggle';
       toggleBtn.innerHTML = '☰';
       toggleBtn.style.cssText = `
         display: none;
@@ -539,8 +539,8 @@ class CSGAHeroMobileFixes {
   }
 
   openMobileMenu() {
-    const mobileMenu = document.querySelector('.csga-mobile-menu');
-    const overlay = document.querySelector('.csga-mobile-overlay');
+    const mobileMenu = document.querySelector('.meok-mobile-menu');
+    const overlay = document.querySelector('.meok-mobile-overlay');
     
     if (mobileMenu) {
       mobileMenu.style.right = '0';
@@ -556,8 +556,8 @@ class CSGAHeroMobileFixes {
   }
 
   closeMobileMenu() {
-    const mobileMenu = document.querySelector('.csga-mobile-menu');
-    const overlay = document.querySelector('.csga-mobile-overlay');
+    const mobileMenu = document.querySelector('.meok-mobile-menu');
+    const overlay = document.querySelector('.meok-mobile-overlay');
     
     if (mobileMenu) {
       mobileMenu.style.right = '-100%';
@@ -573,7 +573,7 @@ class CSGAHeroMobileFixes {
   }
 
   enhanceMobileMenu(mobileMenu) {
-    // Enhance existing mobile menu with CSGA styling
+    // Enhance existing mobile menu with MEOK AI styling
     mobileMenu.style.background = 'linear-gradient(180deg, #1a202c 0%, #2d3748 100%)';
     mobileMenu.style.zIndex = '9999';
     
@@ -609,7 +609,7 @@ class CSGAHeroMobileFixes {
     const style = document.createElement('style');
     style.textContent = `
       @media (max-width: 1024px) {
-        .csga-mobile-toggle {
+        .meok-mobile-toggle {
           display: block !important;
         }
         
@@ -619,16 +619,16 @@ class CSGAHeroMobileFixes {
       }
       
       @media (max-width: 768px) {
-        .csga-mobile-menu {
+        .meok-mobile-menu {
           width: 100% !important;
           max-width: 320px !important;
         }
         
-        .csga-hero-badges {
+        .meok-hero-badges {
           display: none !important;
         }
         
-        .csga-slide-branding {
+        .meok-slide-branding {
           top: 1rem !important;
           left: 1rem !important;
         }
@@ -638,13 +638,13 @@ class CSGAHeroMobileFixes {
     document.head.appendChild(style);
   }
 
-  // 🎨 Add CSGA Branding
-  addCSGABranding() {
-    // Add CSGA branding to navigation if not present
+  // 🎨 Add MEOK AI Branding
+  addMEOK AIBranding() {
+    // Add MEOK AI branding to navigation if not present
     const nav = document.querySelector('nav, .navbar, header');
-    if (nav && !nav.querySelector('.csga-nav-brand')) {
+    if (nav && !nav.querySelector('.meok-nav-brand')) {
       const brand = document.createElement('div');
-      brand.className = 'csga-nav-brand';
+      brand.className = 'meok-nav-brand';
       brand.style.cssText = `
         display: flex;
         align-items: center;
@@ -655,7 +655,7 @@ class CSGAHeroMobileFixes {
       `;
       
       brand.innerHTML = `
-        <span style="font-size: 1.25rem;">🛡️ CSGA</span>
+        <span style="font-size: 1.25rem;">🛡️ MEOK AI</span>
         <span style="font-size: 0.875rem; color: #4a5568;">Cyber Security Global Alliance</span>
       `;
       
@@ -683,12 +683,12 @@ class CSGAHeroMobileFixes {
   // ♿ Add Accessibility Features
   addAccessibilityFeatures() {
     // Add keyboard navigation for sliders
-    const sliders = document.querySelectorAll('.csga-hero-enhanced');
+    const sliders = document.querySelectorAll('.meok-hero-enhanced');
     sliders.forEach(slider => {
       slider.setAttribute('role', 'region');
-      slider.setAttribute('aria-label', 'CSGA Hero Slider');
+      slider.setAttribute('aria-label', 'MEOK AI Hero Slider');
       
-      const dots = slider.querySelectorAll('.csga-slider-dot');
+      const dots = slider.querySelectorAll('.meok-slider-dot');
       dots.forEach((dot, index) => {
         dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
         dot.setAttribute('role', 'button');
@@ -704,14 +704,14 @@ class CSGAHeroMobileFixes {
     });
 
     // Add focus management for mobile menu
-    const mobileToggle = document.querySelector('.csga-mobile-toggle');
-    const mobileMenu = document.querySelector('.csga-mobile-menu');
+    const mobileToggle = document.querySelector('.meok-mobile-toggle');
+    const mobileMenu = document.querySelector('.meok-mobile-menu');
     
     if (mobileToggle && mobileMenu) {
       mobileToggle.setAttribute('aria-label', 'Open mobile menu');
       mobileToggle.setAttribute('aria-expanded', 'false');
       
-      const closeBtn = mobileMenu.querySelector('.csga-mobile-close');
+      const closeBtn = mobileMenu.querySelector('.meok-mobile-close');
       if (closeBtn) {
         closeBtn.setAttribute('aria-label', 'Close mobile menu');
       }
@@ -742,15 +742,15 @@ class CSGAHeroMobileFixes {
   }
 }
 
-// 🚀 Initialize CSGA Hero & Mobile Fixes
+// 🚀 Initialize MEOK AI Hero & Mobile Fixes
 document.addEventListener('DOMContentLoaded', () => {
-  new CSGAHeroMobileFixes();
+  new MEOK AIHeroMobileFixes();
 });
 
 // Handle dynamic content
 const observer = new MutationObserver(() => {
   setTimeout(() => {
-    new CSGAHeroMobileFixes();
+    new MEOK AIHeroMobileFixes();
   }, 100);
 });
 
@@ -759,4 +759,4 @@ observer.observe(document.body, {
   subtree: true
 });
 
-console.log('✅ CSGA Hero Slider & Mobile Navigation Fixes Applied');
+console.log('✅ MEOK AI Hero Slider & Mobile Navigation Fixes Applied');

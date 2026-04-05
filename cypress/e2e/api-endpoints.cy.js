@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 /**
- * CSGA Global — API Endpoint E2E Tests
+ * MEOK AI Labs — API Endpoint E2E Tests
  * ═════════════════════════════════════
  * Tests all 4 Vercel serverless functions:
  *   /api/create-checkout-session
@@ -54,7 +54,7 @@ describe('API Endpoints', () => {
         body: {
           priceId: 'price_starter_monthly',
           mode: 'subscription',
-          customerEmail: 'test@csga-e2e.org',
+          customerEmail: 'test@meok-e2e.org',
           metadata: { tier: 'starter', source: 'e2e-test' },
         },
         failOnStatusCode: false,
@@ -79,7 +79,7 @@ describe('API Endpoints', () => {
         body: {
           priceId: 'price_credit_starter',
           mode: 'payment',
-          customerEmail: 'test@csga-e2e.org',
+          customerEmail: 'test@meok-e2e.org',
           metadata: { productType: 'credit_pack', credits: '1000' },
         },
         failOnStatusCode: false,
@@ -130,7 +130,7 @@ describe('API Endpoints', () => {
       cy.request({
         method: 'POST',
         url: `${API}/customer-portal`,
-        body: { customerId: 'cus_test_e2e', returnUrl: 'https://csga-global.vercel.app/dashboard' },
+        body: { customerId: 'cus_test_e2e', returnUrl: 'https://meok-global.vercel.app/dashboard' },
         failOnStatusCode: false,
       }).then((res) => {
         if (res.status === 200) {
@@ -295,7 +295,7 @@ describe('API Endpoints', () => {
             object: {
               id: 'cs_test_e2e',
               customer: 'cus_test_e2e',
-              customer_email: 'test@csga-e2e.org',
+              customer_email: 'test@meok-e2e.org',
               mode: 'subscription',
               subscription: 'sub_test_e2e',
               metadata: { tier: 'starter' },

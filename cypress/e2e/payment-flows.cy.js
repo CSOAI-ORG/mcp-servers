@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 /**
- * CSGA Global — Payment Flow E2E Tests
+ * MEOK AI Labs — Payment Flow E2E Tests
  * ═════════════════════════════════════
  * Tests Stripe checkout redirect, billing portal,
  * credit pack purchasing, and post-checkout handling.
@@ -28,22 +28,22 @@ describe('Payment Flows', () => {
         .filter(':contains("Subscribe"), :contains("Get Started"), :contains("Start")')
         .first()
         .then(($btn) => {
-          // Check if it has onclick with csga_checkout or href to checkout
+          // Check if it has onclick with meok_checkout or href to checkout
           const onclick = $btn.attr('onclick') || '';
           const href = $btn.attr('href') || '';
           expect(onclick + href).to.satisfy((val) =>
-            val.includes('checkout') || val.includes('csga_checkout') ||
+            val.includes('checkout') || val.includes('meok_checkout') ||
             val.includes('stripe') || val.includes('pricing') || val.length > 0
           );
         });
     });
 
-    it('csga_checkout function is available globally', () => {
-      cy.window().its('csga_checkout').should('be.a', 'function');
+    it('meok_checkout function is available globally', () => {
+      cy.window().its('meok_checkout').should('be.a', 'function');
     });
 
-    it('csga_openPortal function is available globally', () => {
-      cy.window().its('csga_openPortal').should('be.a', 'function');
+    it('meok_openPortal function is available globally', () => {
+      cy.window().its('meok_openPortal').should('be.a', 'function');
     });
   });
 
@@ -53,7 +53,7 @@ describe('Payment Flows', () => {
   describe('Dashboard → Billing Portal', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -76,7 +76,7 @@ describe('Payment Flows', () => {
   describe('Credit Pack Purchase Flow', () => {
     beforeEach(() => {
       cy.visit('/dashboard.html');
-      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@csga.org');
+      cy.get('input[type="email"], input[placeholder*="email" i]').type('pro@meok.org');
       cy.get('button').contains(/log.?in|sign.?in|enter/i).click();
     });
 
@@ -124,7 +124,7 @@ describe('Payment Flows', () => {
     it('pricing config has Stripe endpoints configured', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const config = win.CSGA_PRICING.stripe;
+        const config = win.MEOK AI_PRICING.stripe;
         expect(config).to.have.property('endpoints');
         expect(config.endpoints).to.have.property('checkout');
         expect(config.endpoints).to.have.property('portal');
@@ -136,7 +136,7 @@ describe('Payment Flows', () => {
     it('all membership tiers have Stripe product/price IDs', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const memberships = win.CSGA_PRICING.memberships;
+        const memberships = win.MEOK AI_PRICING.memberships;
         Object.entries(memberships).forEach(([key, tier]) => {
           if (key !== 'community') {
             expect(tier, `Tier ${key}`).to.have.property('stripeProd');
@@ -150,7 +150,7 @@ describe('Payment Flows', () => {
     it('MCP classification has Stripe price IDs', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const classes = win.CSGA_PRICING.mcpClassification;
+        const classes = win.MEOK AI_PRICING.mcpClassification;
         ['lvp', 'mvp', 'hvp'].forEach((cls) => {
           expect(classes[cls], `Class ${cls}`).to.have.property('stripePriceMonthly');
           expect(classes[cls], `Class ${cls}`).to.have.property('stripePriceAnnual');
@@ -161,7 +161,7 @@ describe('Payment Flows', () => {
     it('credit packs have Stripe price IDs', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const packs = win.CSGA_PRICING.creditPacks;
+        const packs = win.MEOK AI_PRICING.creditPacks;
         Object.entries(packs).forEach(([key, pack]) => {
           expect(pack, `Pack ${key}`).to.have.property('stripePrice');
         });
@@ -171,7 +171,7 @@ describe('Payment Flows', () => {
     it('success URL points to dashboard with session_id', () => {
       cy.visit('/pricing.html');
       cy.window().then((win) => {
-        const successUrl = win.CSGA_PRICING.stripe.successUrl;
+        const successUrl = win.MEOK AI_PRICING.stripe.successUrl;
         expect(successUrl).to.contain('dashboard');
         expect(successUrl).to.contain('session_id');
       });

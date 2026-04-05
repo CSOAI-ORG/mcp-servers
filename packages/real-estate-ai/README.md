@@ -1,13 +1,13 @@
 # Real Estate Ai MCP Server
 
-> Part of the [CSGA Global MCP Platform](https://csga-global.vercel.app/) — Cyber Security Global Alliance
+> Part of the [MEOK AI Labs MCP Platform](https://meok-global.vercel.app/) — Cyber Security Global Alliance
 
 Assess compliance for AI in real estate. Covers automated valuation, tenant screening, fair housing, advertising targeting, and smart building management.
 
 ## Installation
 
 ```bash
-npx @smithery/cli install @csga-global/real-estate-ai
+npx @smithery/cli install @meok-global/real-estate-ai
 ```
 
 ## Configuration
@@ -19,7 +19,7 @@ Add to your MCP client config:
   "mcpServers": {
     "real-estate-ai": {
       "command": "npx",
-      "args": ["-y", "@csga-global/real-estate-ai"]
+      "args": ["-y", "@meok-global/real-estate-ai"]
     }
   }
 }
@@ -38,6 +38,6 @@ CC0-1.0 — See [LICENSE](./LICENSE)
 
 ## Links
 
-- [Product Page](https://csga-global.vercel.app/mcp/real-estate-ai.html)
-- [CSGA Global Platform](https://csga-global.vercel.app/)
-- [GitHub Repository](https://github.com/csga-global/mcp-servers)
+- [Product Page](https://meok-global.vercel.app/mcp/real-estate-ai.html)
+- [MEOK AI Labs Platform](https://meok-global.vercel.app/)
+- [GitHub Repository](https://github.com/meok-global/mcp-servers)

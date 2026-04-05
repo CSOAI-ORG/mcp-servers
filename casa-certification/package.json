@@ -1,5 +1,5 @@
 {
-  "name": "@csga-global/casa-certification",
+  "name": "@meok-global/casa-certification",
   "version": "1.0.0",
   "description": "CASA Certification - CSOAI-Authorised Safety Assessment MCP Server",
   "type": "module",
@@ -26,14 +26,14 @@
     "@types/node": "^20.10.6",
     "typescript": "^5.3.3"
   },
-  "author": "CSGA Global — Cyber Security Global Alliance",
+  "author": "MEOK AI Labs — Cyber Security Global Alliance",
   "license": "CC0-1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/csga-global/mcp-servers.git",
+    "url": "https://github.com/meok-global/mcp-servers.git",
     "directory": "packages/casa-certification"
   },
-  "homepage": "https://csga-global.org/casa",
+  "homepage": "https://meok-global.org/casa",
   "keywords": [
     "mcp",
     "casa",

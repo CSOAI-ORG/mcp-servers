@@ -1,7 +1,7 @@
 // 🧪 Comprehensive Testing Automation
 // Run all tests and generate detailed report
 
-class CSGAComprehensiveTesting {
+class MEOK AIComprehensiveTesting {
     constructor() {
         this.testResults = {
             content: { passed: 0, failed: 0, issues: [] },
@@ -188,7 +188,7 @@ class CSGAComprehensiveTesting {
         const totalPassed = Object.values(this.testResults).reduce((acc, category) => acc + category.passed, 0);
         const totalFailed = Object.values(this.testResults).reduce((acc, category) => acc + category.failed, 0);
         
-        console.log('\n🚀 CSGA COMPREHENSIVE TESTING REPORT');
+        console.log('\n🚀 MEOK AI COMPREHENSIVE TESTING REPORT');
         console.log('=====================================');
         console.log(`Total Tests: ${totalTests}`);
         console.log(`Passed: ${totalPassed} (${((totalPassed/totalTests)*100).toFixed(1)}%)`);
@@ -233,7 +233,7 @@ class CSGAComprehensiveTesting {
 // Auto-run comprehensive testing
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(async () => {
-        const tester = new CSGAComprehensiveTesting();
+        const tester = new MEOK AIComprehensiveTesting();
         window.csgaComprehensiveTester = tester;
         
         const report = await tester.runFullSuite();
