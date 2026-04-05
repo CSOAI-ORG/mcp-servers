@@ -1,0 +1,52 @@
+# MEOK AI Labs - vLLM Production Configuration
+# High-performance inference server
+
+version: '3.8'
+
+services:
+  vllm:
+    image: vllm/vllm:latest
+    container_name: meok-vllm
+    ports:
+      - "8000:8000"
+      - "8001:8001"  # Metrics
+    environment:
+      - MODEL_NAME=microsoft/Phi-3-mini-128k-instruct
+      - GPU_MEMORY_UTILIZATION=0.90
+      - MAX_MODEL_LEN=32768
+      - TENSOR_PARALLEL_SIZE=1
+      - QUANTIZATION=fp16
+      - ENFORCE_EAGER=False
+      - TRUST_REMOTE_CODE=True
+    volumes:
+      - vllm_model:/root/.cache/huggingface
+      - vllm_data:/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # vLLM behind nginx for load balancing
+  vllm-proxy:
+    image: nginx:alpine
+    container_name: meok-vllm-proxy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./vllm-nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - vllm
+    restart: unless-stopped
+
+volumes:
+  vllm_model:
+  vllm_data:
