@@ -1,18 +1,42 @@
+# MEOK AI Labs - robots.txt
+# Constitutional AI Governance Platform
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://csga-global.vercel.app/sitemap.xml
+# Sitemap
+Sitemap: https://meok.ai/sitemap.xml
 
-# Optimize for search engines
+# Crawl optimization
 Crawl-delay: 1
 
-# Block sensitive areas (none currently)
-# Disallow: /admin/
-# Disallow: /api/private/
+# Block sensitive areas
+Disallow: /api/private/
+Disallow: /dashboard.html
+Disallow: /admin/
+Disallow: /_/
+Disallow: /*.json$
 
-# Allow important pages
-Allow: /catalog.html
+# Allow main pages
+Allow: /
+Allow: /about.html
+Allow: /pricing.html
+Allow: /contact.html
 Allow: /mcp/
-Allow: /casa-certification/
-Allow: /pricing/
+Allow: /blog/
+
+# AI bots
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Anthropic-AI
+Allow: /
+Crawl-delay: 1
+
+User-agent: Google-Extended
+Allow: /
