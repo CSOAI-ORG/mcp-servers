@@ -20,7 +20,7 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
     await expect(ctaButtons.first()).toBeVisible();
     
     // Check navigation
-    await expect(page.locator('.nav-bar, nav, .navbar')).toBeVisible();
+    await expect(page.locator('.nav')).toBeVisible();
     const navLinks = page.locator('.nav-link, nav a, .navbar a');
     await expect(navLinks.first()).toBeVisible();
   });
@@ -30,7 +30,7 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
     await page.goto('/');
     
     // Check mobile menu button exists
-    const menuButton = page.locator('.hamburger, .menu-toggle, .mobile-menu-btn').first();
+    const menuButton = page.locator('.mobile-toggle, .nav-toggle').first();
     
     if (await menuButton.isVisible()) {
       // Click to open menu
@@ -38,7 +38,7 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
       
       // Check menu opens (wait a bit for animation)
       await page.waitForTimeout(500);
-      const navbar = page.locator('.nav-bar, nav, .mobile-nav');
+      const navbar = page.locator('.nav');
       await expect(navbar).toBeVisible();
     } else {
       console.log('Mobile menu button not found - skipping mobile menu test');
@@ -81,7 +81,7 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
     await page.goto('/pricing.html');
     
     // Check pricing tiers exist (flexible count)
-    const pricingCards = page.locator('.pricing-card, .pricing-tier, .price-card, .tier-card, .pricing-plan');
+    const pricingCards = page.locator('.package-card');
     const cardCount = await pricingCards.count();
     expect(cardCount).toBeGreaterThan(1);
     
@@ -162,11 +162,11 @@ test.describe('CSGA Global - Comprehensive E2E Tests', () => {
       // Check navigation is accessible
       if (viewport.width < 768) {
         // Mobile: check for hamburger menu or navigation
-        const mobileNav = page.locator('.hamburger, .menu-toggle, .mobile-menu, .nav-bar');
+        const mobileNav = page.locator('.mobile-toggle, .nav-toggle, .nav');
         expect(await mobileNav.count()).toBeGreaterThan(0);
       } else {
         // Desktop: check for standard navigation
-        const desktopNav = page.locator('.nav-bar, nav, .navbar');
+        const desktopNav = page.locator('.nav');
         expect(await desktopNav.count()).toBeGreaterThan(0);
       }
     }

@@ -788,7 +788,7 @@
                 </ol>
             </nav>
 <div class="container">
-    <h1 style="color: #fff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);" class="page-title" class="professional-title" class="brand-heading">Build with the CSGA MCP Platform</h1>
+    <h1 style="color: #fff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);" class="page-title brand-heading professional-title">Build with the CSGA MCP Platform</h1>
     <p style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.95); max-width: 700px; margin: 0 auto 36px; line-height: 1.6;" class="professional-body">API-first architecture. 70 MCP servers. professional security and governance at every layer.</p>
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
       <a href="#quickstart" class="btn-professional">Get Started</a>
@@ -809,21 +809,21 @@
 <div class="container">
     <div style="text-align: center; margin-bottom: 60px;">
       <span class="section-label">Get Started</span>
-      <h2 class="professional-title section-title" class="section-title" class="professional-title" class="brand-heading">Quickstart Guide</h2>
-      <p class="section-subtitle" class="professional-body">Three simple steps to integrate the CSGA MCP Platform into your application.</p>
+      <h2 class="brand-heading section-title professional-title">Quickstart Guide</h2>
+      <p class="professional-body section-subtitle">Three simple steps to integrate the CSGA MCP Platform into your application.</p>
     </div>
 
     <div class="grid grid-3">
       <div class="card-professional">
         <div class="icon-circle" style="background: linear-gradient(135deg, rgba(204, 0, 0, 0.15), rgba(230, 57, 70, 0.15));"><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Installation</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Installation</h3>
         <p class="professional-body">Install the SDK via npm for your preferred runtime environment.</p>
         <div class="code-block">npm install @csgaglobal/mcp-sdk</div>
       </div>
 
       <div class="card-professional">
         <div class="icon-circle" style="background: linear-gradient(135deg, rgba(204, 0, 0, 0.15), rgba(230, 57, 70, 0.15));"><div class="feature-icon-professional">CFG</div></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Initialize</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Initialize</h3>
         <p class="professional-body">Set up your connection to the CSGA platform with API credentials.</p>
         <div class="code-block">const mcp = new MCPClient({
   apiKey: process.env.CSGA_API_KEY,
@@ -833,7 +833,7 @@
 
       <div class="card-professional">
         <div class="icon-circle" style="background: linear-gradient(135deg, rgba(204, 0, 0, 0.15), rgba(230, 57, 70, 0.15));"><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Authenticate</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Authenticate</h3>
         <p class="professional-body">Use API keys or OAuth 2.0 for secure authentication.</p>
         <div class="code-block">const token = await mcp.auth.login({
   apiKey: YOUR_API_KEY
@@ -855,14 +855,14 @@
 <div class="container">
     <div style="text-align: center; margin-bottom: 60px;">
       <span class="section-label">API Reference</span>
-      <h2 class="professional-title section-title" class="section-title" class="professional-title" class="brand-heading">Available APIs</h2>
-      <p class="section-subtitle" class="professional-body">Build powerful integrations with our comprehensive REST API endpoints.</p>
+      <h2 class="brand-heading section-title professional-title">Available APIs</h2>
+      <p class="professional-body section-subtitle">Build powerful integrations with our comprehensive REST API endpoints.</p>
     </div>
 
     <div class="grid grid-2">
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text">DESKTOP</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">MCP Server API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">MCP Server API</h3>
         <p class="professional-body">Deploy, manage, and orchestrate MCP servers. Full CRUD operations for your server ecosystem.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">GET /api/v1/mcps</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Retrieve all available MCP servers with metadata and capabilities.</p>
@@ -870,7 +870,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text" data-context="info">ICON</span><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Governance API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Governance API</h3>
         <p class="professional-body">Manage policies, compliance checks, and governance rules across your MCP infrastructure.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">POST /api/v1/policies</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Create and enforce governance policies for AI governance and safety.</p>
@@ -878,7 +878,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><div class="feature-icon-professional">SHD</div></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Security API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Security API</h3>
         <p class="professional-body">Vulnerability scanning, threat intelligence feeds, and security posture management.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">POST /api/v1/scan</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Scan MCPs for vulnerabilities and security compliance.</p>
@@ -886,7 +886,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Webhook API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Webhook API</h3>
         <p class="professional-body">Real-time event notifications for deployment, policy, and security events.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">POST /api/v1/webhooks</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Register webhook endpoints for event-driven architecture.</p>
@@ -894,7 +894,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><div class="feature-icon-professional">ANL</div></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Analytics API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Analytics API</h3>
         <p class="professional-body">Usage metrics, audit logs, and detailed analytics for your MCP infrastructure.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">GET /api/v1/analytics</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Monitor performance and usage patterns across MCPs.</p>
@@ -902,7 +902,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text">SAVE</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Data API</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Data API</h3>
         <p class="professional-body">Query and manage data across your MCP ecosystem with professional consistency.</p>
         <p style="color: #0058A4; font-weight: 600; margin-top: 16px;" class="professional-body">GET /api/v1/data</p>
         <p style="font-size: 0.9rem; color: #666;" class="professional-body">Access unified data layer across all MCP servers.</p>
@@ -923,14 +923,14 @@
 <div class="container">
     <div style="text-align: center; margin-bottom: 60px;">
       <span class="section-label">SDKs Available</span>
-      <h2 class="professional-title section-title" class="section-title" class="professional-title" class="brand-heading">Multiple Language Support</h2>
-      <p class="section-subtitle" class="professional-body">Build in your language of choice. Full feature parity across all SDKs.</p>
+      <h2 class="brand-heading section-title professional-title">Multiple Language Support</h2>
+      <p class="professional-body section-subtitle">Build in your language of choice. Full feature parity across all SDKs.</p>
     </div>
 
     <div class="grid grid-3">
       <div class="card-professional">
         <div class="icon-circle">🟦</div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">TypeScript/JavaScript</h3>
+        <h3 class="professional-title"><h3 class="professional-title">TypeScript/JavaScript</h3>
         <p class="professional-body">Full-featured SDK for Node.js and browser environments. Type-safe with TypeScript support.</p>
         <div style="margin-top: 24px;">
           <button class="btn-professional" style="width: 100%;">View on npm</button>
@@ -939,7 +939,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Python SDK</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Python SDK</h3>
         <p class="professional-body">Async-first SDK for Python 3.8+. Perfect for data science and ML workflows.</p>
         <div style="margin-top: 24px; opacity: 0.6; pointer-events: none;">
           <button class="btn-professional" style="width: 100%;">Coming Soon</button>
@@ -948,7 +948,7 @@
 
       <div class="card-professional">
         <div class="icon-circle"><span class="professional-icon-text" data-context="info">ICON</span></div>
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">Go SDK</h3>
+        <h3 class="professional-title"><h3 class="professional-title">Go SDK</h3>
         <p class="professional-body">High-performance SDK for Go. Ideal for cloud-native and microservices architecture.</p>
         <div style="margin-top: 24px; opacity: 0.6; pointer-events: none;">
           <button class="btn-professional" style="width: 100%;">Coming Soon</button>
@@ -957,7 +957,7 @@
     </div>
 
     <div style="margin-top: 60px; background: #ffffff; border-radius: 12px; padding: 40px; border: 1px solid rgba(0, 0, 0, 0.06);">
-      <h3 style="text-align: center; margin-bottom: 40px;" class="subsection-title" class="professional-title">Rate Limits & Quotas</h3>
+      <h3 style="text-align: center; margin-bottom: 40px;" class="subsection-title professional-title">Rate Limits & Quotas</h3>
       <div class="grid grid-3">
         <div style="text-align: center; padding: 24px; border-right: 1px solid rgba(0, 0, 0, 0.06);">
           <div style="font-size: 2rem; font-weight: 700; color: var(--blue); margin-bottom: 8px;">1,000</div>
@@ -991,20 +991,20 @@
 <div class="container">
     <div style="text-align: center; margin-bottom: 60px;">
       <span class="section-label">Security</span>
-      <h2 class="professional-title section-title" class="section-title" class="professional-title" class="brand-heading">Authentication & Authorization</h2>
-      <p class="section-subtitle" class="professional-body">professional security for all API interactions and integrations.</p>
+      <h2 class="brand-heading section-title professional-title">Authentication & Authorization</h2>
+      <p class="professional-body section-subtitle">professional security for all API interactions and integrations.</p>
     </div>
 
     <div class="grid grid-2" style="margin-bottom: 48px;">
       <div class="card-professional">
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">API Keys</h3>
+        <h3 class="professional-title"><h3 class="professional-title">API Keys</h3>
         <p class="professional-body">Simple API keys for development and testing. Scoped to specific resources and actions.</p>
         <div class="code-block">Authorization: Bearer YOUR_API_KEY</div>
         <p style="margin-top: 16px; font-size: 0.9rem;" class="professional-body">Best for: Development, server-to-server auth</p>
       </div>
 
       <div class="card-professional">
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">OAuth 2.0</h3>
+        <h3 class="professional-title"><h3 class="professional-title">OAuth 2.0</h3>
         <p class="professional-body">Industry-standard OAuth 2.0 for user-facing applications and third-party integrations.</p>
         <div class="code-block">grant_type=authorization_code
 &code=AUTH_CODE
@@ -1013,14 +1013,14 @@
       </div>
 
       <div class="card-professional">
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">JWT Tokens</h3>
+        <h3 class="professional-title"><h3 class="professional-title">JWT Tokens</h3>
         <p class="professional-body">JSON Web Tokens for stateless authentication and fine-grained access control.</p>
         <div class="code-block">Authorization: Bearer eyJhbGc...</div>
         <p style="margin-top: 16px; font-size: 0.9rem;" class="professional-body">Best for: Microservices, API gateways</p>
       </div>
 
       <div class="card-professional">
-        <h3 class="professional-title"><h3 class="professional-title" class="professional-title">mTLS Certificates</h3>
+        <h3 class="professional-title"><h3 class="professional-title">mTLS Certificates</h3>
         <p class="professional-body">Mutual TLS for ultra-secure server-to-server communication in regulated environments.</p>
         <div class="code-block">client_cert.pem + client_key.pem</div>
         <p style="margin-top: 16px; font-size: 0.9rem;" class="professional-body">Best for: Classified, on-prem deployments</p>
@@ -1050,7 +1050,7 @@
                 </ol>
             </nav>
 <div class="container">
-    <h2 class="professional-title" class="brand-heading"><h2 class="professional-title" class="professional-title" class="brand-heading">Ready to Build?</h2>
+    <h2 class="brand-heading professional-title"><h2 class="brand-heading professional-title">Ready to Build?</h2>
     <p class="professional-body">Join hundreds of organizations using the CSGA MCP Platform to accelerate AI governance and cybersecurity.</p>
     <div>
       <a href="/dashboard.html" class="btn-professional">Get Your API Key</a>

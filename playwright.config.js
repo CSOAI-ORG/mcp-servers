@@ -9,7 +9,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3333',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
@@ -39,7 +39,8 @@ module.exports = defineConfig({
 
   webServer: {
     reuseExistingServer: true,
-    command: 'npm run serve',
-    port: 3000,
+    command: 'cd /Users/nicholas/mcp-servers && python3 -m http.server 3333',
+    port: 3333,
+    timeout: 120000,
   },
 });

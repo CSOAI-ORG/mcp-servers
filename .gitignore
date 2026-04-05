@@ -44,3 +44,10 @@ AUDIT_REPORT.txt
 polish-sprint.js
 scripts/
 deploy.js
+
+# Backup files - use git history instead
+*.bak
+*.content-backup
+*.emoji-backup
+*.polish-backup
+*.safe-backup-*
