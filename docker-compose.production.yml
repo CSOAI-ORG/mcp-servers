@@ -1,0 +1,128 @@
+version: '3.8'
+
+services:
+  meok-api:
+    build: ./api
+    container_name: meok-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://meok:${DB_PASSWORD}@meok-db:5432/meokai
+      - REDIS_URL=redis://meok-redis:6379
+      - JWT_SECRET=${JWT_SECRET}
+    env_file:
+      - .env
+    depends_on:
+      - meok-db
+      - meok-redis
+    restart: unless-stopped
+    networks:
+      - meok-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  meok-workers:
+    build: ./workers
+    container_name: meok-workers
+    command: python cli.py worker --workers 4
+    environment:
+      - DATABASE_URL=postgresql://meok:${DB_PASSWORD}@meok-db:5432/meokai
+      - REDIS_URL=redis://meok-redis:6379
+    env_file:
+      - .env
+    depends_on:
+      - meok-db
+      - meok-redis
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+    networks:
+      - meok-network
+
+  meok-db:
+    image: pgvector/pgvector:pg15
+    container_name: meok-db
+    environment:
+      - POSTGRES_DB=meokai
+      - POSTGRES_USER=meok
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - meok-db-data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - meok-network
+
+  meok-redis:
+    image: redis:7-alpine
+    container_name: meok-redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - meok-redis-data:/data
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - meok-network
+
+  meok-prometheus:
+    image: prom/prometheus:latest
+    container_name: meok-prometheus
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./docker/prometheus/alerts.yml:/etc/prometheus/alerts.yml
+      - meok-prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+    networks:
+      - meok-network
+
+  meok-grafana:
+    image: grafana/grafana:latest
+    container_name: meok-grafana
+    volumes:
+      - meok-grafana-data:/var/lib/grafana
+      - ./docker/grafana-dashboards:/etc/grafana/provisioning/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - meok-prometheus
+    restart: unless-stopped
+    networks:
+      - meok-network
+
+  meok-nginx:
+    image: nginx:alpine
+    container_name: meok-nginx
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - meok-api
+    restart: unless-stopped
+    networks:
+      - meok-network
+
+networks:
+  meok-network:
+    driver: bridge
+
+volumes:
+  meok-db-data:
+  meok-redis-data:
+  meok-prometheus-data:
+  meok-grafana-data:

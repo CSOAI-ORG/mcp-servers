@@ -1,0 +1,33 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Insurance AI Governance",
+  "description_for_human": "AI governance for insurance including underwriting, claims automation, actuarial compliance",
+  "keywords": ["insurance", "underwriting", "actuarial", "claims", "compliance"],
+  "tools": [
+    {
+      "name": "underwriting_ai_compliance",
+      "description": "Insurance underwriting AI compliance assessment",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "risk_factors": {"type": "string"},
+          "pricing_model": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "claims_automation_assessment",
+      "description": "Claims automation AI compliance assessment",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "automation_level": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

@@ -45,9 +45,39 @@ polish-sprint.js
 scripts/
 deploy.js
 
-# Backup files - use git history instead
+# Backup files
 *.bak
 *.content-backup
 *.emoji-backup
 *.polish-backup
 *.safe-backup-*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+venv/
+env/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+
+# Audit logs
+audit_logs/
+
+# Prometheus
+prometheus_data/
+
+# Grafana
+grafana_data/

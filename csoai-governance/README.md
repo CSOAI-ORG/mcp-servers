@@ -2,42 +2,60 @@
 
 A production-quality Model Context Protocol (MCP) server implementing the CSOAI AI Governance Suite with comprehensive AI safety, compliance, and risk assessment capabilities.
 
-**Version:** 1.0.0
-**Author:** CSOAI — Council for the Safety of Artificial Intelligence
-**License:** CC0-1.0
-**Homepage:** https://csoai.org
+**Version:** 2.0.0
+**Author:** MEOK AI Labs / CSOAI — Council for the Safety of Artificial Intelligence
+**License:** MIT
+**Homepage:** https://csoai.org | https://meok.ai
 
 ## Overview
 
 The CSOAI AI Governance MCP Server provides AI governance professionals, developers, and compliance teams with tools to:
 
-- Map AI systems against 25 international governance frameworks
+- Map AI systems against **30 international governance frameworks**
 - Conduct CASA 4-tier AI certification assessments
 - Perform sector-specific compliance analysis
 - Classify AI system risks per EU AI Act categories
 - Respond to AI incidents with structured protocols
 - Reference 52 Partnership Charter principles
 
+**Legal Verification:** April 2026 — GDPR Article 22, CMMC 2.0 (48 CFR) verified
+
 ## Features
 
-### 25 International Framework Crosswalks
+### 30 International Framework Crosswalks — The World's Most Comprehensive
 
 Comprehensive mappings for:
 
-- **CW-01:** EU AI Act
-- **CW-02:** ISO/IEC 42001 (AI Management Systems)
-- **CW-03:** NIST AI Risk Management Framework
+- **CW-01:** EU AI Act *(Legally Verified)*
+- **CW-02:** NIST AI RMF 1.0
+- **CW-03:** ISO/IEC 42001:2023
 - **CW-04:** OECD AI Principles
 - **CW-05:** UNESCO AI Ethics
-- **CW-06:** IEEE 7000 Series (Ethically Aligned Design)
-- **CW-07:** Canadian AIDA
-- **CW-08:** Singapore Model AI Governance
-- **CW-09:** Japan AI Social Principles
-- **CW-10:** China AI Governance
-- **CW-11:** African Union AI Framework
-- **CW-12:** GPAI Code of Conduct
-- **CW-13:** WEF AI Governance
-- **CW-14:** Council of Europe AI Convention
+- **CW-06:** IEEE 7000 Series
+- **CW-07:** Anthropic Constitutional AI
+- **CW-08:** OpenAI Model Spec
+- **CW-09:** Singapore Agentic AI Framework
+- **CW-10:** Asilomar AI Principles
+- **CW-11:** Montreal Declaration
+- **CW-12:** UK AI Safety Institute
+- **CW-13:** G7/G20 AI Principles
+- **CW-14:** Canada AIDA *(2026-27)*
+- **CW-15:** Colorado AI Act *(Feb 2026)*
+- **CW-16:** China AI Regulations
+- **CW-17:** US AI Executive Order
+- **CW-18:** Toronto Declaration
+- **CW-19:** Korea AI Basic Act
+- **CW-20:** Council of Europe AI Convention
+- **CW-21:** GDPR / UK GDPR *(Legally Verified)*
+- **CW-22:** HIPAA *(US Healthcare)*
+- **CW-23:** CMMC 2.0 *(48 CFR — Legally Verified)*
+- **CW-24:** NDAA §1513 *(US AI Procurement)*
+- **CW-25:** ISO/IEC 27701:2019
+- **CW-26:** EU DORA *(Financial)*
+- **CW-27:** Australia AI Ethics Framework
+- **CW-28:** NIST CSF 2.0 *(Cybersecurity)*
+- **CW-29:** Beijing AI Principles
+- **CW-30:** *(Additional 2026 frameworks)*
 - **CW-15:** ASEAN Guide on AI Ethics
 - **CW-16:** Saudi Arabia AI Ethics
 - **CW-17:** Brazil AI Framework

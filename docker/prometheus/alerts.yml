@@ -1,0 +1,114 @@
+groups:
+  - name: meokai-alerts
+    interval: 30s
+    rules:
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(meokai_errors_total[5m])) 
+          / sum(rate(meokai_requests_total[5m])) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is {{ $value | humanizePercentage }}"
+
+      - alert: HighLatency
+        expr: |
+          histogram_quantile(0.95, sum(rate(meokai_request_duration_seconds_bucket[5m])) by (le)) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API latency"
+          description: "p95 latency is {{ $value | humanizeDuration }}"
+
+      - alert: HighViolationRate
+        expr: |
+          sum(rate(meokai_violations_total[5m])) by (type) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High violation rate"
+          description: "{{ $labels.type }} violations at {{ $value }}/s"
+
+      - alert: CriticalViolationRate
+        expr: |
+          sum(rate(meokai_violations_total{severity="critical"}[5m])) > 1
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical violations detected"
+          description: "Critical violations at {{ $value }}/s"
+
+      - alert: HighMemoryUsage
+        expr: |
+          (container_memory_usage_bytes / container_spec_memory_limit_bytes) > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is {{ $value | humanizePercentage }}"
+
+      - alert: HighCPUUsage
+        expr: |
+          (container_cpu_usage_seconds_total / container_spec_cpu_quota) > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage"
+          description: "CPU usage is {{ $value | humanizePercentage }}"
+
+      - alert: DatabaseConnectionErrors
+        expr: |
+          sum(rate(meokai_database_errors_total[5m])) > 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection errors"
+          description: "Database errors at {{ $value }}/s"
+
+      - alert: RedisConnectionErrors
+        expr: |
+          sum(rate(meokai_redis_errors_total[5m])) > 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis connection errors"
+          description: "Redis errors at {{ $value }}/s"
+
+      - alert: NoActiveAgents
+        expr: |
+          meokai_active_agents == 0
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "No active agents"
+          description: "No agents processing tasks for 10 minutes"
+
+      - alert: RateLimitNearLimit
+        expr: |
+          meokai_rate_limit_remaining / meokai_rate_limit_total < 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Rate limit near exhaustion"
+          description: "Only {{ $value | humanizePercentage }} rate limit remaining"
+
+      - alert: ServiceDown
+        expr: |
+          up{job="meokai-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "MEOK API service down"
+          description: "Service {{ $labels.instance }} is down"

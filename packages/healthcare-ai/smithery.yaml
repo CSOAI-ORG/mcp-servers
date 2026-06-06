@@ -1,7 +1,8 @@
 name: healthcare-ai
 description: >-
-  AI governance for healthcare technology including clinical decision support oversight, medical imaging AI validation,
-  and patient data AI compliance.
+  AI governance for healthcare technology including clinical decision support oversight, 
+  medical imaging AI validation, patient data AI compliance, FDA/HIPAA alignment, and 
+  clinical trial AI assessment. Essential for healthcare AI deployment.
 version: 1.0.0
 repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
@@ -11,3 +12,15 @@ command:
 categories:
   - Healthcare
   - AI Governance
+  - HIPAA
+  - FDA
+
+keywords:
+  - healthcare AI
+  - clinical decision support
+  - FDA
+  - HIPAA
+  - medical imaging
+  - clinical trials
+  - patient data
+  - compliance

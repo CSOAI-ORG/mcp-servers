@@ -1,7 +1,8 @@
 name: construction-ai
 description: >-
-  AI governance for construction technology including safety prediction, project estimation oversight, and building code
-  compliance AI.
+  AI governance for construction technology including safety prediction, project estimation oversight, 
+  building code compliance AI, and OSHA alignment for construction AI systems including 
+  autonomous equipment, safety monitoring, and BIM validation.
 version: 1.0.0
 repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
@@ -11,3 +12,12 @@ command:
 categories:
   - Construction
   - AI Governance
+  - Safety
+
+keywords:
+  - construction
+  - BIM
+  - OSHA
+  - safety
+  - autonomous equipment
+  - building codes

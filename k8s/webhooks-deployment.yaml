@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meokai-webhooks
+  namespace: meokai
+  labels:
+    app: meokai-webhooks
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: meokai-webhooks
+  template:
+    metadata:
+      labels:
+        app: meokai-webhooks
+    spec:
+      containers:
+      - name: webhooks
+        image: meokai/webhooks:latest
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: meokai-config
+        - secretRef:
+            name: meokai-secrets
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meokai-workers
+  namespace: meokai
+  labels:
+    app: meokai-workers
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: meokai-workers
+  template:
+    metadata:
+      labels:
+        app: meokai-workers
+    spec:
+      containers:
+      - name: worker
+        image: meokai/workers:latest
+        envFrom:
+        - configMapRef:
+            name: meokai-config
+        - secretRef:
+            name: meokai-secrets
+        command: ["python", "-m", "meokai.workers"]
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "2000m"

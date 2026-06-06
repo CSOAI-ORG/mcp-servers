@@ -1,0 +1,64 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Healthcare AI Governance",
+  "description_for_human": "AI governance for healthcare including HIPAA, FDA, clinical safety, EU MDR compliance",
+  "keywords": ["healthcare", "HIPAA", "FDA", "clinical", "medical", "compliance", "PHI"],
+  "tools": [
+    {
+      "name": "hipaa_ai_assessment",
+      "description": "Assess HIPAA compliance for AI systems processing Protected Health Information (PHI)",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "system_description": {"type": "string"},
+          "phi_data_types": {"type": "string"},
+          "deployment_environment": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "fda_ai_assessment",
+      "description": "Evaluate FDA regulatory requirements for AI/ML-based Software as a Medical Device (SaMD)",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "intended_use": {"type": "string"},
+          "clinical_context": {"type": "string"},
+          "ai_model_type": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "clinical_ai_safety",
+      "description": "Comprehensive clinical AI safety assessment covering bias, validation, human oversight",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "clinical_domain": {"type": "string"},
+          "patient_population": {"type": "string"},
+          "decision_autonomy": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "eu_mdr_compliance",
+      "description": "EU MDR compliance assessment for AI medical devices",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "device_description": {"type": "string"},
+          "intended_purpose": {"type": "string"},
+          "risk_class": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

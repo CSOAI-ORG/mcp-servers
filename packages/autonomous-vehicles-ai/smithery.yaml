@@ -1,7 +1,8 @@
 name: autonomous-vehicles-ai
 description: >-
-  AI governance for autonomous vehicle technology including safety validation, sensor fusion oversight, and regulatory
-  compliance for self-driving systems.
+  AI governance for autonomous vehicle technology including safety validation, sensor fusion 
+  oversight, UNECE WP.29 compliance, and regulatory alignment for self-driving systems, 
+  autonomous shuttles, and automated mobility (MaaS).
 version: 1.0.0
 repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
@@ -11,3 +12,13 @@ command:
 categories:
   - Automotive
   - AI Governance
+  - Safety
+
+keywords:
+  - autonomous vehicles
+  - self-driving
+  - MaaS
+  - UNECE WP.29
+  - AV safety
+  - sensor fusion
+  - ADAS

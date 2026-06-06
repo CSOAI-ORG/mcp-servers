@@ -1,7 +1,8 @@
 name: employment-ai
 description: >-
-  AI governance for employment and HR technology including hiring algorithm auditing, workplace surveillance oversight,
-  and employment discrimination prevention.
+  AI governance for employment and HR technology including hiring algorithm auditing, 
+  workplace surveillance oversight, EEOC/UK/EU employment discrimination prevention, 
+  and HR compliance automation for recruitment and performance AI.
 version: 1.0.0
 repository: https://github.com/meok-global/mcp-servers
 license: CC0-1.0
@@ -11,3 +12,13 @@ command:
 categories:
   - Human Resources
   - AI Governance
+  - Compliance
+
+keywords:
+  - HR
+  - employment
+  - hiring
+  - EEOC
+  - discrimination
+  - workplace surveillance
+  - recruitment AI

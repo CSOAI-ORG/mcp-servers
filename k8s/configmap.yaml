@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: meokai-config
+  namespace: meokai
+data:
+  API_VERSION: "2.0.0"
+  LOG_LEVEL: "info"
+  REDIS_URL: "redis://redis:6379"
+  DATABASE_URL: "postgresql://meok:@postgres:5432/meokai"
+  CORS_ORIGINS: "https://meok.ai,https://www.meok.ai"

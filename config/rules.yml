@@ -1,0 +1,104 @@
+events:
+  # Rate limiting
+  - trigger:
+      type: rate_limit
+      threshold: 100
+      window: 60
+    actions:
+      - type: log
+      - type: notify
+        channel: slack
+      - type: block
+    severity: warning
+
+  # Governance violations
+  - trigger:
+      type: governance_violation
+      severity: [high, critical]
+    actions:
+      - type: log
+        format: detailed
+      - type: notify
+        channel: email
+        priority: high
+      - type: alert
+        service: pagerduty
+      - type: block
+    severity: critical
+
+  # Auth failures
+  - trigger:
+      type: auth_failure
+      count: 5
+      window: 300
+    actions:
+      - type: log
+      - type: notify
+        channel: slack
+      - type: block_ip
+      - type: lock_account
+    severity: error
+
+  # System errors
+  - trigger:
+      type: system_error
+      count: 10
+      window: 60
+    actions:
+      - type: log
+        format: detailed
+      - type: notify
+        channel: slack
+      - type: alert
+        service: pagerduty
+      - type: scale_up
+        replicas: 3
+    severity: critical
+
+  # Memory anomalies
+  - trigger:
+      type: memory_anomaly
+    actions:
+      - type: log
+      - type: notify
+        channel: slack
+    severity: info
+
+  # Consciousness state changes
+  - trigger:
+      type: consciousness_change
+      change_threshold: 0.2
+    actions:
+      - type: log
+      - type: record_metrics
+    severity: info
+
+responses:
+  rate_limit:
+    status_code: 429
+    headers:
+      X-RateLimit-Limit: "{{ limit }}"
+      X-RateLimit-Remaining: "{{ remaining }}"
+      X-RateLimit-Reset: "{{ reset }}"
+    body:
+      error: "Rate limit exceeded"
+      retry_after: "{{ retry_after }}"
+
+  violation_blocked:
+    status_code: 400
+    body:
+      error: "Content blocked due to policy violation"
+      violations: "{{ violations }}"
+      score: "{{ score }}"
+
+  auth_failure:
+    status_code: 401
+    body:
+      error: "Authentication failed"
+      attempts_remaining: "{{ attempts }}"
+
+  server_error:
+    status_code: 500
+    body:
+      error: "Internal server error"
+      request_id: "{{ request_id }}"

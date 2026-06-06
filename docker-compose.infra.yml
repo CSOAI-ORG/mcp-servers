@@ -1,0 +1,121 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg15
+    container_name: meok-postgres
+    environment:
+      - POSTGRES_DB=meokai
+      - POSTGRES_USER=meok
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - meok-infra
+
+  redis:
+    image: redis:7-alpine
+    container_name: meok-redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redis}
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - meok-infra
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: meok-prometheus
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./docker/prometheus/alerts.yml:/etc/prometheus/alerts.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.enable-lifecycle'
+    ports:
+      - "9090:9090"
+    networks:
+      - meok-infra
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: meok-grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./docker/grafana-dashboards:/etc/grafana/provisioning/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - meok-infra
+
+  api:
+    build: ./api
+    container_name: meok-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://meok:${DB_PASSWORD:-password}@postgres:5432/meokai
+      - REDIS_URL=redis://:${REDIS_PASSWORD:-redis}@redis:6379
+      - JWT_SECRET=${JWT_SECRET:-change-me}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    networks:
+      - meok-infra
+
+  workers:
+    build: ./workers
+    container_name: meok-workers
+    command: python cli.py worker --workers 4
+    environment:
+      - DATABASE_URL=postgresql://meok:${DB_PASSWORD:-password}@postgres:5432/meokai
+      - REDIS_URL=redis://:${REDIS_PASSWORD:-redis}@redis:6379
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+    networks:
+      - meok-infra
+
+  monitor:
+    build: ./workers
+    container_name: meok-monitor
+    command: python cli.py monitor
+    environment:
+      - DATABASE_URL=postgresql://meok:${DB_PASSWORD:-password}@postgres:5432/meokai
+      - REDIS_URL=redis://:${REDIS_PASSWORD:-redis}@redis:6379
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    networks:
+      - meok-infra
+
+networks:
+  meok-infra:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:

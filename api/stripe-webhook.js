@@ -34,6 +34,10 @@
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+// ── Event deduplication (prevents double-processing on Stripe retries) ──
+const processedEvents = new Set();
+const MAX_PROCESSED = 5000;
+
 // ── Tier → default MCP access mapping ──
 const TIER_DEFAULTS = {
   community:         { mcpCount: 3,  credits: 100 },
@@ -66,7 +70,7 @@ const CREDIT_PACKS = {
 };
 
 module.exports = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://meok.ai https://try.meok.ai https://meok-global.org');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Stripe-Signature');
   if (req.method === 'OPTIONS') return res.status(200).end();
@@ -77,17 +81,33 @@ module.exports = async (req, res) => {
 
   let event;
 
+  if (!sig) {
+    console.error('[WEBHOOK] Rejected: missing stripe-signature header');
+    return res.status(400).json({ error: 'Missing stripe-signature header' });
+  }
+
+  if (!webhookSecret) {
+    console.error('[WEBHOOK] Rejected: STRIPE_WEBHOOK_SECRET not configured');
+    return res.status(500).json({ error: 'Webhook secret not configured' });
+  }
+
   try {
-    if (webhookSecret && sig) {
-      const rawBody = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
-      event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
-    } else {
-      event = req.body;
-      console.warn('[WEBHOOK] Signature verification skipped (no secret configured)');
-    }
+    const rawBody = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
+    event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret);
   } catch (err) {
     console.error('[WEBHOOK] Signature verification failed:', err.message);
     return res.status(400).json({ error: `Webhook Error: ${err.message}` });
+  }
+
+  // Idempotency check
+  if (processedEvents.has(event.id)) {
+    console.log(`[WEBHOOK] Duplicate event ignored: ${event.id}`);
+    return res.status(200).json({ received: true, duplicate: true });
+  }
+  processedEvents.add(event.id);
+  if (processedEvents.size > MAX_PROCESSED) {
+    const first = processedEvents.values().next().value;
+    processedEvents.delete(first);
   }
 
   try {

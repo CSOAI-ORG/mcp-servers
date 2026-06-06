@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meokai-api
+  namespace: meokai
+  labels:
+    app: meokai-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: meokai-api
+  template:
+    metadata:
+      labels:
+        app: meokai-api
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      containers:
+      - name: api
+        image: meokai/api:latest
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: meokai-config
+        - secretRef:
+            name: meokai-secrets
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        volumeMounts:
+        - name: pgvector-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: pgvector-data
+        persistentVolumeClaim:
+          claimName: meokai-pgvector-pvc
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: meokai-api-hpa
+  namespace: meokai
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: meokai-api
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80

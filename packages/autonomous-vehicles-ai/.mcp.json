@@ -1,0 +1,35 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Autonomous Vehicles AI",
+  "description_for_human": "AI governance for autonomous vehicles including safety validation, UNECE compliance",
+  "keywords": ["autonomous", "vehicles", "self-driving", "ADAS", "MaaS", "safety"],
+  "tools": [
+    {
+      "name": "av_safety_assessment",
+      "description": "Safety assessment for autonomous vehicle systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "autonomy_level": {"type": "string"},
+          "operational_design_domain": {"type": "string"},
+          "sensor_suite": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "av_regulatory_compliance",
+      "description": "UNECE WP.29 and regulatory compliance for AV systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "jurisdiction": {"type": "string"},
+          "deployment_type": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

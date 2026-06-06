@@ -1,0 +1,45 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Compliance Audit",
+  "description_for_human": "Compliance auditing for ISO 27001, SOC 2, NIST AI RMF, GDPR, HIPAA",
+  "keywords": ["compliance", "audit", "ISO 27001", "SOC 2", "NIST", "GDPR", "HIPAA"],
+  "tools": [
+    {
+      "name": "iso27001_audit",
+      "description": "ISO 27001 compliance audit for AI systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "scope": {"type": "string"},
+          "previous_audit_date": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "soc2_compliance_audit",
+      "description": "SOC 2 compliance audit for AI systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "trust_service_criteria": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "nist_ai_rmf_assessment",
+      "description": "NIST AI Risk Management Framework assessment",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "ai_capabilities": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Legal Tech AI",
+  "description_for_human": "AI governance for legal technology including contract analysis, case prediction",
+  "keywords": ["legal", "contract", "e-discovery", "compliance"],
+  "tools": [
+    {
+      "name": "legal_ai_assessment",
+      "description": "Assessment for legal AI systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "legal_domain": {"type": "string"},
+          "decision_support_level": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

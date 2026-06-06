@@ -20,53 +20,17 @@
   "graphTooltip": 0,
   "id": null,
   "links": [],
-  "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "mode": "palette-classic"
           },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {"color": "green", "value": null},
-              {"color": "red", "value": 80}
-            ]
-          }
-        }
-      },
-      "gridPos": {"h": 4, "w": 6, "x": 0, "y": 0},
-      "id": 1,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "title": "Total Requests",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {"mode": "palette-classic"},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -79,7 +43,46 @@
           "unit": "ms"
         }
       },
-      "gridPos": {"h": 4, "w": 6, "x": 6, "y": 0},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": ["lastNotNull"],
+          "fields": "",
+          "values": false
+        }
+      },
+      "title": "API Latency (p99)",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.99, sum(rate(meokai_request_duration_seconds_bucket[5m])) by (le)) * 1000",
+          "legendFormat": "p99"
+        }
+      ]
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "palette-classic"},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {"color": "green", "value": null}
+            ]
+          }
+        }
+      },
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
       "id": 2,
       "options": {
         "colorMode": "value",
@@ -87,144 +90,74 @@
         "justifyMode": "auto",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": ["mean"],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
-        },
-        "textMode": "auto"
+        }
       },
-      "title": "Avg Response Time",
-      "type": "stat"
+      "title": "Requests/sec",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(rate(meokai_requests_total[5m]))",
+          "legendFormat": "req/s"
+        }
+      ]
     },
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
-          "color": {"mode": "thresholds"},
+          "color": {"mode": "palette-classic"},
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {"legend": false, "tooltip": false, "viz": false},
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {"type": "linear"},
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {"group": "A", "mode": "none"},
+            "thresholdsStyle": {"mode": "off"}
+          },
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
-            "steps": [
-              {"color": "green", "value": null},
-              {"color": "yellow", "value": 1},
-              {"color": "red", "value": 10}
-            ]
-          }
+            "steps": [{"color": "green", "value": null}]
+          },
+          "unit": "short"
         }
       },
-      "gridPos": {"h": 4, "w": 6, "x": 12, "y": 0},
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
       "id": 3,
       "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "title": "Error Rate",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {"mode": "thresholds"},
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {"color": "green", "value": null},
-              {"color": "yellow", "value": 70},
-              {"color": "red", "value": 90}
-            ]
-          },
-          "unit": "percent"
-        }
-      },
-      "gridPos": {"h": 4, "w": 6, "x": 18, "y": 0},
-      "id": 4,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "title": "CPU Usage",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {"mode": "palette-classic"},
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": {"legend": false, "tooltip": false, "viz": false},
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {"type": "linear"},
-            "showPoints": "never",
-            "spanNulls": false,
-            "stacking": {"group": "A", "mode": "none"},
-            "thresholdsStyle": {"mode": "off"}
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [{"color": "green", "value": null}]
-          },
-          "unit": "reqps"
-        }
-      },
-      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 4},
-      "id": 5,
-      "options": {
         "legend": {"calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true},
         "tooltip": {"mode": "single", "sort": "none"}
       },
-      "targets": [
-        {
-          "datasource": {"type": "prometheus", "uid": "prometheus"},
-          "expr": "rate(http_requests_total[5m])",
-          "legendFormat": "{{method}} {{path}}",
-          "refId": "A"
-        }
-      ],
       "title": "Request Rate",
-      "type": "timeseries"
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "sum(rate(meokai_requests_total[5m])) by (endpoint)",
+          "legendFormat": "{{endpoint}}"
+        }
+      ]
     },
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -237,64 +170,6 @@
             "barAlignment": 0,
             "drawStyle": "line",
             "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": {"legend": false, "tooltip": false, "viz": false},
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {"type": "linear"},
-            "showPoints": "never",
-            "spanNulls": false,
-            "stacking": {"group": "A", "mode": "none"},
-            "thresholdsStyle": {"mode": "off"}
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [{"color": "green", "value": null}]
-          },
-          "unit": "ms"
-        }
-      },
-      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 4},
-      "id": 6,
-      "options": {
-        "legend": {"calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true},
-        "tooltip": {"mode": "single", "sort": "none"}
-      },
-      "targets": [
-        {
-          "datasource": {"type": "prometheus", "uid": "prometheus"},
-          "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))",
-          "legendFormat": "p95",
-          "refId": "A"
-        },
-        {
-          "datasource": {"type": "prometheus", "uid": "prometheus"},
-          "expr": "histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))",
-          "legendFormat": "p99",
-          "refId": "B"
-        }
-      ],
-      "title": "Response Time",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {"mode": "palette-classic"},
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "bars",
-            "fillOpacity": 100,
             "gradientMode": "none",
             "hideFrom": {"legend": false, "tooltip": false, "viz": false},
             "lineInterpolation": "linear",
@@ -310,30 +185,29 @@
           "thresholds": {
             "mode": "absolute",
             "steps": [{"color": "green", "value": null}]
-          }
+          },
+          "unit": "short"
         }
       },
-      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 12},
-      "id": 7,
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8},
+      "id": 4,
       "options": {
         "legend": {"calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true},
         "tooltip": {"mode": "single", "sort": "none"}
       },
+      "title": "Violations by Type",
+      "type": "timeseries",
       "targets": [
         {
-          "datasource": {"type": "prometheus", "uid": "prometheus"},
-          "expr": "rate(http_requests_total{status=~\"5..\"}[5m])",
-          "legendFormat": "{{status}}",
-          "refId": "A"
+          "expr": "sum(rate(meokai_violations_total[5m])) by (type)",
+          "legendFormat": "{{type}}"
         }
-      ],
-      "title": "Error Rate by Status",
-      "type": "timeseries"
+      ]
     },
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "prometheus"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -362,37 +236,101 @@
             "mode": "absolute",
             "steps": [{"color": "green", "value": null}]
           },
-          "unit": "bytes"
+          "unit": "percent"
         }
       },
-      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 12},
-      "id": 8,
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16},
+      "id": 5,
       "options": {
         "legend": {"calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true},
         "tooltip": {"mode": "single", "sort": "none"}
       },
+      "title": "Error Rate",
+      "type": "timeseries",
       "targets": [
         {
-          "datasource": {"type": "prometheus", "uid": "prometheus"},
-          "expr": "container_memory_usage_bytes{pod=~\"meok-.*\"}",
-          "legendFormat": "{{pod}}",
-          "refId": "A"
+          "expr": "sum(rate(meokai_errors_total[5m])) / sum(rate(meokai_requests_total[5m])) * 100",
+          "legendFormat": "Error %"
         }
-      ],
-      "title": "Memory Usage",
-      "type": "timeseries"
+      ]
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "palette-classic"},
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {"legend": false, "tooltip": false, "viz": false},
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {"type": "linear"},
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {"group": "A", "mode": "none"},
+            "thresholdsStyle": {"mode": "off"}
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [{"color": "green", "value": null}]
+          },
+          "unit": "short"
+        }
+      },
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16},
+      "id": 6,
+      "options": {
+        "legend": {"calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true},
+        "tooltip": {"mode": "single", "sort": "none"}
+      },
+      "title": "Active Agents",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "meokai_active_agents",
+          "legendFormat": "Active"
+        }
+      ]
     }
   ],
   "refresh": "5s",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": ["meok", "api", "monitoring"],
-  "templating": {"list": []},
+  "tags": ["meok", "ai", "governance"],
+  "templating": {
+    "list": [
+      {
+        "current": {"text": "Prometheus", "value": "Prometheus"},
+        "hide": 0,
+        "includeAll": false,
+        "label": "Datasource",
+        "name": "DS_PROMETHEUS",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
+  },
   "time": {"from": "now-1h", "to": "now"},
   "timepicker": {},
   "timezone": "",
   "title": "MEOK AI Labs - API Dashboard",
-  "uid": "meok-api",
+  "uid": "meokai-api",
   "version": 1,
   "weekStart": ""
 }

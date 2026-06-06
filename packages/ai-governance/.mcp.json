@@ -1,0 +1,33 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AI Governance",
+  "description_for_human": "AI risk assessment, model cards, bias detection, EU AI Act alignment",
+  "keywords": ["AI", "governance", "risk", "EU AI Act", "compliance", "bias", "model cards"],
+  "tools": [
+    {
+      "name": "ai_governance_assessment",
+      "description": "Run AI Governance assessment against target",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "target": {"type": "string"},
+          "context": {"type": "string"},
+          "scope": {"type": "string"},
+          "framework": {"type": "string"}
+        }
+      }
+    },
+    {
+      "name": "ai_governance_scan", 
+      "description": "Run AI Governance scan on target",
+      "input_schema": {
+        "type": "object", 
+        "properties": {
+          "target": {"type": "string"},
+          "depth": {"type": "string"},
+          "output_format": {"type": "string"}
+        }
+      }
+    }
+  ]
+}

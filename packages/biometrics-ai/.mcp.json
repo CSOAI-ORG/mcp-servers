@@ -1,0 +1,35 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Biometrics AI Governance",
+  "description_for_human": "AI governance for biometric systems including facial recognition, voiceprint, identity verification",
+  "keywords": ["biometrics", "facial recognition", "identity", "privacy", "GDPR", "BIPA"],
+  "tools": [
+    {
+      "name": "biometric_ai_assessment",
+      "description": "Assessment for biometric AI systems including privacy and discrimination risks",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "biometric_type": {"type": "string"},
+          "use_case": {"type": "string"},
+          "jurisdiction": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "privacy_impact_assessment",
+      "description": "GDPR/privacy impact assessment for biometric systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "data_collection": {"type": "string"},
+          "consent_mechanism": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}

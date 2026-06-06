@@ -1,205 +1,181 @@
--- MEOK AI Labs - Database Schema
--- PostgreSQL with pgvector extension
+-- MEOK AI Labs Database Schema
+-- PostgreSQL with pgvector
 
--- Enable pgvector
-CREATE EXTENSION IF NOT EXISTS vector;
+-- Enable required extensions
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "vector";
 
 -- Users table
 CREATE TABLE users (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255),
+    api_key VARCHAR(64) UNIQUE NOT NULL,
     name VARCHAR(255),
-    tier VARCHAR(50) DEFAULT 'free',
-    api_key VARCHAR(255) UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login_at TIMESTAMP,
-    is_active BOOLEAN DEFAULT true,
-    metadata JSONB DEFAULT '{}'
-);
-
--- API Keys table
-CREATE TABLE api_keys (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    key_hash VARCHAR(255) NOT NULL,
-    name VARCHAR(255),
-    permissions JSONB DEFAULT '[]',
+    plan VARCHAR(50) DEFAULT 'free',
     rate_limit INTEGER DEFAULT 100,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    expires_at TIMESTAMP,
-    last_used_at TIMESTAMP,
-    is_active BOOLEAN DEFAULT true
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- MCP Servers table
-CREATE TABLE mcp_servers (
-    id VARCHAR(255) PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT,
-    category VARCHAR(100),
-    version VARCHAR(50),
-    schema JSONB,
-    config JSONB,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    is_published BOOLEAN DEFAULT false,
-    download_count INTEGER DEFAULT 0,
-    metadata JSONB DEFAULT '{}'
-);
-
--- Agent memories with vector embeddings
-CREATE TABLE memories (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    content TEXT NOT NULL,
-    embedding VECTOR(1536),
-    memory_type VARCHAR(50) DEFAULT 'episodic',
-    importance_score FLOAT DEFAULT 0.5,
-    emotional_valence FLOAT,
-    care_dimension VARCHAR(50),
-    context JSONB DEFAULT '{}',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    accessed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    is_archived BOOLEAN DEFAULT false
-);
-
--- HNSW index for memories
-CREATE INDEX idx_memories_embedding_hnsw ON memories 
-USING hnsw (embedding vector_cosine_ops);
-
--- Conversation history
-CREATE TABLE conversations (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    agent_id VARCHAR(255),
-    messages JSONB DEFAULT '[]',
-    summary TEXT,
-    embedding VECTOR(1536),
-    metadata JSONB DEFAULT '{}',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_message_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Consciousness states
-CREATE TABLE consciousness_states (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    mode VARCHAR(50) DEFAULT 'waking',
-    consciousness_level FLOAT DEFAULT 0.0,
-    care_intensity FLOAT DEFAULT 0.0,
-    emotional_state JSONB DEFAULT '{}',
-    meta_observations JSONB DEFAULT '[]',
-    dream_targets JSONB DEFAULT '[]',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    metadata JSONB DEFAULT '{}'
-);
-
--- Agent tasks
-CREATE TABLE agent_tasks (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    agent_id VARCHAR(255) NOT NULL,
-    instruction TEXT,
-    status VARCHAR(50) DEFAULT 'pending',
-    priority VARCHAR(20) DEFAULT 'normal',
-    result JSONB,
-    error TEXT,
-    started_at TIMESTAMP,
-    completed_at TIMESTAMP,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    metadata JSONB DEFAULT '{}'
-);
-
--- Audit logs
-CREATE TABLE audit_logs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
-    action VARCHAR(255) NOT NULL,
-    resource_type VARCHAR(100),
-    resource_id VARCHAR(255),
-    ip_address INET,
-    user_agent TEXT,
-    metadata JSONB DEFAULT '{}',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Rate limit tracking
-CREATE TABLE rate_limits (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    identifier VARCHAR(255) NOT NULL,
-    tier VARCHAR(50) DEFAULT 'free',
-    request_count INTEGER DEFAULT 0,
-    window_start TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(identifier, window_start)
-);
-
--- Webhook subscriptions
-CREATE TABLE webhooks (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    url VARCHAR(1024) NOT NULL,
-    events VARCHAR(255)[] NOT NULL,
-    secret VARCHAR(255),
-    is_active BOOLEAN DEFAULT true,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_triggered_at TIMESTAMP
-);
-
--- Webhook deliveries
-CREATE TABLE webhook_deliveries (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    webhook_id UUID REFERENCES webhooks(id) ON DELETE CASCADE,
-    event VARCHAR(255) NOT NULL,
-    payload JSONB NOT NULL,
-    response_status INTEGER,
-    response_body TEXT,
-    attempts INTEGER DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    delivered_at TIMESTAMP
-);
-
--- Indexes for performance
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_api_key ON users(api_key);
-CREATE INDEX idx_memories_user_id ON memories(user_id);
-CREATE INDEX idx_memories_type ON memories(memory_type);
-CREATE INDEX idx_memories_created ON memories(created_at DESC);
-CREATE INDEX idx_conversations_user_id ON conversations(user_id);
-CREATE INDEX idx_conversations_updated ON conversations(updated_at DESC);
-CREATE INDEX idx_agent_tasks_status ON agent_tasks(status);
-CREATE INDEX idx_agent_tasks_user ON agent_tasks(user_id);
-CREATE INDEX idx_audit_logs_user ON audit_logs(user_id);
-CREATE INDEX idx_audit_logs_created ON audit_logs(created_at DESC);
+
+-- Analyses table
+CREATE TABLE analyses (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    content_hash VARCHAR(64) NOT NULL,
+    framework VARCHAR(50) NOT NULL,
+    content_type VARCHAR(20) DEFAULT 'text',
+    score FLOAT NOT NULL,
+    passed BOOLEAN NOT NULL,
+    violations JSONB DEFAULT '[]',
+    recommendations JSONB DEFAULT '[]',
+    processing_time_ms FLOAT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_analysis_user_created ON analyses(user_id, created_at);
+CREATE INDEX idx_analysis_framework ON analyses(framework);
+CREATE INDEX idx_analysis_passed ON analyses(passed);
+
+-- Memories table with vector embeddings
+CREATE TABLE memories (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    content TEXT NOT NULL,
+    content_embedding VECTOR(1536),
+    memory_type VARCHAR(50) DEFAULT 'episodic',
+    tags TEXT[] DEFAULT '{}',
+    importance FLOAT DEFAULT 0.5,
+    metadata JSONB DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_memory_user_type ON memories(user_id, memory_type);
+CREATE INDEX idx_memory_importance ON memories(importance DESC);
+CREATE INDEX idx_memory_user_created ON memories(user_id, created_at);
+CREATE INDEX idx_memory_embedding ON memories USING ivfflat (content_embedding vector_cosine_ops);
+
+-- Agents table
+CREATE TABLE agents (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    name VARCHAR(100) UNIQUE NOT NULL,
+    description TEXT,
+    capabilities TEXT[] DEFAULT '{}',
+    status VARCHAR(20) DEFAULT 'active',
+    current_tasks INTEGER DEFAULT 0,
+    max_concurrent INTEGER DEFAULT 5,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_agents_status ON agents(status);
+CREATE INDEX idx_agents_name ON agents(name);
+
+-- Tasks table
+CREATE TABLE tasks (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    agent_id UUID REFERENCES agents(id) ON DELETE SET NULL,
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    instruction TEXT NOT NULL,
+    priority VARCHAR(20) DEFAULT 'normal',
+    status VARCHAR(20) DEFAULT 'pending',
+    result JSONB,
+    error TEXT,
+    retry_count INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT NOW(),
+    started_at TIMESTAMP,
+    completed_at TIMESTAMP
+);
+
+CREATE INDEX idx_tasks_status ON tasks(status);
+CREATE INDEX idx_tasks_priority ON tasks(priority);
+CREATE INDEX idx_tasks_user_status ON tasks(user_id, status);
+CREATE INDEX idx_tasks_created ON tasks(created_at);
+
+-- Consciousness states table
+CREATE TABLE consciousness_states (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    session_id UUID NOT NULL,
+    state_type VARCHAR(50),
+    awareness_level FLOAT DEFAULT 0.0,
+    coherence FLOAT DEFAULT 0.0,
+    active_patterns JSONB DEFAULT '[]',
+    anomalies JSONB DEFAULT '[]',
+    metrics JSONB DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_consciousness_session ON consciousness_states(session_id, created_at);
+CREATE INDEX idx_consciousness_type ON consciousness_states(state_type);
+
+-- Audit logs table
+CREATE TABLE audit_logs (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
+    action VARCHAR(100) NOT NULL,
+    resource_type VARCHAR(50),
+    resource_id UUID,
+    details JSONB DEFAULT '{}',
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_audit_user ON audit_logs(user_id, created_at);
+CREATE INDEX idx_audit_action ON audit_logs(action);
+CREATE INDEX idx_audit_created ON audit_logs(created_at DESC);
+
+-- Webhook subscriptions table
+CREATE TABLE webhook_subscriptions (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    url TEXT NOT NULL,
+    events TEXT[] NOT NULL,
+    secret VARCHAR(64),
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    last_triggered TIMESTAMP,
+    failure_count INTEGER DEFAULT 0
+);
+
+CREATE INDEX idx_webhook_user ON webhook_subscriptions(user_id);
+CREATE INDEX idx_webhook_active ON webhook_subscriptions(active);
 
 -- Functions
 
--- Update timestamp trigger
-CREATE OR REPLACE FUNCTION update_updated_at()
+-- Updated_at trigger function
+CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
-    NEW.updated_at = CURRENT_TIMESTAMP;
+    NEW.updated_at = NOW();
     RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$$ language 'plpgsql';
 
--- Create triggers
+-- Apply updated_at trigger to relevant tables
 CREATE TRIGGER update_users_updated_at BEFORE UPDATE ON users
-    FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+    FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
-CREATE TRIGGER update_mcp_servers_updated_at BEFORE UPDATE ON mcp_servers
-    FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+CREATE TRIGGER update_memories_updated_at BEFORE UPDATE ON memories
+    FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
-CREATE TRIGGER update_conversations_updated_at BEFORE UPDATE ON conversations
-    FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+-- Row-level security (if using PostgreSQL 9.5+)
 
--- Cleanup old audit logs (run monthly)
-CREATE OR REPLACE FUNCTION cleanup_old_audit_logs()
-RETURNS void AS $$
-BEGIN
-    DELETE FROM audit_logs WHERE created_at < CURRENT_TIMESTAMP - INTERVAL '90 days';
-END;
-$$ LANGUAGE plpgsql;
+-- ALTER TABLE analyses ENABLE ROW LEVEL SECURITY;
+-- ALTER TABLE memories ENABLE ROW LEVEL SECURITY;
+-- ALTER TABLE tasks ENABLE ROW LEVEL SECURITY;
+
+-- Policies would be created based on user_id ownership
+-- CREATE POLICY analysis_user_policy ON analyses FOR ALL
+--     USING (user_id = current_user_id());
+
+-- Seed data for agents
+INSERT INTO agents (name, description, capabilities, status) VALUES
+    ('researcher', 'Research and gather information', ARRAY['web_search', 'document_analysis', 'data_retrieval'], 'active'),
+    ('writer', 'Content creation and editing', ARRAY['writing', 'editing', 'summarization'], 'active'),
+    ('analyst', 'Data analysis and insights', ARRAY['data_analysis', 'visualization', 'reporting'], 'active'),
+    ('coder', 'Code generation and review', ARRAY['code_generation', 'code_review', 'debugging'], 'active'),
+    ('planner', 'Task planning and coordination', ARRAY['planning', 'scheduling', 'coordination'], 'active')
+ON CONFLICT (name) DO NOTHING;

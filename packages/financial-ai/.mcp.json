@@ -1,0 +1,50 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Financial AI Governance",
+  "description_for_human": "AI governance for financial services including credit scoring, algorithmic trading, AML/KYC",
+  "keywords": ["finance", "credit", "trading", "AML", "KYC", "compliance", "fintech"],
+  "tools": [
+    {
+      "name": "credit_scoring_compliance",
+      "description": "Assess regulatory compliance for AI-based credit scoring and lending systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "model_description": {"type": "string"},
+          "data_inputs": {"type": "string"},
+          "jurisdiction": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "algo_trading_compliance",
+      "description": "Assess regulatory compliance for algorithmic trading systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "trading_strategy": {"type": "string"},
+          "asset_classes": {"type": "string"},
+          "jurisdiction": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    },
+    {
+      "name": "aml_kyc_compliance",
+      "description": "Assess regulatory compliance for AML/KYC AI systems",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "system_name": {"type": "string"},
+          "system_description": {"type": "string"},
+          "transaction_types": {"type": "string"},
+          "jurisdiction": {"type": "string"}
+        },
+        "required": ["system_name"]
+      }
+    }
+  ]
+}
