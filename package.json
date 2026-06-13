@@ -13,7 +13,7 @@
     "polish": "node -e \"console.log('🎯 MEOK AI Professional Polish - Deployed')\""
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.60.0",
     "axe-core": "^4.11.2",
     "cypress": "^13.6.0",
     "cypress-axe": "^1.7.0",
