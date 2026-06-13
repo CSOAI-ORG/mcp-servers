@@ -81,3 +81,5 @@ prometheus_data/
 
 # Grafana
 grafana_data/
+
+.env.example
