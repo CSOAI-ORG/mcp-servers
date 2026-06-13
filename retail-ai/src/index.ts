@@ -3,8 +3,8 @@
  * @csoai/retail-ai
  * ═══════════════════════════════════════════════════════════════════════════════
  *
- * Copyright (c) 2026 CSGA Global. All rights reserved.
- * Part of the CSGA Global MCP Ecosystem.
+ * Copyright (c) 2026 MEOK AI Labs. All rights reserved.
+ * Part of the MEOK AI Labs MCP Ecosystem.
  *
  * LEGAL NOTICE: This software is provided for informational and advisory
  * purposes only. It does not constitute legal, regulatory, or professional

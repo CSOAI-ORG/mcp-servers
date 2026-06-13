@@ -100,7 +100,7 @@ All 6 tools implemented and functional ✓
 ✓ package.json
   - Correct name: thn-global-mcp
   - Correct version: 1.0.0
-  - Author: THN Global — Terranova Health AI
+  - Author: MEOK AI Labs
   - License: CC0-1.0
   - Homepage: https://thn-global.com
   - Dependencies: @modelcontextprotocol/sdk, zod
@@ -307,7 +307,7 @@ Industry context verified ✓
 ✓ Server Information
   - Name: thn-global-mcp
   - Version: 1.0.0
-  - Author: THN Global — Terranova Health AI
+  - Author: MEOK AI Labs
   - License: CC0-1.0
   - Homepage: https://thn-global.com
   - Location: Waterloo Biotech Ecosystem, Canada

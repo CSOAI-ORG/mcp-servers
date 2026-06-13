@@ -1,95 +1,78 @@
-# @csoai/aiemployment — Employment & HR AI Governance MCP Server
+# Employment Ai
 
-CSOAI Employment & HR AI MCP Server provides AI governance tools for employment-related AI systems covering hiring bias, EU AI Act compliance, NYC Local Law 144, EEOC regulations, and workplace surveillance AI.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/employment_ai/)
 
-## Features
+> MEOK AI Labs — employment-ai MCP Server
 
-### Tools
-- `hiring_ai_compliance` — Comprehensive regulatory compliance assessment for hiring AI systems
-  - NYC Local Law 144 (AEDT) bias audit requirements
-  - EEOC disparate impact testing (Four-Fifths Rule)
-  - EU AI Act Annex III high-risk classification
-  - Candidate rights and transparency requirements
-  - Bias assessment and remediation roadmap
+MEOK AI Labs — employment-ai MCP Server
 
-- `workplace_surveillance_compliance` — Compliance assessment for workplace monitoring AI
-  - EU AI Act Article 5(1)(f) emotion recognition prohibition
-  - Employee rights and proportionality testing
-  - Platform Workers Directive compliance
-  - Prohibited surveillance practices
+---
 
-### Resources
-- `employment://regulations/index` — Complete regulatory framework reference
-- `employment://tools/guide` — Tool usage guide
-
-## Regulations Covered
-
-### US Federal
-- Title VII Civil Rights Act — Disparate impact
-- ADA — Accommodation requirements
-- ADEA — Age discrimination
-- EEOC AI Guidance (2023)
-- ECPA — Electronic surveillance
-
-### US State/Local
-- NYC Local Law 144 — Automated Employment Decision Tools
-- Illinois AI Video Interview Act
-- Colorado SB 21-169
-- California FEHA
-
-### EU
-- EU AI Act — Employment AI high-risk classification
-- GDPR Articles 22, 88 — Automated decision-making
-- Platform Workers Directive (2024)
-- EU Charter — Fundamental rights
-
-### International
-- ILO Convention on Workers' Privacy
-- UK Equality Act 2010
-- UK ICO Employment Practices Code
-
-## Install
+## 🚀 Quick Start
 
 ```bash
-npx @csoai/aiemployment
+# Install via pip
+pip install employment_ai
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install employment-ai --client claude
 ```
 
-## Build from Source
+## ✨ Features
 
-```bash
-npm install
-npm run build
-npm start
-```
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-## Example Usage
+## 📖 Documentation
 
-### Hiring AI Assessment
-```
-Tool: hiring_ai_compliance
-- system_name: "TalentScreen Pro"
-- ai_function: "resume screening and candidate ranking"
-- data_inputs: "resumes, educational background, work history"
-- jurisdiction: "US/NYC"
-```
+- [Full Documentation](https://docs.meok.ai/employment-ai)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-### Workplace Surveillance Assessment
-```
-Tool: workplace_surveillance_compliance
-- system_name: "ProductivityTracker AI"
-- monitoring_type: "keystroke logging and activity monitoring"
-- data_collected: "keystroke timing, window activity, mouse movement"
-- jurisdiction: "EU"
-```
+## 🛡️ Compliance
 
-## Legal Notice
+This MCP server is built with **EU AI Act compliance** built-in:
 
-This MCP server provides technical compliance guidance based on current regulations. It is not a substitute for legal counsel. Organizations should consult qualified employment law and AI governance attorneys before implementing AI systems in hiring and workplace monitoring.
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-## License
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-CC0-1.0 (Public Domain Dedication)
+## 🏢 Enterprise
 
-## Author
+Need custom development, SLA guarantees, or white-label deployment?
 
-CSOAI — Council for the Safety of Artificial Intelligence
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+
+## 🤝 Part of the MEOK Ecosystem
+
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>

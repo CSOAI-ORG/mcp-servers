@@ -1,108 +1,78 @@
-# @csoai/healthcare-ai — Healthcare AI Governance MCP Server
+# Healthcare Ai
 
-Part of the CSOAI MCP Ecosystem — AI Economy Infrastructure.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/healthcare_ai/)
 
-## Tools
+> MEOK AI Labs — healthcare-ai MCP Server
 
-- `hipaa_ai_assessment` — HIPAA compliance assessment for AI systems processing PHI (Protected Health Information)
-- `fda_ai_assessment` — FDA regulatory pathway determination for AI/ML-based Software as a Medical Device (SaMD)
-- `clinical_ai_safety` — Clinical AI safety assessment covering bias, validation, human oversight, and EU AI Act obligations
-- `eu_mdr_compliance` — EU Medical Device Regulation (MDR 2017/745) compliance assessment for AI medical devices
-
-## Resources
-
-- `healthcare://regulations/index` — Complete regulatory landscape (HIPAA, FDA, EU MDR, EU AI Act, international standards)
-- `healthcare://tools/guide` — Comprehensive guide to all tools and usage workflows
-
-## Quick Start
-
-### Installation
-
-```bash
-npm install @csoai/healthcare-ai-mcp
-```
-
-### Claude Desktop Configuration
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "healthcare-ai": {
-      "command": "npx",
-      "args": ["-y", "@csoai/healthcare-ai-mcp"]
-    }
-  }
-}
-```
-
-### Usage Example
-
-Run a complete healthcare AI governance assessment:
-
-1. **HIPAA Assessment** — Understand PHI protection requirements
-   ```
-   hipaa_ai_assessment(
-     system_name: "Diagnostic AI System",
-     system_description: "ML model for cancer diagnosis using medical imaging",
-     phi_data_types: "diagnostic images, patient demographics, treatment history",
-     deployment_environment: "cloud"
-   )
-   ```
-
-2. **FDA Assessment** — Determine regulatory pathway
-   ```
-   fda_ai_assessment(
-     system_name: "Cancer Detection SaMD",
-     intended_use: "assist radiologists in detecting lung cancer from CT scans",
-     clinical_context: "diagnosis and treatment decision support",
-     ai_model_type: "deep learning convolutional neural network"
-   )
-   ```
-
-3. **Clinical Safety Assessment** — Evaluate safety and bias risks
-   ```
-   clinical_ai_safety(
-     system_name: "Cancer Detection AI",
-     clinical_domain: "radiology and oncology",
-     patient_population: "adult patients with suspected lung cancer",
-     decision_autonomy: "decision support - clinician makes final determination"
-   )
-   ```
-
-4. **EU MDR Compliance** — EU market access requirements
-   ```
-   eu_mdr_compliance(
-     system_name: "Cancer Detection Device",
-     device_description: "AI software analyzing CT images using deep learning",
-     intended_purpose: "diagnosis of lung cancer",
-     risk_class: "Class IIb"
-   )
-   ```
-
-## Regulatory Frameworks Covered
-
-- **HIPAA** — 45 CFR Parts 160 and 164 (Privacy, Security, Breach Notification)
-- **FDA AI/ML** — Software as a Medical Device (SaMD) classification and regulatory pathways
-- **EU MDR** — Medical Device Regulation 2017/745 (CE marking, conformity assessment)
-- **EU AI Act** — High-risk AI system requirements for healthcare
-- **International Standards** — ISO 14971, IEC 62304, ISO 13485
-
-## About CSOAI
-
-The Council for the Safety of Artificial Intelligence (CSOAI) develops governance infrastructure for the AI economy, including Model Context Protocol (MCP) servers for regulatory compliance across healthcare, finance, autonomous systems, and general AI governance.
-
-## License
-
-CC0-1.0 — Public Domain
-
-## Feedback and Contributions
-
-Questions? Found an issue? Open an issue at https://github.com/csoai/healthcare-ai-mcp
+MEOK AI Labs — healthcare-ai MCP Server
 
 ---
 
-**Version:** 1.0.0  
-**Homepage:** https://csoai.org  
-**Last Updated:** 2025
+## 🚀 Quick Start
+
+```bash
+# Install via pip
+pip install healthcare_ai
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install healthcare-ai --client claude
+```
+
+## ✨ Features
+
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
+
+## 📖 Documentation
+
+- [Full Documentation](https://docs.meok.ai/healthcare-ai)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
+
+## 🛡️ Compliance
+
+This MCP server is built with **EU AI Act compliance** built-in:
+
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
+
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
+
+## 🏢 Enterprise
+
+Need custom development, SLA guarantees, or white-label deployment?
+
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+
+## 🤝 Part of the MEOK Ecosystem
+
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>

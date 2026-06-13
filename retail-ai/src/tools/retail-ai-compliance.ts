@@ -1,6 +1,6 @@
 /**
  * retail_ai_compliance.ts — Part of @csoai MCP Ecosystem
- * Copyright (c) 2026 CSGA Global. All rights reserved.
+ * Copyright (c) 2026 MEOK AI Labs. All rights reserved.
  * License: CC0-1.0 | Build: 2026-02-26T06:00:00Z
  * LEGAL NOTICE: Advisory only. Not legal or compliance advice.
  */
