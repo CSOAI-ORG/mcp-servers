@@ -15,7 +15,7 @@ const MEOK AI_PRICING = {
   //  STRIPE CONFIGURATION
   // ═══════════════════════════════════════════════════════════
   stripe: {
-    publishableKey: 'pk_live_51PpysBR1MkVzHj7pLUCBDdcUv5CgG4MFZt84EOX5OOwRfUCkpKsSZmTS5k9MJpmWuuwYciAmRX5AlxGakX1wVAVQ00ZYe9rLMF',
+    publishableKey: 'pk_live_REPLACE_WITH_YOUR_KEY',
     testKey: 'pk_test_REPLACE_WITH_YOUR_KEY',
     apiBase: '/api',
     endpoints: {
